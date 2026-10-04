@@ -1,6 +1,6 @@
 -- ============================================================
--- PROdiGYM — Supabase PostgreSQL Schema & Auth Trigger
--- Project: Pipeline for Research Oriented Development with Intelligence of Global Youth for Mankind
+-- Boss of AI — Supabase PostgreSQL Schema & Auth Trigger
+-- Official Website: https://bossofai.org
 -- Run this script in the Supabase SQL Editor (Dashboard -> SQL Editor -> New Query)
 -- ============================================================
 

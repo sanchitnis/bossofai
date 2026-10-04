@@ -13,7 +13,7 @@ In the AI era, this model is broken.
 **How are we preparing our future leaders to deliver enterprise-grade solutions before graduation?**
 
 🌐 **Check out Live Projects Showcase**: https://sanchitnis.github.io/prodigy/#projects  
-📄 **Read Executive Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📄 **Read Executive Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **Call to CTOs & R&D VPs**: If your team has exploratory R&D projects or problem statements ready for dedicated student/faculty squads, connect with Founder **Dr. Sanjay Chitnis** (`sanjay.chitnis@gmail.com`) to pilot a PRODIGY squad.
 

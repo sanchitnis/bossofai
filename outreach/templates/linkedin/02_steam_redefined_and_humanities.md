@@ -14,7 +14,7 @@ In **Project PRODIGY**, we re-define **STEAM** as a 5-part interdisciplinary spe
 
 By moving away from siloed lectures and organizing learning around real-world **Role-Based Projects** (Student Sprints & Faculty TRACK Projects).
 
-🌐 **Read Full Framework in Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md  
+🌐 **Read Full Framework in Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md  
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/
 
 🤝 **Our Ask**: Which interdisciplinary area do you believe is most critical for future leaders? Leave a comment below or email Dr. Sanjay Chitnis at `sanjay.chitnis@gmail.com`!

@@ -1,6 +1,6 @@
-# PROdiGYM Strategic Knowledge Base
+# Boss of AI Strategic Knowledge Base (bossofai.org)
 
-Welcome to the PROdiGYM Wiki. This knowledge base captures the foundational philosophies, execution methodologies, and agentic workflows required to prepare society for the era of abundant intelligence.
+Welcome to the Boss of AI Wiki. This knowledge base captures the foundational philosophies, execution methodologies, and agentic workflows required to prepare society for the era of abundant intelligence.
 
 ## 🧭 Core Strategic Pillars
 1. **[The Cascading Theory of Transformation](cascading_theory_of_transformation.md)**: The foundational strategic logic — Educational Institutions → Academic Community → Society.

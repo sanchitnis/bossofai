@@ -1,6 +1,6 @@
-# AI-Native Project Playbook - PROdiGYM
+# AI-Native Project Playbook - Boss of AI (bossofai.org)
 
-This playbook defines how collaborative projects in PROdiGYM move from an initial spark into high-impact, deployed assets through human-in-the-loop AI pairing.
+This playbook defines how collaborative projects in Boss of AI move from an initial spark into high-impact, deployed assets through human-in-the-loop AI pairing.
 
 ---
 

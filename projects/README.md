@@ -1,6 +1,6 @@
-﻿# PROdiGYM Projects Registry (`projects/`)
+# Boss of AI Projects Registry (`projects/`)
 
-Welcome to the **Project Delivery Tracks** of PROdiGYM. While the **Wiki** (`wiki/`) stores our enduring methodologies and frameworks, the `projects/` directory houses our **active deliverables, policy briefs, curricula, institutional blueprints, and venture incubators**.
+Welcome to the **Project Delivery Tracks** of Boss of AI (bossofai.org). While the **Wiki** (`wiki/`) stores our enduring methodologies and frameworks, the `projects/` directory houses our **active deliverables, policy briefs, curricula, institutional blueprints, and venture incubators**.
 
 Every project in this directory is executed using the 6-stage **AI-Native Project Lifecycle** from [ai-native-project-playbook.md](../ai-native-project-playbook.md).
 

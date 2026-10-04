@@ -10,15 +10,15 @@
 
 ## Form Title & Description
 
-**Title**: Join the Project PRODIGY Ecosystem
+**Title**: Join the Boss of AI Ecosystem (bossofai.org)
 
 **Description**:
-> Project PRODIGY empowers students and faculty to build real-world solutions using Human + Augmented Intelligence.
+> Boss of AI empowers educational institutions, faculty, and students to build real-world solutions leading as the Human Expert Orchestrator of AI Agents.
 >
 > Whether you're a student, mentor, faculty member, industry leader, or supporter — register below to join our community. Takes under 3 minutes.
 >
-> 🌐 Learn more: https://sanchitnis.github.io/prodigy/
-> 📄 Read our Concept Note: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+> 🌐 Official Website: https://bossofai.org
+> 📄 Read our Concept Note: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ---
 
@@ -389,8 +389,8 @@
 > **Industry Partners**: We'll share our engagement framework and schedule a call within 10 days.
 >
 > **In the meantime**:
-> - 🌐 Explore our portal: https://sanchitnis.github.io/prodigy/
-> - 📄 Read the Concept Note: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+> - 🌐 Explore our website: https://bossofai.org
+> - 📄 Read the Concept Note: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 > - 💬 Questions? Email sanjay.chitnis@gmail.com
 >
 > *Building our common future through Human + Augmented Intelligence.*

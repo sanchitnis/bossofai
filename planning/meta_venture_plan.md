@@ -19,7 +19,7 @@
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PHASE 2: BRANDING, WEB PORTAL & RESOURCE PROCUREMENT (WEEKS 5–8)                       │
 │ • Develop brand identity, visual style guide, & pitch documentation.                   │
-│ • Expand GitHub Pages portal (`sanchitnis.github.io/prodigy/`) with dynamic showcases. │
+│ • Deploy web application (`bossofai.org`) with dynamic showcases.                      │
 │ • Apply for Cloud & AI Compute Credits (Google Cloud, OpenAI, AWS, Microsoft).         │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PHASE 3: MENTOR NETWORK & CORE TEAM ONBOARDING (WEEKS 9–12)                            │

@@ -1,8 +1,8 @@
-# Agentic Graph Engineering: The Engine of PRODIGY
+# Agentic Graph Engineering: The Engine of Boss of AI
 
-Project PRODIGY does not just *teach* about Artificial Intelligence; it **runs** on it. The entire ecosystem is structured as a collaborative venture between human experts and autonomous AI agents. 
+Project **Boss of AI** (bossofai.org) does not just *teach* about Artificial Intelligence; it **runs** on it. The entire ecosystem is structured as a collaborative venture between human experts and autonomous AI agents. 
 
-This document explains the core philosophy and technical architecture of **Agentic Graph Engineering**—the system that powers PRODIGY.
+This document explains the core philosophy and technical architecture of **Agentic Graph Engineering**—the system that powers Boss of AI.
 
 ---
 
@@ -20,7 +20,7 @@ In this model, you don't prompt; you *orchestrate*.
 
 ## 2. The Human Expert in the Loop (HEITL) as the Orchestrator
 
-In PRODIGY, the AI does not replace the human. **Using AI smartly is critical to avoid "brain rot."** The first focus should always be on how much the human user has learned through the process. The human acts as the **Human Expert in the Loop (HEITL)**—the Human Expert Orchestrator of AI Agents.
+In Boss of AI, the AI does not replace the human. **Using AI smartly is critical to avoid "brain rot."** The first focus should always be on how much the human user has learned through the process. The human acts as the **Human Expert in the Loop (HEITL)**—the Human Expert Orchestrator of AI Agents.
 
 **Your role as the HEITL:**
 1. **Define the Goal**: Set the strategic direction and provide context (the "graph").
@@ -29,7 +29,7 @@ In PRODIGY, the AI does not replace the human. **Using AI smartly is critical to
 
 ## 3. The Toolchain & Agent Harnesses
 
-PRODIGY participants use industry-standard tools to build these agentic workflows:
+Boss of AI participants use industry-standard tools to build these agentic workflows:
 
 - **Antigravity SDK / Frameworks**: Used to design, implement, and debug autonomous multi-agent systems with specific skill sets.
 - **VS Code with Copilot / Claude Co-Work**: IDE-integrated harnesses where AI agents live directly alongside the codebase, capable of reading repositories, suggesting edits, and running terminals.
@@ -49,10 +49,10 @@ Agents are used not just for coding, but for project management. They create and
 
 More importantly, this architecture creates a **Learning Loop for Humans**. By managing AI agents, students and faculty are forced to understand concepts deeply enough to verify the AI's work. You cannot be the human expert orchestrator of an AI writing a React component unless you understand how React works well enough to review it.
 
-## 6. The PRODIGY Repo: A Live Case Study
+## 6. The Boss of AI Repo: A Live Case Study
 
-The [PRODIGY GitHub Repository](https://github.com/sanchitnis/prodigym) itself is a living example of Agentic Graph Engineering. 
+The [Boss of AI GitHub Repository](https://github.com/sanchitnis/bossofai) itself is a living example of Agentic Graph Engineering. 
 
 If you look at the commit history and file structure (like the `AGENTS.md` file), you will see that this very platform was architected, reviewed, and refined through continuous collaboration between Dr. Sanjay Chitnis (as the HEITL) and various AI agent personas. 
 
-When we ask students to learn human-AI collaboration, we are asking them to use the exact same methods we use to build PRODIGY.
+When we ask students to learn human-AI collaboration, we are asking them to use the exact same methods we use to build Boss of AI.

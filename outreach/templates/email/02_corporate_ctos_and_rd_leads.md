@@ -15,7 +15,7 @@ We invite **[Company Name]** to engage with **Project PRODIGY**—a high-perform
 
 ### Key References
 - 🌐 **Live Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We invite **[Company Name]** to submit 1–2 real-world problem statements and designate an Operational Technical SPOC to guide a dedicated PRODIGY project squad. 

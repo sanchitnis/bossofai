@@ -144,12 +144,12 @@ const anthropicLoop = [
 
 // ─── Mapping between the two loops ─────────────────────────────────────────
 const loopMapping = [
-  { anthropic: "Discovery & Context", prodigym: "0_context.md + 1_intent.md" },
-  { anthropic: "Prompt Architecture & Spec", prodigym: "2_spec.md" },
-  { anthropic: "Agentic Generation & Scaffolding", prodigym: "3_draft.md" },
-  { anthropic: "Continuous Eval & Red-Teaming", prodigym: "4_review.md" },
-  { anthropic: "Production Deployment & Observability", prodigym: "5_final.md" },
-  { anthropic: "Fast Feedback Loops & Iteration", prodigym: "6_feedback.md" },
+  { anthropic: "Discovery & Context", bossofai: "0_context.md + 1_intent.md" },
+  { anthropic: "Prompt Architecture & Spec", bossofai: "2_spec.md" },
+  { anthropic: "Agentic Generation & Scaffolding", bossofai: "3_draft.md" },
+  { anthropic: "Continuous Eval & Red-Teaming", bossofai: "4_review.md" },
+  { anthropic: "Production Deployment & Observability", bossofai: "5_final.md" },
+  { anthropic: "Fast Feedback Loops & Iteration", bossofai: "6_feedback.md" },
 ];
 
 export const ProjectsSection: React.FC = () => {
@@ -190,7 +190,7 @@ export const ProjectsSection: React.FC = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Every project in PROdiGYM runs on committed, durable markdown files numbered sequentially —
+            Every project in Boss of AI runs on committed, durable markdown files numbered sequentially —
             guaranteeing exact chronological and concept dependency order across terminals, IDEs, and Git repositories.
           </p>
         </div>
@@ -239,7 +239,7 @@ export const ProjectsSection: React.FC = () => {
               </p>
             </div>
             <a
-              href="https://github.com/sanchitnis/prodigym/tree/main/projects"
+              href="https://github.com/sanchitnis/bossofai/tree/main/projects"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-cyan-500/20"
@@ -359,7 +359,7 @@ export const ProjectsSection: React.FC = () => {
               Two Loops, One Mission
             </h3>
             <p className="text-sm text-slate-400 max-w-2xl mx-auto">
-              PROdiGYM's AI-Native Project Loop is inspired by and extends{" "}
+              Boss of AI's AI-Native Project Loop is inspired by and extends{" "}
               <strong className="text-purple-300">Anthropic's AI-Native SDLC Playbook</strong> —
               generalising it from software products to the full knowledge artifact lifecycle:
               policy briefs, curricula, research papers, venture whitepapers, and more.
@@ -386,7 +386,7 @@ export const ProjectsSection: React.FC = () => {
               </p>
             </div>
             <div className="text-[10px] text-slate-500 uppercase font-bold tracking-wider shrink-0">
-              PROdiGYM extends this →
+              Boss of AI extends this →
             </div>
           </div>
 
@@ -423,14 +423,14 @@ export const ProjectsSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Right: PROdiGYM AI-Native Project Loop for Creating Artifacts */}
+            {/* Right: Boss of AI AI-Native Project Loop for Creating Artifacts */}
             <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/70 p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-5">
               <div className="flex items-start gap-3 border-b border-white/10 pb-5">
                 <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-300 shrink-0">
                   <BookOpen className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 mb-0.5">PROdiGYM Enhancement</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 mb-0.5">Boss of AI Enhancement</div>
                   <h4 className="font-heading font-bold text-white text-base leading-snug">
                     AI-Native Project Loop for Creating Artifacts
                   </h4>
@@ -465,14 +465,14 @@ export const ProjectsSection: React.FC = () => {
               <thead>
                 <tr className="border-b border-white/10">
                   <th className="text-left pb-2 text-slate-400 font-semibold pr-4">Anthropic AI-Native SDLC Phase</th>
-                  <th className="text-left pb-2 text-slate-400 font-semibold">PROdiGYM Artifact Loop Equivalent</th>
+                  <th className="text-left pb-2 text-slate-400 font-semibold">Boss of AI Artifact Loop Equivalent</th>
                 </tr>
               </thead>
               <tbody>
                 {loopMapping.map((row, i) => (
                   <tr key={i} className="border-b border-white/5">
                     <td className="py-2 pr-4 text-purple-300 font-medium">{row.anthropic}</td>
-                    <td className="py-2 text-cyan-300 font-mono">{row.prodigym}</td>
+                    <td className="py-2 text-cyan-300 font-mono">{row.bossofai}</td>
                   </tr>
                 ))}
               </tbody>
@@ -480,7 +480,7 @@ export const ProjectsSection: React.FC = () => {
             <div className="mt-4 flex items-start gap-2 text-xs text-slate-400">
               <Zap className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
               <span>
-                <strong className="text-white">Key extension:</strong> PROdiGYM adds <code className="text-cyan-300">0_context.md</code> as a standing foundation stage (missing from Anthropic's code-centric SDLC) — critical for knowledge work where domain context is not embedded in a codebase.
+                <strong className="text-white">Key extension:</strong> Boss of AI adds <code className="text-cyan-300">0_context.md</code> as a standing foundation stage (missing from Anthropic's code-centric SDLC) — critical for knowledge work where domain context is not embedded in a codebase.
               </span>
             </div>
           </div>
@@ -501,7 +501,7 @@ export const ProjectsSection: React.FC = () => {
               </div>
             </div>
             <a
-              href="https://github.com/sanchitnis/prodigym/blob/main/ai-native-project-playbook.md"
+              href="https://github.com/sanchitnis/bossofai/blob/main/ai-native-project-playbook.md"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-200 transition-colors shrink-0"

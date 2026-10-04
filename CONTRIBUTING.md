@@ -1,6 +1,6 @@
-﻿# Contributing to PROdiGYM
+# Contributing to Boss of AI (bossofai.org)
 
-Welcome! PROdiGYM is designed for seamless pair-collaboration between human experts (HEITL) and AI agents.
+Welcome! Boss of AI is designed for seamless pair-collaboration between human experts (HEITL) and AI agents.
 
 ## How to Contribute
 1. **To start a new collaborative project:**

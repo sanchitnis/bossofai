@@ -15,7 +15,7 @@ Today, we are thrilled to introduce **Project PRODIGY** (**P**ipeline for **R**e
 4. **Diverse Leadership Pathways**: Preparing graduates for high-impact leadership roles across Public Service & Governance (DPI), Sovereign Defense (DefenseTech/SpaceTech), Social Enterprises, Academic R&D, and Commercial Startups.
 
 🌐 **Explore Live Portal**: https://sanchitnis.github.io/prodigy/  
-📄 **Read Executive Concept Note on GitHub**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📄 **Read Executive Concept Note on GitHub**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **OUR SPECIFIC ASK FOR THE COMMUNITY**:
 We are actively building our global ecosystem and seeking your specific suggestions, advice, and support:

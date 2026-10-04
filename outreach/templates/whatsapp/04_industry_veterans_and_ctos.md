@@ -10,6 +10,6 @@ Dear Tech Leaders & Industry Veterans,
 - Participate in Expert Jury HEITL reviews for patentable IP.
 
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/  
-📖 **Full Governance Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
+📖 **Full Governance Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
 
 🤝 **Specific Ask**: Submit industry problem statements or sign up as a **Tier C (Industry/CTO) or Tier D (STEAM+ Expert) Mentor**. Contact Initiative Lead Dr. Sanjay Chitnis at `sanjay.chitnis@gmail.com`.

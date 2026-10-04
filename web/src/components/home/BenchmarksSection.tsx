@@ -50,7 +50,7 @@ export const BenchmarksSection: React.FC = () => {
             Learnings From Global Models
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            PROdiGYM synthesizes operational mechanisms from premier innovation and educational engines worldwide.
+            Boss of AI synthesizes operational mechanisms from premier innovation and educational engines worldwide.
           </p>
         </div>
 

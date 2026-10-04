@@ -81,7 +81,7 @@ export const GovernanceSection: React.FC = () => {
             Governance & Team Architecture
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Operational structure, institutional SPOCs, and mentorship tiers driving Project PROdiGYM.
+            Operational structure, institutional SPOCs, and mentorship tiers driving Project Boss of AI.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ PRODIGY addresses this imperative through a multi-stakeholder **Co-opetition Mod
 
 ### Key Links
 - 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 📄 **Executive Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We request an opportunity to present a formal briefing to your office, seek your strategic guidance on policy alignment, and explore synergies with national R&D grant programs.

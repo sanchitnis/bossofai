@@ -1,4 +1,4 @@
-﻿# Getting Started with PROdiGYM
+# Getting Started with Boss of AI (bossofai.org)
 
 ## Quick Start in 3 Steps:
 

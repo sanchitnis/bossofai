@@ -28,7 +28,7 @@ If you are a Community User, Student, Faculty Lead, Startup Founder, Mentor, or 
 
 ### 🎓 1. Students & Life-Long Learners
 1. **Register**: Complete the [Official Google Form Registration](https://docs.google.com/forms/d/e/1FAIpQLSf6CkQQXXr3306tPjUFi6nODpdLXT-F6uyFrLpoEcK5iBAa5Q/viewform) managed by Dr. Sanjay Chitnis (`sanjay.chitnis@gmail.com`).
-2. **Explore Projects & Probes**: Browse existing venture probes in the [Web Portal Showcase](https://sanchitnis.github.io/prodigy/#projects) or inspect [`data/projects.json`](../data/projects.json).
+2. **Explore Projects & Probes**: Browse existing venture probes in the [Web Portal Showcase](https://bossofai.org#projects) or inspect [`data/projects.json`](../data/projects.json).
 3. **Hatch or Join a Probe**:
    - Create your own downstream project repository on GitHub (or join an existing team).
    - Point your external repo URL back to PRODIGY's showcase registry by submitting an issue or pull request updating `data/projects.json`.
@@ -42,7 +42,7 @@ If you are a Community User, Student, Faculty Lead, Startup Founder, Mentor, or 
 ### 🏛️ 3. Institutional Hubs (Universities, Colleges & R&D Labs)
 1. **Register Hub**: Register your institution via the Google Form.
 2. **Adopt Srujana Pathway**: Integrate the 4 Developmental Stages ([references/srujana-pathway.md](../references/srujana-pathway.md)) into capstone courses or student clubs.
-3. **Track Rankings**: Compete on the live global [Leaderboard Showcase](https://sanchitnis.github.io/prodigy/#leaderboard).
+3. **Track Rankings**: Compete on the live global [Leaderboard Showcase](https://bossofai.org#leaderboard).
 
 ### 🛠️ 4. Support Experts & Partners (IP Attorneys, Infra Providers, VCs)
 1. **Register**: Complete registration as a *Support Expert / Partner*.
@@ -52,7 +52,7 @@ If you are a Community User, Student, Faculty Lead, Startup Founder, Mentor, or 
 
 ## 🔗 Key Documentation Index
 
-- 🌐 [Live Web Portal](https://sanchitnis.github.io/prodigy/)
+- 🌐 [Live Web Portal](https://bossofai.org)
 - 📄 [Executive Concept Note](../strategy/concept-note.md)
 - 🎯 [Strategy & Global Learnings](../strategy/strategy_and_learnings.md)
 - 📌 [Srujana Pathway Reference](../references/srujana-pathway.md)

@@ -1,16 +1,16 @@
-# Project PRODIGY: 1-Page Overview
+# Boss of AI: 1-Page Overview (bossofai.org)
 
-**A community venture studio where students build real solutions to real problems, using AI as their superpower.**
+**A community venture studio and cognitive Brain GYM where students, educators, and leaders build real solutions to real problems, leading as the authoritative Boss of AI.**
 
 ---
 
 ## 🚨 The Problem
 Traditional entry-level software and task-based jobs are vanishing as AI automates routine work. Students are graduating with theoretical knowledge and generic resumes, completely unprepared for an AI-first industry. Meanwhile, universities are struggling to update curricula, and tech leaders waste time interviewing candidates with no real-world problem-solving skills.
 
-## 💡 The Solution: Project PRODIGY
-PRODIGY (**P**ipeline for **R**esearch **O**riented **D**evelopment with **I**ntelligence of **G**lobal **Y**outh) is an open, collaborative ecosystem. We pair ambitious students with industry mentors to build real solutions (in healthcare, agriculture, climate, etc.) using frontier AI tools. 
+## 💡 The Solution: Boss of AI
+**Boss of AI** (bossofai.org) is an open, collaborative ecosystem. We pair ambitious students with industry mentors to build real solutions (in healthcare, agriculture, climate, education, etc.) using frontier AI tools and multi-agent orchestration. 
 
-PRODIGY itself is built and managed using **Agentic Graph Engineering**—the entire project functions as a deep collaboration between human experts and AI agents. The [PRODIGY GitHub repository](https://github.com/sanchitnis/prodigym) is a live case study of this architecture, where humans act as the Human Expert Orchestrator of AI Agents to plan, track, and execute complex workflows.
+Boss of AI itself is built and managed using **Agentic Graph Engineering**—the entire project functions as a deep collaboration between human experts and AI agents. The project repository is a live case study of this architecture, where humans act as the Human Expert Orchestrator of AI Agents to plan, track, and execute complex workflows.
 
 Students build a portfolio that gets them hired. Mentors get access to top talent. Society gets solutions to hard problems.
 

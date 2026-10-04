@@ -1,14 +1,15 @@
-# PROdiGYM - Readiness for Abundant Intelligence
+# Boss of AI - Readiness for Abundant Intelligence
 
 > **Preparing Educational Institutions, the Academic Community, and Thereby Society for Abundant Intelligence**
+> **Website: [bossofai.org](https://bossofai.org)**
 
-PROdiGYM is an execution framework, strategic knowledge hub, and operational platform designed to prepare educational institutions, the academic community, and broader society for the era of **Abundant Intelligence**—where synthetic cognition, reasoning models, autonomous agents, and generative systems become zero-marginal-cost utilities.
+Boss of AI is an execution framework, strategic knowledge hub, and operational platform designed to prepare educational institutions, the academic community, and broader society for the era of **Abundant Intelligence**—where synthetic cognition, reasoning models, autonomous agents, and generative systems become zero-marginal-cost utilities.
 
 ---
 
 ## 🎯 Strategic Vision: The Cascading Transformation
 
-When artificial intelligence transitions from narrow task automation to ubiquitous, autonomous intelligence, societal readiness cannot be achieved through piecemeal training. PROdiGYM drives a **systemic, cascading transformation**:
+When artificial intelligence transitions from narrow task automation to ubiquitous, autonomous intelligence, societal readiness cannot be achieved through piecemeal training. Boss of AI drives a **systemic, cascading transformation**:
 
 ```mermaid
 flowchart TD
@@ -177,9 +178,9 @@ Complementing T.R.A.C.K., the **Srujana Pathway** enables learners of all backgr
 
 ---
 
-## 🌐 Web Platform & Interactive Portal
+## 🌐 Web Platform & Interactive Portal (`bossofai.org`)
 
-PROdiGYM includes an interactive web application showcasing the frameworks, pathways, and active projects:
+Boss of AI includes an interactive web application showcasing the frameworks, pathways, and active projects:
 
 - **React + Vite Web App (`web/`)**: Built with Tailwind CSS, Lucide icons, and Radix UI components, featuring interactive explorers for:
   - The **T.R.A.C.K. Framework** matrix and dynamic pillar deep dives.
@@ -198,10 +199,10 @@ PROdiGYM includes an interactive web application showcasing the frameworks, path
 
 ## 📂 Repository Architecture & Directory Structure
 
-PROdiGYM operates as a **Dual-Engine Hub** pairing an enduring strategic knowledge base with active AI-native deliverables:
+Boss of AI operates as a **Dual-Engine Hub** pairing an enduring strategic knowledge base with active AI-native deliverables:
 
 ```text
-prodigym/
+bossofai/
 ├── projects/            # Active AI-native projects (sequentially numbered 0 onwards)
 │   ├── _template-project/ # Base template with 0-6 lifecycle artifacts
 │   └── README.md        # Active project registry & workflow guide
@@ -226,7 +227,7 @@ prodigym/
 
 ## 📋 The 0-Indexed AI-Native Project Lifecycle (`projects/`)
 
-All collaborative projects in PROdiGYM are structured with **sequential numeric numbering (0 onwards)** so that files appear in strict chronological creation and concept dependency order across file browsers, terminals, and IDEs:
+All collaborative projects in Boss of AI are structured with **sequential numeric numbering (0 onwards)** so that files appear in strict chronological creation and concept dependency order across file browsers, terminals, and IDEs:
 
 ```text
 projects/<project-slug>/

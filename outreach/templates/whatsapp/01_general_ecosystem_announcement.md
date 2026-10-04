@@ -14,7 +14,7 @@ We invite you to explore **Project PRODIGY** (**P**ipeline for **R**esearch **O*
 - **Co-opetition Framework**: Cooperating on pre-competitive R&D & compute while competing in market venture hatching.
 
 🌐 **Explore Live Portal**: https://sanchitnis.github.io/prodigy/  
-📖 **Read Executive Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📖 **Read Executive Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **Our Specific Ask**:
 We are seeking specific suggestions, institutional hub partnerships, CTO problem statements, and expert mentors. Please review our concept note and share your feedback directly with Founder **Dr. Sanjay Chitnis** at `sanjay.chitnis@gmail.com`.

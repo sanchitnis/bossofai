@@ -70,10 +70,10 @@ export const BrainGymSection: React.FC = () => {
             <span>The Cognitive Brain GYM</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Why PROdi<span className="text-cyan-400">GYM</span>?
+            Why Boss of <span className="text-cyan-400">AI</span>?
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            In the AGI era, passive AI consumption causes cognitive atrophy. PROdiGYM is a high-intensity{" "}
+            In the AGI era, passive AI consumption causes cognitive atrophy. Boss of AI is a high-intensity{" "}
             <strong className="text-white">Brain GYM</strong> designed to build human-centric cognitive muscle and train you to be the authoritative{" "}
             <strong className="text-cyan-300">Human Expert Orchestrator of AI Agents</strong>.
           </p>

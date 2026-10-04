@@ -42,7 +42,7 @@ export const MemberPortal: React.FC = () => {
               Member Sign In Required
             </h2>
             <p className="text-xs text-slate-300 mb-6">
-              Sign in with your Google account to access your PROdiGYM Brain GYM stats, Srujana stage progress, and submitted probes.
+              Sign in with your Google account to access your Boss of AI Brain GYM stats, Srujana stage progress, and submitted probes.
             </p>
             <Button onClick={() => signInWithGoogle()} variant="gym" className="w-full gap-2">
               <LogIn className="h-4 w-4" />

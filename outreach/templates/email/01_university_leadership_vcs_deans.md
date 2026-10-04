@@ -24,7 +24,7 @@ Each participating institute establishes a standardized governance node:
 
 ### Key Links for Review
 - 🌐 **Live Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note & Governance Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 📄 **Executive Concept Note & Governance Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We warmly request a 20-minute exploratory meeting to discuss formalizing **[Institute Name]** as a **PRODIGY Institutional Nodal Hub** and nominating your institution's SPOCs. 

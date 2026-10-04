@@ -7,7 +7,7 @@
 
 ## Overview
 
-The **Cascading Theory of Transformation** is the foundational strategic logic of PROdiGYM. It articulates how societal readiness for the era of **Abundant Intelligence** cannot be achieved through isolated, one-off interventions. Instead, it requires a *structured, cascading institutional movement* that flows from the most foundational layer outward.
+The **Cascading Theory of Transformation** is the foundational strategic logic of **Boss of AI** (bossofai.org). It articulates how societal readiness for the era of **Abundant Intelligence** cannot be achieved through isolated, one-off interventions. Instead, it requires a *structured, cascading institutional movement* that flows from the most foundational layer outward.
 
 > **By transforming Educational Institutions and empowering the Academic Community, we systematically and inevitably prepare the broader Workforce and Society to thrive in an AI-abundant future.**
 

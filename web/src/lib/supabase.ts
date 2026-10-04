@@ -5,7 +5,7 @@ const supabaseUrl = (import.meta.env.VITE_SUPABASE_URL as string) || "https://pl
 const supabaseAnonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) || "placeholder-anon-key";
 
 // Singleton to prevent duplicate GoTrue clients during Vite HMR
-const GLOBAL_KEY = "__prodigym_supabase_client__";
+const GLOBAL_KEY = "__bossofai_supabase_client__";
 const g = globalThis as typeof globalThis & { [GLOBAL_KEY]?: SupabaseClient<Database> };
 
 if (!g[GLOBAL_KEY]) {

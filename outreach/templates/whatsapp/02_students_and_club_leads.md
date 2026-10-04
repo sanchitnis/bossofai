@@ -14,6 +14,6 @@ Are you relying on traditional coding classes while AI automates routine tech ta
 - Compete on global leaderboards and launch high-impact ventures.
 
 🌐 **Visit Web Portal**: https://sanchitnis.github.io/prodigy/  
-📄 **Read Executive Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📄 **Read Executive Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 💡 **Specific Ask**: Share this message with your student clubs, explore the project showcase, and submit your project ideas or mentor requests! Contact Dr. Sanjay Chitnis at `sanjay.chitnis@gmail.com`.

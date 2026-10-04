@@ -31,8 +31,8 @@ Each participating institute establishes a standardized governance node:
 - **4 Single Points of Contact (SPOCs)**: 2 Faculty SPOCs (Curriculum & Labs) + 2 Student SPOCs (Clubs & Sprints).
 
 ### Key Links for Review
-- 🌐 **Live Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note & Governance Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 🌐 **Live Web Portal**: https://bossofai.org
+- 📄 **Executive Concept Note & Governance Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We warmly request a 20-minute exploratory meeting to discuss formalizing **[Institute Name]** as a **PRODIGY Institutional Nodal Hub** and nominating your institution's SPOCs. 
@@ -44,7 +44,7 @@ Warm regards,
 **Dr. Sanjay Chitnis**  
 Founder & Lead Studio Orchestrator, Project PRODIGY  
 Email: sanjay.chitnis@gmail.com  
-Web: https://sanchitnis.github.io/prodigy/  
+Web: https://bossofai.org  
 
 ---
 
@@ -66,8 +66,8 @@ We invite **[Company Name]** to engage with **Project PRODIGY**—a high-perform
 3. **Outcome-Based Corporate Consulting (Stage 3 & 4)**: Commission specialized exploratory R&D probes remunerated on milestone delivery rather than monthly retainers.
 
 ### Key References
-- 🌐 **Live Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 🌐 **Live Web Portal**: https://bossofai.org
+- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We invite **[Company Name]** to submit 1–2 real-world problem statements and designate an Operational Technical SPOC to guide a dedicated PRODIGY project squad. 
@@ -100,8 +100,8 @@ PRODIGY addresses this imperative through a multi-stakeholder **Co-opetition Mod
 - **Diverse Leadership Pathways**: Preparing youth for leadership roles in Public Service, Sovereign Defense, Social Enterprise, and Deep-Tech Research.
 
 ### Key Links
-- 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 🌐 **Web Portal**: https://bossofai.org
+- 📄 **Executive Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 ### Our Specific Ask
 We request an opportunity to present a formal briefing to your office, seek your strategic guidance on policy alignment, and explore synergies with national R&D grant programs.

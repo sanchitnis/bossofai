@@ -1,13 +1,13 @@
-# 🚀 PROdiGYM — Vercel Deployment & Hosting Playbook
+# 🚀 Boss of AI — Vercel Deployment & Hosting Playbook
 
-This document provides a step-by-step guide for deploying the **PROdiGYM** web application on **Vercel** with full Supabase integration, Google OAuth, and custom domain setup.
+This document provides a step-by-step guide for deploying the **Boss of AI** web application on **Vercel** with full Supabase integration, Google OAuth, and custom domain setup (`bossofai.org`).
 
 ---
 
 ## 🏗️ Architecture Overview
 
 The repository is structured as a multi-facet meta-venture workspace:
-- **`web/`**: The modern React 18 + TypeScript + Vite + Tailwind CSS web application (the public face of PROdiGYM).
+- **`web/`**: The modern React 18 + TypeScript + Vite + Tailwind CSS web application (the public face of Boss of AI).
 - **`supabase/`**: PostgreSQL schema, RLS policies, and Google OAuth user trigger (`schema.sql`).
 - **`strategy/`**, **`planning/`**, **`wiki/`**, **`docs/`**, **`outreach/`**: Strategic charters, prompt playbooks, and venture frameworks.
 
@@ -20,7 +20,7 @@ The repository is structured as a multi-facet meta-venture workspace:
 1. **Log in to Vercel**: Navigate to [https://vercel.com](https://vercel.com) and log in with your GitHub account.
 2. **Import Repository**:
    - Click **"Add New..."** → **"Project"**.
-   - Select your GitHub repository: `sanchitnis/prodigy` (or `prodigym`).
+   - Select your GitHub repository: `sanchitnis/bossofai`.
 3. **Configure Project Settings**:
    - **Framework Preset**: `Vite`
    - **Root Directory**: Click *Edit* and set to `web` (or leave default if using root `vercel.json`).
@@ -32,7 +32,7 @@ The repository is structured as a multi-facet meta-venture workspace:
    - `VITE_SUPABASE_URL`: `https://<your-supabase-project-id>.supabase.co`
    - `VITE_SUPABASE_ANON_KEY`: `<your-supabase-anon-key>`
 5. **Deploy**:
-   - Click **"Deploy"**. Vercel will build and assign a production URL (e.g. `prodigym.vercel.app`).
+   - Click **"Deploy"**. Vercel will build and assign a preview/production URL (e.g. `bossofai.vercel.app`).
 
 ---
 
@@ -71,13 +71,16 @@ The repository is structured as a multi-facet meta-venture workspace:
 
 ---
 
-## 🌐 Custom Domain Setup
+## 🌐 Custom Domain Setup (`bossofai.org`)
 
 1. In the Vercel project dashboard, go to **Settings** → **Domains**.
-2. Enter your custom domain (e.g., `prodigym.org` or `prodigy.ai`).
-3. Add the suggested DNS CNAME / A records in your DNS provider:
-   - **Type**: `CNAME` | **Name**: `www` | **Value**: `cname.vercel-dns.com`
+2. Add your custom domains:
+   - Primary: `bossofai.org`
+   - Redirect / Alias: `www.bossofai.org` (redirects to `bossofai.org` or vice versa)
+3. Configure DNS records at your domain registrar (where `bossofai.org` was registered):
    - **Type**: `A` | **Name**: `@` | **Value**: `76.76.21.21`
+   - **Type**: `CNAME` | **Name**: `www` | **Value**: `cname.vercel-dns.com`
+4. Once DNS propagates (typically 1-5 minutes), Vercel will automatically provision SSL certificates for `bossofai.org`.
 
 ---
 

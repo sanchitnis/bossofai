@@ -14,6 +14,6 @@ With the rapid acceleration of AI, traditional rote instruction is no longer suf
 - **K**: Kaizen Quality Improvements
 
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/  
-📖 **Executive Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📖 **Executive Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **Specific Ask**: We invite you to join as a **Faculty Mentor (Tier B)** or serve as a **Faculty SPOC** for your institute. Share your feedback with Dr. Sanjay Chitnis (`sanjay.chitnis@gmail.com`).

@@ -33,8 +33,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       // Mock local fallback user if Supabase env vars not configured yet
       setUser({
         id: sess.user.id,
-        email: sess.user.email ?? "member@prodigym.org",
-        name: sess.user.user_metadata?.full_name ?? "PROdiGYM Member",
+        email: sess.user.email ?? "member@bossofai.org",
+        name: sess.user.user_metadata?.full_name ?? "Boss of AI Member",
         role: "student",
         institution: "Brain GYM Academic Node",
         avatar: sess.user.user_metadata?.avatar_url ?? null,
@@ -64,7 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           await supabase.from("users").insert({
             id: sess.user.id,
             email: sess.user.email ?? "",
-            name: sess.user.user_metadata?.full_name ?? sess.user.email ?? "PROdiGYM Member",
+            name: sess.user.user_metadata?.full_name ?? sess.user.email ?? "Boss of AI Member",
             role: "student",
             avatar: sess.user.user_metadata?.avatar_url ?? null,
             points: 50,
@@ -128,7 +128,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const mockSession = {
         user: {
           id: "demo-user-123",
-          email: "demo.student@prodigym.org",
+          email: "demo.student@bossofai.org",
           user_metadata: { full_name: "Demo Student (HEITL)", avatar_url: null },
         },
       } as unknown as Session;

@@ -55,7 +55,7 @@ We're looking for tech leaders to:
 Want to see what the students are building? [Link to Project Catalog]
 Read the 1-page overview: [Link to One-Pager]
 
-Want to see how we build? The PRODIGY ecosystem itself runs on **Agentic Graph Engineering**—a deep collaboration between human experts and AI agents. Check out our repository to see a live case study of this architecture in action: https://github.com/sanchitnis/prodigym
+Want to see how we build? The PRODIGY ecosystem itself runs on **Agentic Graph Engineering**—a deep collaboration between human experts and AI agents. Check out our repository to see a live case study of this architecture in action: https://github.com/sanchitnis/bossofai
 
 Let me know if you'd like to chat! -> sanjay.chitnis@gmail.com
 

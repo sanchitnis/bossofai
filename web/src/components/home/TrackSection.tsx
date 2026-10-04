@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import {
   GraduationCap,
   FlaskConical,
@@ -295,7 +295,7 @@ export const TrackSection: React.FC = () => {
               </p>
             </div>
             <a
-              href="https://github.com/sanchitnis/prodigym/blob/main/wiki/track_framework.md"
+              href="https://github.com/sanchitnis/bossofai/blob/main/wiki/track_framework.md"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-xs font-semibold text-cyan-300 transition-colors shrink-0"

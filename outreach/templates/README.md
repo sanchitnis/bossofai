@@ -28,6 +28,6 @@ This directory contains ready-to-use, standalone message templates organized by 
 ---
 
 ## 🔗 Global Links Included in All Templates
-- 🌐 **Live Web Portal**: https://sanchitnis.github.io/prodigy/
-- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+- 🌐 **Live Web Application**: https://bossofai.org
+- 📄 **Executive Concept Note (GitHub)**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 - 📋 **Google Form Registration / Direct Contact**: Initiative Lead **Dr. Sanjay Chitnis** (`sanjay.chitnis@gmail.com`)

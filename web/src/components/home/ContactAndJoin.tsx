@@ -54,7 +54,7 @@ export const ContactAndJoin: React.FC = () => {
       role: "hub",
       badge: "🏛️ INSTITUTIONAL HUBS",
       title: "Universities, Deans & R&D Labs",
-      desc: "Establish a PROdiGYM Institutional Hub Node, nominate 1 Executive Sponsor + 4 SPOCs, and embed R&D into STEAM curricula.",
+      desc: "Establish a Boss of AI Institutional Hub Node, nominate 1 Executive Sponsor + 4 SPOCs, and embed R&D into STEAM curricula.",
     },
     {
       id: "industry",
@@ -170,8 +170,8 @@ export const ContactAndJoin: React.FC = () => {
             </div>
             <p className="text-xs text-slate-400 mb-6 leading-relaxed">
               Have a question about joining cohorts, becoming an institutional hub, or sponsoring R&D probes? Send us a message directly or email us at{" "}
-              <a href="mailto:info.prodigym@gmail.com" className="text-cyan-400 hover:underline font-mono">
-                info.prodigym@gmail.com
+              <a href="mailto:info@bossofai.org" className="text-cyan-400 hover:underline font-mono">
+                info@bossofai.org
               </a>.
             </p>
 
@@ -180,7 +180,7 @@ export const ContactAndJoin: React.FC = () => {
                 <CheckCircle2 className="h-10 w-10 text-emerald-400 mx-auto" />
                 <h4 className="text-base font-bold text-white">Inquiry Received!</h4>
                 <p className="text-xs text-slate-300">
-                  Thank you for reaching out. Dr. Sanjay Chitnis and the PROdiGYM team will get back to you shortly.
+                  Thank you for reaching out. Dr. Sanjay Chitnis and the Boss of AI team will get back to you shortly.
                 </p>
                 <Button
                   size="sm"
@@ -264,7 +264,7 @@ export const ContactAndJoin: React.FC = () => {
                   disabled={isSubmitting}
                 >
                   <Send className="h-4 w-4" />
-                  <span>{isSubmitting ? "Sending..." : "Submit Inquiry to PROdiGYM"}</span>
+                  <span>{isSubmitting ? "Sending..." : "Submit Inquiry to Boss of AI"}</span>
                 </Button>
               </form>
             )}
@@ -293,7 +293,7 @@ export const ContactAndJoin: React.FC = () => {
               </a>
               <div className="mt-3 text-[11px] text-slate-400 space-y-1">
                 <div>Directly overseen by <strong className="text-slate-200">Dr. Sanjay Chitnis</strong> (<code>sanjay.chitnis@gmail.com</code>).</div>
-                <div>General & ecosystem queries: <a href="mailto:info.prodigym@gmail.com" className="text-cyan-400 hover:underline font-mono">info.prodigym@gmail.com</a></div>
+                <div>General & ecosystem queries: <a href="mailto:info@bossofai.org" className="text-cyan-400 hover:underline font-mono">info@bossofai.org</a></div>
               </div>
             </div>
 

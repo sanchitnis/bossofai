@@ -119,7 +119,7 @@ export const CascadingTheory: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold text-indigo-300 backdrop-blur-md mb-6">
             <Layers className="h-3.5 w-3.5 text-indigo-400" />
-            <span>Strategic Foundation of PROdiGYM</span>
+            <span>Strategic Foundation of Boss of AI</span>
           </div>
           <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1] mb-6">
             The Cascading{" "}
@@ -141,7 +141,7 @@ export const CascadingTheory: React.FC = () => {
               </Button>
             </Link>
             <a
-              href="https://github.com/sanchitnis/prodigym/blob/main/wiki/cascading_theory_of_transformation.md"
+              href="https://github.com/sanchitnis/bossofai/blob/main/wiki/cascading_theory_of_transformation.md"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -379,7 +379,7 @@ export const CascadingTheory: React.FC = () => {
               <ArrowRight className="h-4 w-4 text-purple-400 mt-3" />
             </Link>
             <a
-              href="https://github.com/sanchitnis/prodigym/blob/main/wiki/cascading_theory_of_transformation.md"
+              href="https://github.com/sanchitnis/bossofai/blob/main/wiki/cascading_theory_of_transformation.md"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl border border-cyan-500/30 bg-cyan-950/20 p-5 hover:bg-cyan-950/40 transition-colors group"

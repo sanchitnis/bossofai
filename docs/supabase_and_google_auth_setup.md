@@ -1,13 +1,13 @@
-# ⚡ Supabase & Google Auth Setup Guide for PROdiGYM
+# ⚡ Supabase & Google Auth Setup Guide for Boss of AI
 
-This guide details how to configure your **Supabase** backend and enable **Google OAuth** authentication for the PROdiGYM web application.
+This guide details how to configure your **Supabase** backend and enable **Google OAuth** authentication for the **Boss of AI** (bossofai.org) web application.
 
 ---
 
 ## 1. Create Supabase Project
 
 1. Go to [https://supabase.com](https://supabase.com) and create an account / log in.
-2. Click **"New Project"**, name it `prodigym-db`, choose a secure database password and region (e.g. `ap-south-1` for India / Singapore).
+2. Click **"New Project"**, name it `bossofai-db`, choose a secure database password and region (e.g. `ap-south-1` for India / Singapore).
 3. Once provisioned, navigate to **Project Settings** → **API**:
    - Copy **Project URL** (e.g. `https://xyzcompany.supabase.co`).
    - Copy **anon / public key**.
@@ -34,15 +34,15 @@ This guide details how to configure your **Supabase** backend and enable **Googl
 ## 3. Configure Google OAuth Credentials
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project named **PROdiGYM Auth**.
+2. Create a new project named **Boss of AI Auth**.
 3. Navigate to **APIs & Services** → **OAuth consent screen**:
    - User Type: **External**
-   - App name: **PROdiGYM**
+   - App name: **Boss of AI**
    - Support email: `sanjay.chitnis@gmail.com`
-   - Authorized domains: `supabase.co` and `vercel.app`
+   - Authorized domains: `supabase.co`, `vercel.app`, and `bossofai.org`
 4. Navigate to **Credentials** → **Create Credentials** → **OAuth Client ID**:
    - Application type: **Web application**
-   - Name: **PROdiGYM Web Client**
+   - Name: **Boss of AI Web Client**
    - **Authorized redirect URIs**:
      - Go to Supabase Dashboard → **Authentication** → **Providers** → **Google**.
      - Copy the **Callback URL (for OAuth)** (e.g. `https://<project-ref>.supabase.co/auth/v1/callback`).
@@ -57,8 +57,8 @@ This guide details how to configure your **Supabase** backend and enable **Googl
 2. Toggle Google to **Enabled**.
 3. Paste the **Client ID** and **Client Secret**.
 4. In **Authentication** → **URL Configuration**:
-   - **Site URL**: `https://<your-vercel-app>.vercel.app` (or `http://localhost:8080` during local development).
-   - **Redirect URLs**: Add `https://<your-vercel-app>.vercel.app/auth/callback` and `http://localhost:8080/auth/callback`.
+   - **Site URL**: `https://bossofai.org` (or `https://bossofai.vercel.app` / `http://localhost:8080` during development).
+   - **Redirect URLs**: Add `https://bossofai.org/auth/callback`, `https://bossofai.vercel.app/auth/callback`, and `http://localhost:8080/auth/callback`.
 5. Click **Save**.
 
 ---

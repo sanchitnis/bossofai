@@ -30,12 +30,11 @@ export const Hero: React.FC = () => {
 
         {/* Main Title */}
         <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1] mb-6">
-          PROJECT{" "}
           <span className="bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent">
-            PROdi
+            BOSS OF{" "}
           </span>
           <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent underline decoration-cyan-400/40 decoration-4 underline-offset-8">
-            GYM
+            AI
           </span>
         </h1>
 
@@ -79,7 +78,7 @@ export const Hero: React.FC = () => {
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <a
-                href="https://github.com/sanchitnis/prodigym/blob/main/wiki/cascading_theory_of_transformation.md"
+                href="https://github.com/sanchitnis/bossofai/blob/main/wiki/cascading_theory_of_transformation.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 transition-colors"
@@ -108,7 +107,7 @@ export const Hero: React.FC = () => {
           </a>
 
           <a
-            href="https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md"
+            href="https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -121,10 +120,10 @@ export const Hero: React.FC = () => {
         {/* Founder's Vision Callout */}
         <div className="max-w-3xl mx-auto rounded-xl border border-white/10 bg-white/[0.02] p-6 text-left backdrop-blur-md">
           <div className="text-xs uppercase tracking-widest font-bold text-cyan-400 mb-2">
-            The "Why" Behind PROdiGYM
+            The "Why" Behind Boss of AI
           </div>
           <p className="text-sm italic text-slate-300 leading-relaxed">
-            “My journey with AI started during my M.Tech at IIT Kanpur and PhD at IISc, eventually leading me through multinational GCCs like Motorola and LG. I saw how the world's best tech companies operate. I returned to academics because I realized our future generation has immense potential but lacks the right runway. PROdiGYM is my way of being an enabler—a catalyst to help students realize their highest aspirations in a rapidly changing world.”
+            “My journey with AI started during my M.Tech at IIT Kanpur and PhD at IISc, eventually leading me through multinational GCCs like Motorola and LG. I saw how the world's best tech companies operate. I returned to academics because I realized our future generation has immense potential but lacks the right runway. Boss of AI is my way of being an enabler—a catalyst to help students realize their highest aspirations in a rapidly changing world.”
           </p>
           <div className="mt-3 text-right text-xs font-medium text-slate-400">
             — <strong className="text-white">Dr. Sanjay Chitnis</strong>, Founder & Lead Studio Orchestrator{" "}

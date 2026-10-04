@@ -23,7 +23,7 @@ Today, we are thrilled to introduce **Project PRODIGY** (**P**ipeline for **R**e
 4. **Diverse Leadership Pathways**: Preparing graduates for high-impact leadership roles across Public Service & Governance (DPI), Sovereign Defense (DefenseTech/SpaceTech), Social Enterprises, Academic R&D, and Commercial Startups.
 
 🌐 **Explore Live Portal**: https://sanchitnis.github.io/prodigy/  
-📄 **Read Executive Concept Note on GitHub**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📄 **Read Executive Concept Note on GitHub**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **OUR SPECIFIC ASK FOR THE COMMUNITY**:
 We are actively building our global ecosystem and seeking your specific suggestions, advice, and support:
@@ -55,7 +55,7 @@ In **Project PRODIGY**, we re-define **STEAM** as a 5-part interdisciplinary spe
 
 By moving away from siloed lectures and organizing learning around real-world **Role-Based Projects** (Student Sprints & Faculty TRACK Projects).
 
-🌐 **Read Full Framework in Concept Note**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md  
+🌐 **Read Full Framework in Concept Note**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md  
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/
 
 🤝 **Our Ask**: Which interdisciplinary area do you believe is most critical for future leaders? Leave a comment below!
@@ -81,7 +81,7 @@ In the AI era, this model is broken.
 **How are we preparing our future leaders to deliver enterprise-grade solutions before graduation?**
 
 🌐 **Check out Live Projects Showcase**: https://sanchitnis.github.io/prodigy/#projects  
-📄 **Read Executive Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md
+📄 **Read Executive Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md
 
 🤝 **Call to CTOs & R&D VPs**: If your team has exploratory R&D projects or problem statements ready for dedicated student/faculty squads, connect with Founder **Dr. Sanjay Chitnis** (`sanjay.chitnis@gmail.com`) to pilot a PRODIGY squad.
 
@@ -107,7 +107,7 @@ To support global youth through the **Srujana 4-Stage Pathway**, Project PRODIGY
 **How are you contributing to preparing our future citizens and leaders?**
 
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/  
-📖 **Governance Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
+📖 **Governance Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
 
 🤝 **Specific Ask**: If you are passionate about mentoring young talent and reviewing deep-tech probes, join our mentor network! Register via Google Form or email Dr. Sanjay Chitnis at `sanjay.chitnis@gmail.com`.
 

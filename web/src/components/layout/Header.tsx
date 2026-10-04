@@ -42,21 +42,21 @@ export const Header: React.FC = () => {
     { label: "Srujana Pathway", href: "/#pathway", icon: Compass },
     { label: "Solutions & IP", href: "/#solutions", icon: Sparkles },
     { label: "Leaderboard", href: "/#leaderboard", icon: Trophy },
-    { label: "Wiki", href: "https://github.com/sanchitnis/prodigym/blob/main/wiki/index.md", icon: BookOpen, external: true },
+    { label: "Wiki", href: "https://github.com/sanchitnis/bossofai/blob/main/wiki/index.md", icon: BookOpen, external: true },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-all">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2.5 group">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-500 shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform">
-            <span className="font-heading font-black text-white text-base">P</span>
+            <span className="font-heading font-black text-white text-base">B</span>
           </div>
-          <div className="flex items-baseline">
-            <span className="font-heading text-xl font-bold tracking-tight text-white">PROdi</span>
+          <div className="flex items-baseline gap-1">
+            <span className="font-heading text-xl font-bold tracking-tight text-white">Boss of</span>
             <span className="font-heading text-xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent underline decoration-cyan-400/50 decoration-2 underline-offset-4">
-              GYM
+              AI
             </span>
           </div>
         </Link>
@@ -98,7 +98,7 @@ export const Header: React.FC = () => {
         {/* Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://github.com/sanchitnis/prodigym"
+            href="https://github.com/sanchitnis/bossofai"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/10 transition-colors"
@@ -207,7 +207,7 @@ export const Header: React.FC = () => {
           ))}
           <div className="pt-2 border-t border-white/10 flex gap-2">
             <a
-              href="https://github.com/sanchitnis/prodigym"
+              href="https://github.com/sanchitnis/bossofai"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center py-2 bg-white/5 rounded-lg text-xs text-slate-300 border border-white/10"

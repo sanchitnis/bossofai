@@ -14,7 +14,7 @@ To support global youth through the **Srujana 4-Stage Pathway**, Project PRODIGY
 **How are you contributing to preparing our future citizens and leaders?**
 
 🌐 **Web Portal**: https://sanchitnis.github.io/prodigy/  
-📖 **Governance Charter**: https://github.com/sanchitnis/prodigym/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
+📖 **Governance Charter**: https://github.com/sanchitnis/bossofai/blob/main/strategy/concept-note.md#9-multi-tier-ecosystem-governance--team-architecture
 
 🤝 **Specific Ask**: If you are passionate about mentoring young talent and reviewing deep-tech probes, join our mentor network! Register via Google Form or email Dr. Sanjay Chitnis at `sanjay.chitnis@gmail.com`.
 
