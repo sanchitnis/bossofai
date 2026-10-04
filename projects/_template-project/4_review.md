@@ -1,4 +1,4 @@
-﻿---
+---
 project: _template-project
 stage: 4-test
 artifact: review
@@ -11,12 +11,12 @@ tags: [ai-native, review, stage-4]
 
 # Review Ledger: [Template Project Title]
 
-## ðŸ¤– Layer 1: Agent Automated Review Check
+## 🤖 Layer 1: Agent Automated Review Check
 - [x] Grounding check: all factual numbers cross-checked.
 - [x] Spec alignment: all 5 outline sections present.
 - [x] Scope boundary: non-goals respected.
 
-## ðŸ‘¤ Layer 2: Human Domain Expert Judgment
+## 👤 Layer 2: Human Domain Expert Judgment
 - Verified strategic framing and domain validity.
 - Approved promotion to `5_final.md`.
 
