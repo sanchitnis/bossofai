@@ -1,0 +1,5 @@
+Type,Name,Value,TTL
+A,@,76.76.21.21,3600
+CNAME,www,cname.vercel-dns.com,3600
+CAA,@,0 issue "letsencrypt.org",3600
+CAA,@,0 issue "pki.goog",3600
