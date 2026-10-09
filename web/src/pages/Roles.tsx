@@ -60,6 +60,12 @@ export const Students: React.FC = () => (
           A public portfolio, open-source contributions, and (later) a leaderboard ranked by peer review and an expert-team
           viva. Not clicks. Not quiz scores. See <a href="/leaderboard">how it will work</a>.
         </p>
+        <h3>Start learning today</h3>
+        <p>
+          Our open-source <a href="/learn">AI engineer study guide</a> has two tracks (AI-native builder and deep technical
+          AI engineer) and a map from these five skills to the sections worth reading first. Prefer doing to reading? Try the{" "}
+          <a href="/quests">13 quests</a>, and browse the <a href="/toolkit">toolkit</a> of prompts, assistants and courses.
+        </p>
         <p>
           <sup>[1]</sup> As summarised by{" "}
           <a href="https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering" target="_blank" rel="noopener noreferrer">

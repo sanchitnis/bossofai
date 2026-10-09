@@ -7,6 +7,9 @@ import { DepthProvider } from "@/components/site/Depth";
 import { Index } from "@/pages/Index";
 import { Students, Faculty, Institutions, Practitioners, Teachers } from "@/pages/Roles";
 import { Ideas, Framework, Pedagogy, Safety, Evidence, Leaderboard } from "@/pages/Info";
+import { Learn } from "@/pages/Learn";
+import { Quests, QuestDetail } from "@/pages/Quests";
+import { Toolkit } from "@/pages/Toolkit";
 import { Join } from "@/pages/Join";
 import { AuthCallback } from "@/pages/AuthCallback";
 import { MemberPortal } from "@/pages/MemberPortal";
@@ -25,6 +28,10 @@ export function App() {
               <Route path="/institutions" element={<Institutions />} />
               <Route path="/practitioners" element={<Practitioners />} />
               <Route path="/teachers" element={<Teachers />} />
+              <Route path="/learn" element={<Learn />} />
+              <Route path="/toolkit" element={<Toolkit />} />
+              <Route path="/quests" element={<Quests />} />
+              <Route path="/quests/:id" element={<QuestDetail />} />
               <Route path="/ideas" element={<Ideas />} />
               <Route path="/framework" element={<Framework />} />
               <Route path="/cascading-theory" element={<Navigate to="/framework" replace />} />

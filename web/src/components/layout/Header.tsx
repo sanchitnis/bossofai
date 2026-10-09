@@ -24,6 +24,9 @@ const roleLinks = [
 ];
 
 const moreLinks = [
+  { label: "Quests", to: "/quests" },
+  { label: "Toolkit", to: "/toolkit" },
+  { label: "Study guide", to: "/learn" },
   { label: "Open ideas", to: "/ideas" },
   { label: "T.R.A.C.K. framework", to: "/framework" },
   { label: "How we teach", to: "/pedagogy" },

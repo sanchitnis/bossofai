@@ -1,0 +1,200 @@
+[
+    {
+        "id": "hubspot-marketing-2026",
+        "title": "HubSpot State of Marketing 2026",
+        "source": "HubSpot",
+        "url": "https://hubspot-state-of-marketing-2026.replit.app/",
+        "description": "Comprehensive look at the shift toward AI-driven marketing strategies, automation, and the evolving role of marketing professionals.",
+        "category": "Consulting",
+        "tags": ["Marketing", "Business", "Automation"],
+        "year": "2026",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "wef-jobs-2025",
+        "title": "Future of Jobs Report 2025",
+        "source": "World Economic Forum",
+        "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+        "description": "Based on surveys of over 1,000 companies, this report projects job disruption, displacement, and the creation of millions of new roles by 2030.",
+        "category": "Research",
+        "tags": ["Jobs", "Economy", "Labour Market"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "wef-four-futures-2030",
+        "title": "Four Futures for Jobs in the New Economy: AI and Talent in 2030",
+        "source": "World Economic Forum",
+        "url": "https://reports.weforum.org/docs/WEF_Four_Futures_for_Jobs_in_the_New_Economy_AI_and_Talent_in_2030_2025.pdf",
+        "description": "Maps four scenarios for the future of work based on the pace of AI advancement and availability of AI-ready skillsets.",
+        "category": "Research",
+        "tags": ["Jobs", "Talent", "Scenario Planning"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "imf-global-economy-2024",
+        "title": "AI Will Transform the Global Economy",
+        "source": "International Monetary Fund",
+        "url": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+        "description": "An assessment of AI's exposure across 40% of jobs globally, rising to 60% in high-income countries.",
+        "category": "Research",
+        "tags": ["Macro", "Economy", "Policy"],
+        "year": "2024",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "goldman-sachs-future-work",
+        "title": "Generative AI & the Future of Work",
+        "source": "Goldman Sachs Research",
+        "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+        "description": "Goldman Sachs estimates that approximately 300 million full-time jobs could be affected by generative AI, while potentially raising global GDP by 7%.",
+        "category": "Consulting",
+        "tags": ["Business", "Work", "GDP"],
+        "year": "2024",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "stanford-hai-index-2025",
+        "title": "AI Index Report 2025",
+        "source": "Stanford Institute for Human-Centered AI",
+        "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+        "description": "The eighth edition tracking AI across research, investment, adoption, policy, and societal impact with unprecedented depth.",
+        "category": "Research",
+        "tags": ["Research", "Investment", "Policy", "SOCIETY"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "mckinsey-state-ai-2025",
+        "title": "The State of AI 2025 (November Edition)",
+        "source": "McKinsey & Company / QuantumBlack",
+        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+        "description": "Findings from nearly 2,000 participants across 105 nations on regular AI use and the scaling of AI programs.",
+        "category": "Consulting",
+        "tags": ["Business", "Innovation", "Adoption"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "mckinsey-superagency-2025",
+        "title": "Superagency in the Workplace",
+        "source": "McKinsey & Company",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work",
+        "description": "Baseline economic sizing for generative AI estimating $2.6–$4.4 trillion in annual value potential across 63 use cases.",
+        "category": "Consulting",
+        "tags": ["Workforce", "Work", "Productivity"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "anthropic-economic-index",
+        "title": "Economic Index Reports (2025–2026)",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/research/economic-index-primitives",
+        "description": "Studies on 'economic primitives' to understand how Claude is actually used across 3,000 unique work tasks.",
+        "category": "Research",
+        "tags": ["Jobs", "Tasks", "Research"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "educause-ai-higher-ed-2026",
+        "title": "Impact of AI on Work in Higher Education",
+        "source": "EDUCAUSE",
+        "url": "https://www.educause.edu/research/2026/the-impact-of-ai-on-work-in-higher-education",
+        "description": "A look at faculty enthusiasm and institutional strategies for upskilling in the face of AI transformation.",
+        "category": "Teaching",
+        "tags": ["Education", "Higher Ed", "Upskilling"],
+        "year": "2026",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "microsoft-ai-education-2025",
+        "title": "AI in Education Report 2025",
+        "source": "Microsoft",
+        "url": "https://www.microsoft.com/en-us/education/blog",
+        "description": "Highlights AI fluency as a baseline requirement and upskilling as a top leadership strategy.",
+        "category": "Teaching",
+        "tags": ["Education", "Skills", "Fluency"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "cengage-genai-education-2025",
+        "title": "State and Future of GenAI in Education Report",
+        "source": "Cengage Group",
+        "url": "https://www.cengagegroup.com/news/perspectives/2025/ais-impact-on-education-in-2025/",
+        "description": "Surveys students' AI knowledge vs instructors and the preparedness of academic programs.",
+        "category": "Teaching",
+        "tags": ["Education", "Student Voice", "Academic Readiness"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "coursera-global-skills-2026",
+        "title": "Global Skills Report (February 2026 Edition)",
+        "source": "Coursera",
+        "url": "https://www.coursera.org/skills-reports/global",
+        "description": "Data from 4,200 students and educators on AI adoption outpacing governance structures.",
+        "category": "Teaching",
+        "tags": ["Skills", "Global", "Education"],
+        "year": "2026",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "bright-horizons-outlook-2026",
+        "title": "2026 Workforce Outlook",
+        "source": "Bright Horizons / The Harris Poll",
+        "url": "https://investors.brighthorizons.com/news-releases/news-release-details/2026-workforce-outlook-employers-prioritize-ai-literacy-and",
+        "description": "Highlights the adoption gap where 42% of employees expect role changes but few feel prepared.",
+        "category": "Consulting",
+        "tags": ["Workforce", "Business", "Literacy"],
+        "year": "2026",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "linkedin-skills-advantage-2025",
+        "title": "AI Labour Market Update",
+        "source": "LinkedIn Economic Graph",
+        "url": "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/skills-advantage-report-2025.pdf",
+        "description": "Tracking the fastest-growing AI skills on global LinkedIn profiles, signaling rapid upskilling.",
+        "category": "Research",
+        "tags": ["Jobs", "Skills", "Labour Market"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "oecd-ai-capability-2025",
+        "title": "AI Capability Indicators",
+        "source": "OECD",
+        "url": "https://www.oecd.org/en/topics/ai-in-work-automation-and-labour-markets.html",
+        "description": "Foundational framework for understanding occupational risk through replication of skills by automation.",
+        "category": "Research",
+        "tags": ["Jobs", "Automation", "Policy"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "nasscom-future-work-india",
+        "title": "Future of Work & AI Reports",
+        "source": "NASSCOM",
+        "url": "https://nasscom.in/knowledge-center/publications",
+        "description": "The authoritative source for AI's impact on India's IT/tech workforce, critical for CS placement planning.",
+        "category": "Research",
+        "tags": ["India", "IT", "Jobs"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    },
+    {
+        "id": "qs-future-skills-2025",
+        "title": "QS World Future Skills Index 2025",
+        "source": "QS Quacquarelli Symonds",
+        "url": "https://www.qs.com/portfolio-items/the-qs-world-future-skills-index/",
+        "description": "Benchmarking student employability and institutional readiness for future skills with specific India data.",
+        "category": "Teaching",
+        "tags": ["Education", "Skills", "India"],
+        "year": "2025",
+        "contributor": "Sanjay Chitnis"
+    }
+]

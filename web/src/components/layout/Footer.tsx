@@ -16,6 +16,9 @@ const cols = [
   {
     title: "Learn more",
     links: [
+      ["Quests", "/quests"],
+      ["Toolkit", "/toolkit"],
+      ["Study guide", "/learn"],
       ["Open ideas", "/ideas"],
       ["T.R.A.C.K. framework", "/framework"],
       ["How we teach", "/pedagogy"],

@@ -8,7 +8,7 @@ import { Deep } from "@/components/site/Depth";
 import { PayForward, joinLink } from "@/components/site/RolePage";
 import { IDEAS, roleBySlug } from "@/content/roles";
 
-const InfoPage: React.FC<{
+export const InfoPage: React.FC<{
   eyebrow: string;
   title: React.ReactNode;
   intro: string;
@@ -29,7 +29,7 @@ const InfoPage: React.FC<{
   </Layout>
 );
 
-const Cards: React.FC<{ items: { t: string; d: string }[]; cols?: string }> = ({ items, cols = "md:grid-cols-3" }) => (
+export const Cards: React.FC<{ items: { t: string; d: string }[]; cols?: string }> = ({ items, cols = "md:grid-cols-3" }) => (
   <div className={`grid gap-5 ${cols}`}>
     {items.map((i) => (
       <article key={i.t} className="brut-sm rounded-xl p-5">
@@ -263,6 +263,9 @@ export const Evidence: React.FC = () => {
     { what: "Intent and positioning", stage: "Documented", note: "Written down in the project repository." },
     { what: "T.R.A.C.K. framework", stage: "Idea", note: "A proposal. Not yet tested in a pilot." },
     { what: "Srujana Pathway", stage: "Idea", note: "Stages defined. No cohort has completed it." },
+    { what: "AI engineer study guide", stage: "Available", note: "Open-source reading plan on GitHub. Not yet tested with learners." },
+    { what: "Student quests", stage: "Prototype", note: "13 self-paced quests, written but not yet tried by learners. Progress is saved in the browser only." },
+    { what: "Toolkit", stage: "Available", note: "Curated links to prompts, assistants, apps, courses and reports. Curated by people, not audited." },
     { what: "Student and faculty projects", stage: "None completed", note: "Open invitations only. None are built." },
     { what: "Leaderboard", stage: "Planned", note: "No rankings exist. See how it will work." },
     { what: "Outcomes, testimonials, partners", stage: "None yet", note: "We will list them here only when verified." },
