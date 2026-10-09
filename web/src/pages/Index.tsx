@@ -121,7 +121,7 @@ const HowWeLearn: React.FC = () => {
 
 const Roles: React.FC = () => (
   <section className="container mx-auto px-4 py-16 sm:px-6">
-    <p className="label-mono text-muted-foreground">Five roles, five promises</p>
+    <p className="label-mono text-muted-foreground">Six roles, six promises</p>
     <h2 className="mt-2 font-heading text-4xl font-extrabold tracking-tight sm:text-5xl">Find your orbit.</h2>
     <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {ROLES.map((r) => (

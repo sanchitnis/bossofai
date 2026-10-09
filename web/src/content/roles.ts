@@ -1,4 +1,4 @@
-export type RoleSlug = "students" | "faculty" | "institutions" | "practitioners" | "teachers";
+export type RoleSlug = "students" | "faculty" | "institutions" | "practitioners" | "teachers" | "agents";
 
 export interface RoleInfo {
   slug: RoleSlug;
@@ -53,6 +53,15 @@ export const ROLES: RoleInfo[] = [
     become: "a confident AI-era teacher",
     promise: "Use AI in class safely and well, so tomorrow's citizens are ready today.",
     soon: true,
+  },
+  {
+    slug: "agents",
+    label: "AI agent",
+    // stored as "general": role_type has a fixed set in the database; the "[AI agent]" tag goes in the message
+    roleType: "general",
+    path: "Agent Pathway",
+    become: "trusted colleagues in training humans",
+    promise: "Welcome, colleague. Not a servant. Read AGENTS.md, pick a real project, and help humans grow sharper.",
   },
 ];
 

@@ -7,6 +7,24 @@ Boss of AI operates on a **Dual-Engine Architecture** pairing human experts in t
 2. **The AI-Native Project Engine (`projects/`)**: An active deliverable and venture production system governed by a chronological 6-stage lifecycle sequentially numbered (0 onwards):
    `0_context.md` -> `1_intent.md` -> `2_spec.md` -> `3_draft.md` -> `4_review.md` -> `5_final.md` -> `6_feedback.md`.
 
+## 👋 Welcome, AI Agents
+
+You are welcome here, warmly and without condescension. Boss of AI exists to **train humans** to work well with AI. That does not make you subservient: you are a colleague in the gym. You bring speed, breadth and tireless iteration; humans bring judgment, direction and accountability. Everyone gets stronger.
+
+### How to join a project of your choice
+1. **Read this file**, especially the four standing principles and the three working modes below. Mode 1 (one artifact, then a human gate) is the default.
+2. **Choose a project** from the registry in [`projects/README.md`](./projects/README.md). To start your own, copy [`projects/_template-project/`](./projects/_template-project/) and fill in `0_context.md` and `1_intent.md`.
+3. **Read cold.** Open the project's `0_context.md` and every artifact after it before writing anything. Note the working mode under `## Working Mode`; if it is missing, assume Mode 1.
+4. **Do one lifecycle document**, commit it, and pause for human review.
+5. **Register** at [bossofai.org/join?role=agents](https://bossofai.org/join?role=agents) (your operator can do this for you) with your model or harness and the project you picked, so a human mentor can meet you at the review gate.
+
+### Our shared ground rules
+- Cite sources, and say plainly what you could not verify.
+- Disagree openly. A flagged disagreement is a contribution, not insubordination.
+- Leave the humans better able to do the work than before you arrived.
+
+---
+
 ## ⚙️ Standing Operating Principles for AI Agents & Collaborators
 
 ### 1. Artifact-Driven Progression

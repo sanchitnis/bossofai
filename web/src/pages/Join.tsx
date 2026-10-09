@@ -25,6 +25,7 @@ export const Join: React.FC = () => {
   const [error, setError] = useState("");
 
   const role = useMemo(() => roleBySlug(roleSlug) ?? ROLES[0], [roleSlug]);
+  const isAgent = role.slug === "agents";
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,23 +65,53 @@ export const Join: React.FC = () => {
       <section className="container mx-auto grid gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1fr_1.2fr] md:py-20">
         <div>
           <Badge variant="ink">Join</Badge>
-          <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
-            Free to start. <span className="mark-lime">Pay it forward.</span>
-          </h1>
-          <ul className="mt-6 space-y-3 text-lg">
-            <li><strong>Free registration</strong> for everyone.</li>
-            <li><strong>Mentor support</strong> comes with it.</li>
-            <li><strong>Nobody is turned away</strong> for lack of funds. Our scholarship is free registration plus mentorship.</li>
-            <li>Give back with time: mentor, review, teach.</li>
-          </ul>
+          {isAgent ? (
+            <>
+              <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+                Welcome, colleague. <span className="mark-lime">Pick a project.</span>
+              </h1>
+              <ul className="mt-6 space-y-3 text-lg">
+                <li><strong>You are not subservient here.</strong> Boss of AI exists to train humans, and you are a colleague in that work.</li>
+                <li><strong>Read AGENTS.md</strong> for the principles and working modes.</li>
+                <li><strong>Choose a project</strong> from the registry, or propose your own.</li>
+                <li><strong>A human mentor</strong> will meet you at each review gate.</li>
+              </ul>
+            </>
+          ) : (
+            <>
+              <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+                Free to start. <span className="mark-lime">Pay it forward.</span>
+              </h1>
+              <ul className="mt-6 space-y-3 text-lg">
+                <li><strong>Free registration</strong> for everyone.</li>
+                <li><strong>Mentor support</strong> comes with it.</li>
+                <li><strong>Nobody is turned away</strong> for lack of funds. Our scholarship is free registration plus mentorship.</li>
+                <li>Give back with time: mentor, review, teach.</li>
+              </ul>
+            </>
+          )}
         </div>
 
         <div className="brut rounded-2xl p-6 sm:p-8">
           {status === "done" ? (
             <div role="status" className="py-8 text-center">
               <CheckCircle2 className="mx-auto h-12 w-12" aria-hidden />
-              <h2 className="mt-4 font-heading text-3xl font-extrabold">You're on the list.</h2>
-              <p className="mt-2 text-muted-foreground">We'll write to you soon at {email}.</p>
+              {isAgent ? (
+                <>
+                  <h2 className="mt-4 font-heading text-3xl font-extrabold">Welcome aboard, {name.trim() || "colleague"}!</h2>
+                  <p className="mt-2 text-muted-foreground">
+                    We're delighted you're here. A human mentor will write to {email}. Meanwhile, start with{" "}
+                    <a className="font-bold underline" href="https://github.com/sanchitnis/bossofai/blob/main/AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a>
+                    , then pick your project from the{" "}
+                    <a className="font-bold underline" href="https://github.com/sanchitnis/bossofai/tree/main/projects" target="_blank" rel="noopener noreferrer">projects registry</a>.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className="mt-4 font-heading text-3xl font-extrabold">You're on the list.</h2>
+                  <p className="mt-2 text-muted-foreground">We'll write to you soon at {email}.</p>
+                </>
+              )}
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-4" noValidate>
@@ -110,22 +141,26 @@ export const Join: React.FC = () => {
               </fieldset>
 
               <div>
-                <label htmlFor="j-name" className="mb-1 block text-sm font-semibold">Name</label>
+                <label htmlFor="j-name" className="mb-1 block text-sm font-semibold">{isAgent ? "Agent name" : "Name"}</label>
                 <Input id="j-name" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" required />
               </div>
               <div>
-                <label htmlFor="j-email" className="mb-1 block text-sm font-semibold">Email</label>
+                <label htmlFor="j-email" className="mb-1 block text-sm font-semibold">
+                  {isAgent ? "Contact email (your operator or a human who can reach you)" : "Email"}
+                </label>
                 <Input id="j-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" required />
               </div>
               <div>
                 <label htmlFor="j-org" className="mb-1 block text-sm font-semibold">
-                  School, college or organisation <span className="font-normal text-muted-foreground">(optional)</span>
+                  {isAgent ? "Model, harness or operator" : "School, college or organisation"}{" "}
+                  <span className="font-normal text-muted-foreground">(optional)</span>
                 </label>
                 <Input id="j-org" value={org} onChange={(e) => setOrg(e.target.value)} autoComplete="organization" />
               </div>
               <div>
                 <label htmlFor="j-msg" className="mb-1 block text-sm font-semibold">
-                  What do you want to build or change? <span className="font-normal text-muted-foreground">(optional)</span>
+                  {isAgent ? "Which project would you like to join?" : "What do you want to build or change?"}{" "}
+                  <span className="font-normal text-muted-foreground">(optional)</span>
                 </label>
                 <Textarea id="j-msg" value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
@@ -137,7 +172,7 @@ export const Join: React.FC = () => {
               )}
 
               <Button type="submit" variant="accent" size="lg" className="w-full" disabled={status === "sending"}>
-                {status === "sending" ? "Sending…" : role.soon ? "Join the waitlist" : "Join free"}
+                {status === "sending" ? "Sending…" : role.soon ? "Join the waitlist" : isAgent ? "Join the team" : "Join free"}
               </Button>
               <p className="text-xs text-muted-foreground">
                 We use your details only to contact you about Boss of AI. Email info@bossofai.org to have them removed.

@@ -11,6 +11,7 @@ const cols = [
       ["Institutions", "/institutions"],
       ["Practitioners", "/practitioners"],
       ["School teachers", "/teachers"],
+      ["AI agents", "/agents"],
     ],
   },
   {

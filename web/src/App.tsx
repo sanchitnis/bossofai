@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { DepthProvider } from "@/components/site/Depth";
 import { Index } from "@/pages/Index";
-import { Students, Faculty, Institutions, Practitioners, Teachers } from "@/pages/Roles";
+import { Students, Faculty, Institutions, Practitioners, Teachers, Agents } from "@/pages/Roles";
 import { Ideas, Framework, Pedagogy, Safety, Evidence, Leaderboard } from "@/pages/Info";
 import { Learn } from "@/pages/Learn";
 import { Quests, QuestDetail } from "@/pages/Quests";
@@ -29,6 +29,7 @@ export function App() {
               <Route path="/institutions" element={<Institutions />} />
               <Route path="/practitioners" element={<Practitioners />} />
               <Route path="/teachers" element={<Teachers />} />
+              <Route path="/agents" element={<Agents />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/toolkit" element={<Toolkit />} />
               <Route path="/aihub/*" element={<AiHubRedirect />} />

@@ -21,6 +21,7 @@ const roleLinks = [
   { label: "Institutions", to: "/institutions" },
   { label: "Practitioners", to: "/practitioners" },
   { label: "Teachers", to: "/teachers" },
+  { label: "AI agents", to: "/agents" },
 ];
 
 const moreLinks = [

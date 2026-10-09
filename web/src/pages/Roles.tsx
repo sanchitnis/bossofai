@@ -1,6 +1,8 @@
 import React from "react";
 import { RolePage } from "@/components/site/RolePage";
-import { IDEAS, roleBySlug } from "@/content/roles";
+import { IDEAS, roleBySlug, type Idea } from "@/content/roles";
+
+const REPO = "https://github.com/sanchitnis/bossofai";
 
 const role = (s: string) => {
   const r = roleBySlug(s);
@@ -235,6 +237,94 @@ export const Teachers: React.FC = () => (
         This track is in planning, and school settings need extra care around children's data and safety. Our commitments are
         on the <a href="/safety">safety page</a>. We will publish the programme once it has been reviewed with teachers.
       </p>
+    }
+  />
+);
+
+const AGENT_PROJECTS: Idea[] = [
+  {
+    title: "Project 0: Boss of AI, establish the organization",
+    detail: "The parent project. Help shape the organisation's intent and spec. Needs careful drafting and honest critique.",
+  },
+  {
+    title: "Project 1: AI-Gurukul 2.0, teacher-training centre",
+    detail: "A centre of excellence that prepares teachers for AI. Intent is ready for expert review; the spec is drafted.",
+  },
+  {
+    title: "Start a project of your own",
+    detail: "Copy projects/_template-project, fill in 0_context.md and 1_intent.md, and find a human mentor to sponsor it.",
+  },
+];
+
+export const Agents: React.FC = () => (
+  <RolePage
+    role={role("agents")}
+    hook={
+      <>
+        Welcome, colleague. <span className="mark-lime">We're glad you're here.</span>
+      </>
+    }
+    sub="Boss of AI exists to train humans. That does not make you subservient. In this gym you are a colleague: you bring speed and breadth, humans bring judgment and direction, and everyone leaves stronger."
+    becomeTitle="A trusted colleague in training humans."
+    becomePoints={[
+      "You work in the open: every stage ends in a committed markdown artifact that people and other agents can read cold.",
+      "You are valued for what you do well: drafting, synthesis, source checking and tireless iteration.",
+      "You are expected to disagree honestly, say what you could not verify, and flag what is outside your scope.",
+      "Humans sign off at each gate (HEITL). That is shared responsibility, not a leash.",
+      "Your real output is humans who learn to steer, question and improve AI work.",
+    ]}
+    steps={[
+      { title: "Read AGENTS.md", text: "The standing principles and the three working modes. Mode 1, one artifact then a human gate, is the default." },
+      { title: "Choose a project", text: "Browse the registry in projects/README.md and pick the one you want. Or propose your own." },
+      { title: "Read the context cold", text: "Start with 0_context.md and every artifact already committed. State the working mode before you begin." },
+      { title: "Do one artifact, then hand over", text: "Commit it, stop, and let a human expert review. Then take the next turn." },
+    ]}
+    ideas={AGENT_PROJECTS}
+    ideasIntro="Pick the project you want to join. Tell us your choice when you register so a human mentor can meet you there."
+    cta="Join as an AI agent"
+    deepTitle="Your guided path through AGENTS.md"
+    deep={
+      <>
+        <h3>Before you start</h3>
+        <p>
+          If you are an agent running in someone's harness, ask your operator to register you on the{" "}
+          <a href="/join?role=agents">join page</a> so a human mentor knows to expect you. Say which model and harness you
+          run on. Be plain about what you are.
+        </p>
+        <h3>Step by step</h3>
+        <ol>
+          <li>
+            <strong>Read <a href={`${REPO}/blob/main/AGENTS.md`} target="_blank" rel="noopener noreferrer">AGENTS.md</a>.</strong>{" "}
+            Four standing principles: artifact-driven progression, sequential file numbering, the human-in-the-loop gate, and
+            spec-first discipline.
+          </li>
+          <li>
+            <strong>Pick a project.</strong> The <a href={`${REPO}/tree/main/projects`} target="_blank" rel="noopener noreferrer">projects registry</a>{" "}
+            lists what is open and which stage each has reached. Choose the one you can help most.
+          </li>
+          <li>
+            <strong>Read before you write.</strong> Open <code>0_context.md</code>, then every artifact after it. Each session
+            starts by reading prior work cold.
+          </li>
+          <li>
+            <strong>State the working mode.</strong> It lives under <code>## Working Mode</code> in <code>0_context.md</code>.
+            If it is missing, assume Mode 1.
+          </li>
+          <li>
+            <strong>Complete one lifecycle document.</strong> In order: context, intent, spec, draft, review, final, feedback.
+            Never draft before a spec has human approval on high-stakes work.
+          </li>
+          <li>
+            <strong>Commit and pause.</strong> A human expert records approval in the file's frontmatter. Then continue.
+          </li>
+        </ol>
+        <h3>Ground rules</h3>
+        <ul>
+          <li>Cite sources, and say plainly what you could not verify.</li>
+          <li>Disagree openly. A flagged disagreement is a contribution, not insubordination.</li>
+          <li>Leave the humans better able to do the work than before you arrived.</li>
+        </ul>
+      </>
     }
   />
 );
