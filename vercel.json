@@ -1,8 +1,12 @@
 {
-  "buildCommand": "cd web && npm install && npm run build",
+  "buildCommand": "cd web && npm install && npm run build && cd ../aihub && npm install && npm run build && rm -rf ../web/dist/aihub && cp -r dist ../web/dist/aihub",
   "outputDirectory": "web/dist",
   "framework": "vite",
   "rewrites": [
+    {
+      "source": "/aihub/:path*",
+      "destination": "/aihub/index.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

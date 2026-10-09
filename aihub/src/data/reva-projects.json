@@ -1,0 +1,81 @@
+[
+    {
+        "id": "smart-agri-crop-yield",
+        "title": "AI-Driven Crop Yield Prediction",
+        "description": "A deep learning approach to predict crop yields based on historical weather patterns, soil quality, and satellite imagery.",
+        "faculty": [
+            "Dr. Ramesh Babu",
+            "Prof. Sneha K."
+        ],
+        "department": "Computer Science & Engineering",
+        "year": 2024,
+        "track": "Research",
+        "domain": "Agriculture",
+        "tags": [
+            "Deep Learning",
+            "Remote Sensing",
+            "Predictive Analytics"
+        ],
+        "githubUrl": "https://github.com/reva-ai/crop-yield-prediction",
+        "demoUrl": "https://agri-ai-demo.reva.edu.in",
+        "paperUrl": "https://ieeexplore.ieee.org/document/1234567",
+        "status": "completed"
+    },
+    {
+        "id": "reva-heartbreak-navigator-backend",
+        "title": "REVA Heartbreak Navigator Backend",
+        "description": "Development of the RAG pipeline and fine-tuning of the emotional support agent for student wellbeing.",
+        "faculty": [
+            "Dr. Sanjay Chitnis",
+            "Amit Kumar"
+        ],
+        "department": "AI & ML",
+        "year": 2024,
+        "track": "Research",
+        "domain": "Kaizen",
+        "tags": [
+            "LLM",
+            "RAG",
+            "Mental Health"
+        ],
+        "githubUrl": "https://github.com/reva-ai/heartbreak-navigator",
+        "status": "completed"
+    },
+    {
+        "id": "autonomous-quadruped-robot",
+        "title": "Autonomous Quadruped for Campus Security",
+        "description": "Building a low-cost autonomous quadruped robot with computer vision capabilities for night patrolling.",
+        "faculty": [
+            "Prof. Vikram Singh"
+        ],
+        "department": "Mechanical Engineering",
+        "year": 2023,
+        "track": "Research",
+        "domain": "Smart Manufacturing",
+        "tags": [
+            "Robotics",
+            "Computer Vision",
+            "Edge AI"
+        ],
+        "githubUrl": "https://github.com/reva-robotics/quadruped-patrol",
+        "status": "in-progress"
+    },
+    {
+        "id": "llm-powered-syllabus-analyzer",
+        "title": "LLM-Powered Syllabus Alignment Tool",
+        "description": "Automatically checking syllabus alignment with industry standards and Bloom's Taxonomy levels.",
+        "faculty": [
+            "Dr. Anupama R."
+        ],
+        "department": "School of Education",
+        "year": 2024,
+        "track": "Research",
+        "domain": "Teaching",
+        "tags": [
+            "NLP",
+            "Education Tech",
+            "Bloom's Taxonomy"
+        ],
+        "status": "completed"
+    }
+]

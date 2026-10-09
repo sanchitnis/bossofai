@@ -1,0 +1,57 @@
+[
+    {
+        "id": "reva-crop-images-v1",
+        "title": "REVA Agricultural Crop Disease Dataset",
+        "description": "15,000 high-resolution images of local Karnataka crops (Paddy, Ragi, Corn) with disease annotations.",
+        "domain": "Agriculture",
+        "size": "4.2 GB",
+        "format": "JPG/JSON",
+        "records": "15,200",
+        "license": "CC BY-NC 4.0",
+        "tags": [
+            "Computer Vision",
+            "Image Classification",
+            "Crop Protection"
+        ],
+        "downloadUrl": "https://datasets.reva.edu.in/agri-v1",
+        "contactEmail": "research.agri@reva.edu.in",
+        "year": 2023,
+        "verified": true
+    },
+    {
+        "id": "student-behavior-logs-anon",
+        "title": "Anonymized Student Learning Patterns",
+        "description": "Interaction logs from LMS platforms during elective courses, useful for learning analytics research.",
+        "domain": "Education",
+        "size": "150 MB",
+        "format": "CSV",
+        "records": "120,000",
+        "license": "Restricted Access",
+        "tags": [
+            "Learning Analytics",
+            "Tabular",
+            "Time Series"
+        ],
+        "contactEmail": "lms.admin@reva.edu.in",
+        "year": 2024,
+        "verified": true
+    },
+    {
+        "id": "karnakata-solar-irradiance",
+        "title": "Bengaluru North Solar Irradiance Dataset",
+        "description": "Five years of meteorological data from REVA campus solar station.",
+        "domain": "Sustainable Infrastructure",
+        "size": "25 MB",
+        "format": "Parquet",
+        "records": "525,600",
+        "license": "Public Domain (CC0)",
+        "tags": [
+            "Meteorology",
+            "Renewable Energy",
+            "Time Series"
+        ],
+        "downloadUrl": "https://datasets.reva.edu.in/solar-bangalore",
+        "year": 2024,
+        "verified": true
+    }
+]

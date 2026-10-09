@@ -167,7 +167,8 @@ export const Toolkit: React.FC = () => {
           <h3>Where it comes from</h3>
           <p>
             These entries were collected in the REVA AI Hub, an AI resource hub for a university community. We ported the
-            general-purpose ones here and left out anything specific to that university.
+            general-purpose ones here and left out anything specific to that university. The full hub, with learning
+            tracks, guidelines and more, is at <a href="/aihub/">bossofai.org/aihub</a>.
           </p>
           <h3>What we have and haven't checked</h3>
           <ul>

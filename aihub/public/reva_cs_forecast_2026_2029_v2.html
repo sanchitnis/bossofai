@@ -1,0 +1,1127 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--color-text-primary);
+    line-height: 1.5
+  }
+
+  .top-bar {
+    padding: 1.2rem 0 .8rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    margin-bottom: .8rem
+  }
+
+  .top-bar h1 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 4px
+  }
+
+  .top-bar .sub {
+    font-size: 11.5px;
+    color: var(--color-text-secondary)
+  }
+
+  .badge-pill {
+    font-size: 10.5px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    white-space: nowrap
+  }
+
+  .bp-blue {
+    background: #E6F1FB;
+    color: #0C447C
+  }
+
+  .bp-amber {
+    background: #FAEEDA;
+    color: #633806
+  }
+
+  .bp-teal {
+    background: #E1F5EE;
+    color: #085041
+  }
+
+  .bp-coral {
+    background: #FAECE7;
+    color: #712B13
+  }
+
+  .bp-purple {
+    background: #EEEDFE;
+    color: #3C3489
+  }
+
+  .bp-gray {
+    background: #F1EFE8;
+    color: #444441
+  }
+
+  .bp-pink {
+    background: #FBEAF0;
+    color: #72243E
+  }
+
+  .bp-green {
+    background: #EAF3DE;
+    color: #27500A
+  }
+
+  .bp-red {
+    background: #FCEBEB;
+    color: #791F1F
+  }
+
+  .crunch-b {
+    font-size: 9.5px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 7px;
+    background: #FCEBEB;
+    color: #791F1F;
+    border: 0.5px solid #F09595;
+    margin-left: 3px
+  }
+
+  .rpp-b {
+    font-size: 9.5px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 7px;
+    background: #EAF3DE;
+    color: #27500A;
+    border: 0.5px solid #97C459;
+    margin-left: 3px
+  }
+
+  .split-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: .8rem 0
+  }
+
+  .sc {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 12px 14px;
+    border: 0.5px solid var(--color-border-tertiary)
+  }
+
+  .sc-label {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+    font-weight: 500
+  }
+
+  .sc-pct {
+    font-size: 22px;
+    font-weight: 500
+  }
+
+  .sc-sub {
+    font-size: 10.5px;
+    color: var(--color-text-secondary);
+    margin-top: 2px
+  }
+
+  .sc-bar {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 8px
+  }
+
+  .crunch-alert {
+    background: #FCEBEB;
+    border: 0.5px solid #F09595;
+    border-radius: var(--border-radius-md);
+    padding: 8px 12px;
+    margin-bottom: .8rem;
+    font-size: 11.5px;
+    color: #791F1F
+  }
+
+  .controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: .8rem;
+    align-items: center
+  }
+
+  .controls input {
+    font-size: 12px;
+    padding: 5px 9px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    width: 200px
+  }
+
+  .controls select {
+    font-size: 12px;
+    padding: 5px 8px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary)
+  }
+
+  .cohort-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: .8rem;
+    flex-wrap: wrap
+  }
+
+  .ctab {
+    font-size: 11.5px;
+    padding: 5px 12px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary)
+  }
+
+  .ctab.active {
+    background: #E6F1FB;
+    border-color: #378ADD;
+    color: #0C447C;
+    font-weight: 500
+  }
+
+  .ctab-note {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    align-self: center
+  }
+
+  .count-info {
+    font-size: 11.5px;
+    color: var(--color-text-secondary)
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: .8rem
+  }
+
+  .tbl-wrap {
+    overflow-x: auto;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg)
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px
+  }
+
+  thead {
+    background: var(--color-background-secondary)
+  }
+
+  th {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    padding: 9px 9px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    white-space: nowrap;
+    text-align: left
+  }
+
+  td {
+    padding: 8px 9px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    vertical-align: top
+  }
+
+  tr:last-child td {
+    border-bottom: none
+  }
+
+  tr:hover td {
+    background: var(--color-background-secondary)
+  }
+
+  .crunch-row td {
+    border-left: 2px solid #E24B4A
+  }
+
+  .job-title {
+    font-weight: 500;
+    font-size: 12.5px
+  }
+
+  .job-desc {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+    max-width: 190px
+  }
+
+  .domain-note {
+    font-size: 10px;
+    color: #185FA5;
+    margin-top: 2px;
+    font-style: italic
+  }
+
+  .op-row {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 1px
+  }
+
+  .op-label {
+    font-size: 9.5px;
+    color: var(--color-text-tertiary);
+    min-width: 44px
+  }
+
+  .op-val {
+    font-weight: 500;
+    font-size: 11.5px
+  }
+
+  .sal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    min-width: 185px
+  }
+
+  .sal-cell {
+    background: var(--color-background-secondary);
+    border-radius: 3px;
+    padding: 3px 5px
+  }
+
+  .sal-label {
+    font-size: 9px;
+    color: var(--color-text-tertiary);
+    display: block
+  }
+
+  .sal-val {
+    font-size: 11px;
+    font-weight: 500
+  }
+
+  .sal-val.it {
+    color: #444441
+  }
+
+  .sal-val.gcc {
+    color: #0C447C
+  }
+
+  .sal-val.gig {
+    color: #3B6D11
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+  }
+
+  .skill-item {
+    font-size: 10.5px;
+    background: var(--color-background-secondary);
+    border-radius: 3px;
+    padding: 2px 6px;
+    color: var(--color-text-secondary);
+    border-left: 2px solid var(--color-border-secondary)
+  }
+
+  .traj {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500
+  }
+
+  .traj-note {
+    font-size: 9.5px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+    text-align: center
+  }
+
+  .footer {
+    font-size: 10.5px;
+    color: var(--color-text-tertiary);
+    margin-top: 1.2rem;
+    padding-top: .8rem;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    line-height: 1.8
+  }
+
+  .sr-num {
+    font-size: 10.5px;
+    color: var(--color-text-tertiary);
+    text-align: center
+  }
+
+  .section-divider {
+    background: var(--color-background-secondary)
+  }
+
+  .section-divider td {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    padding: 5px 9px;
+    letter-spacing: .4px;
+    text-transform: uppercase
+  }
+</style>
+<div style="padding:0 0 2rem">
+
+  <div class="top-bar">
+    <h1>India CS Job Market Forecast 2026–2029 (DRAFT) &nbsp;<span class="badge-pill bp-blue">All Cohorts</span> <span
+        class="badge-pill bp-amber">Freshers · 0 YOE</span></h1>
+    <div class="sub">REVA University · Created with the help of Claude.ai &nbsp;·&nbsp; Sources: NASSCOM SR 2026, Zinnov
+      GCC 2026, Taggd India Decoding Jobs 2026, AmbitionBox, Upwork/Payoneer Global Freelance Reports 2025–26</div>
+  </div>
+
+  <div class="split-cards">
+    <div class="sc">
+      <div class="sc-label">IT SERVICES (Mass Recruiters)</div>
+      <div class="sc-pct" style="color:#444441">46%</div>
+      <div class="sc-sub">~290k openings/yr · TCS, Infosys, Wipro, Cognizant, HCL</div>
+      <div class="sc-bar" style="background:#B4B2A9;width:100%"></div>
+    </div>
+    <div class="sc">
+      <div class="sc-label">GCCs / PRODUCT MNCs (Selective)</div>
+      <div class="sc-pct" style="color:#0C447C">29%</div>
+      <div class="sc-sub">~182k openings/yr · Google, Microsoft, SAP, Bosch, Honeywell GCCs</div>
+      <div class="sc-bar" style="background:#85B7EB;width:100%"></div>
+    </div>
+    <div class="sc">
+      <div class="sc-label">GIG / FREELANCE (Global Assignments)</div>
+      <div class="sc-pct" style="color:#3B6D11">25%</div>
+      <div class="sc-sub">~157k slots/yr · Upwork, Toptal, Turing, direct client · Salary = Annual equiv.</div>
+      <div class="sc-bar" style="background:#97C459;width:100%"></div>
+    </div>
+  </div>
+
+  <div class="crunch-alert">
+    <strong>⚑ Top 5 Talent Crunch Roles 2026–29 (Supply ≪ Demand):</strong> &nbsp;AI Agent Developer &nbsp;·&nbsp; GenAI
+    / LLM Engineer &nbsp;·&nbsp; MLOps / LLMOps Engineer &nbsp;·&nbsp; Computer Vision Engineer &nbsp;·&nbsp; Robotics
+    Software Engineer
+  </div>
+
+  <div class="cohort-tabs">
+    <span style="font-size:11.5px;color:var(--color-text-secondary);align-self:center;font-weight:500">Graduating
+      Cohort:</span>
+    <button class="ctab active" onclick="setCohort(2026,this)">Class of 2026</button>
+    <button class="ctab" onclick="setCohort(2027,this)">Class of 2027</button>
+    <button class="ctab" onclick="setCohort(2028,this)">Class of 2028</button>
+    <button class="ctab" onclick="setCohort(2029,this)">Class of 2029</button>
+    <span class="ctab-note" id="cohortNote">Market at entry: AI is scaling from experimentation → enterprise
+      deployment</span>
+  </div>
+
+  <div class="legend">
+    <span class="badge-pill bp-blue">Core Tech</span>
+    <span class="badge-pill bp-coral">Cybersecurity</span>
+    <span class="badge-pill bp-purple">Enterprise Stack</span>
+    <span class="badge-pill bp-teal">Data &amp; AI</span>
+    <span class="badge-pill bp-pink">Physical AI &amp; Robotics</span>
+    <span class="badge-pill bp-amber">Interdisciplinary</span>
+    <span class="badge-pill bp-green">Hybrid / Non-Tech</span>
+    <span class="badge-pill bp-red" style="background:#FCEBEB;color:#791F1F">Talent Crunch</span>
+    <span class="badge-pill" style="background:#EAF3DE;color:#27500A;border:0.5px solid #97C459">Reliable Placement
+      Path</span>
+    <span style="font-size:10.5px;color:var(--color-text-secondary);align-self:center">· Gig salary = annual equiv. INR
+      LPA · Trajectory for selected cohort</span>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="searchBox" placeholder="Search role, skill, domain..." oninput="filterTable()">
+    <select id="catFilter" onchange="filterTable()">
+      <option value="">All categories</option>
+      <option>Core Tech</option>
+      <option>Cybersecurity</option>
+      <option>Enterprise Stack</option>
+      <option>Data & AI</option>
+      <option>Physical AI & Robotics</option>
+      <option>Interdisciplinary</option>
+      <option>Hybrid / Non-Tech</option>
+    </select>
+    <select id="specFilter" onchange="filterTable()">
+      <option value="">All roles</option>
+      <option value="crunch">Talent Crunch only</option>
+      <option value="rpp">Reliable Placement Path</option>
+      <option value="gcc14">GCC ≥ ₹14 LPA</option>
+      <option value="gig20">Gig ≥ ₹20 LPA</option>
+    </select>
+    <span class="count-info" id="rowCount"></span>
+  </div>
+
+  <div class="tbl-wrap">
+    <table id="mainTable">
+      <thead>
+        <tr>
+          <th style="width:24px">#</th>
+          <th style="width:100px">Category</th>
+          <th style="width:148px">Job Title</th>
+          <th style="width:185px">Description &amp; Domain Context</th>
+          <th style="width:155px">Annual Openings (Est.)</th>
+          <th style="width:195px">Salary ₹ LPA — Fresher</th>
+          <th style="width:160px">Top 3 Skills</th>
+          <th style="width:85px">Trajectory</th>
+        </tr>
+      </thead>
+      <tbody id="tbl"></tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <strong>Placement split methodology:</strong> Derived from aggregate estimated annual openings across all 62 roles.
+    IT Services 46% (~290k): mass campus + off-campus recruitment by TCS/Infosys/Wipro/Cognizant/HCL/Tech
+    Mahindra/Capgemini. GCC/MNC 29% (~182k): selective campus + off-campus from Karnataka's ~1,900 GCCs (target 3,000 by
+    2029). Gig/Global 25% (~157k): annual assignment slots accessible to Indian freshers on Upwork, Toptal, Turing,
+    Freelancer.com, direct client referral; annual equiv. earnings at ~1,400 hrs/year billing.<br>
+    <strong>Gig salaries:</strong> Annual equivalent (₹ LPA) at entry-level global billing rates of $10–$35/hour
+    depending on role, converted at ~₹85/USD. Building to $20–50/hr bracket by Year 2 with portfolio. Not guaranteed
+    income — project pipeline risk applies.<br>
+    <strong>Cohort trajectories:</strong> Role demand momentum projected for the year each cohort enters the market.
+    Explosive = >30% CAGR, Strong = 15–30%, Stable = 5–15%, Transition = role shape changing, Declining = <5%
+      /commoditising.<br>
+      <strong>Reliable Placement Path (RPP):</strong> Domain SDET roles marked RPP offer accessible entry for students
+      without AI specialisation — domain knowledge + automation skills = defensible differentiation vs. pure coding
+      generalists.<br>
+      <strong>Sources:</strong> NASSCOM Strategic Review 2025/26 · Zinnov GCC Salary & Hiring Trends 2026 · Taggd India
+      Decoding Jobs Report 2026 · AmbitionBox crowdsourced 2025–26 · Upwork/Payoneer Global Freelance Benchmarks 2025 ·
+      Naukri JobSpeak Jan 2026 · Karnataka GCC Policy 2024–29 (ITBT Dept.)
+  </div>
+</div>
+
+<script>
+  const CAT_BADGE = {
+    "Core Tech": "bp-blue", "Cybersecurity": "bp-coral", "Enterprise Stack": "bp-purple",
+    "Data & AI": "bp-teal", "Physical AI & Robotics": "bp-pink",
+    "Interdisciplinary": "bp-amber", "Hybrid / Non-Tech": "bp-green"
+  };
+
+  const COHORT_NOTES = {
+    2026: "Market at entry: AI scaling from experimentation → enterprise deployment. GCCs hiring aggressively. IT Services selective.",
+    2027: "Market at entry: LLM deployment mainstream. AI Agents entering production. Physical AI labs expanding. Gig rates rising.",
+    2028: "Market at entry: Agentic AI commoditising fast. Domain-AI hybrid roles dominant. GCC count nearing 3,000 in Karnataka.",
+    2029: "Market at entry: AGI-adjacent tools disrupting entry-level coding. Deep domain + AI fluency = new baseline expectation."
+  };
+
+  const ROLES = [
+    // ─── CORE TECH ───
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Full Stack Developer", desc: "End-to-end web/mobile apps; frontend + backend + DB; primary hire for product teams", domain: "", openings: [14000, 22000, 9000], it: "3.5–5.5", gcc: "10–16", gig: "8–16", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "⚠ Transition" },
+      tnote: { 2026: "High volume entry role", 2027: "AI pair-programming reduces slots", 2028: "AI co-dev standard; portfolio critical", 2029: "Role shape shifting to AI-supervisor" },
+      skills: ["React/Next.js + Node.js / Django", "REST/GraphQL APIs, Docker", "CI/CD basics, cloud deploy"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Backend Developer", desc: "Server-side logic, APIs, microservices; Java/Python/Go; DB integration at scale", domain: "", openings: [10000, 18000, 7000], it: "3.5–5.5", gcc: "10–15", gig: "8–15", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "⚠ Transition" },
+      tnote: { 2026: "Core hire across all sectors", 2027: "Demand firm; AI automates boilerplate", 2028: "Domain + API expertise valued", 2029: "AI handles 40% of coding; architects needed" },
+      skills: ["Java / Python / Go, Spring Boot", "Microservices, REST/gRPC", "PostgreSQL, Redis, Kafka basics"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Frontend Developer", desc: "UI implementation using JS frameworks; design systems; accessibility compliance", domain: "", openings: [9000, 14000, 7000], it: "3.5–5", gcc: "9–14", gig: "7–14", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "Solid demand, commoditising fast", 2027: "AI tools (v0, Copilot) reduce need", 2028: "Generative UI tools widespread", 2029: "Pure frontend becomes niche; Full-Stack preferred" },
+      skills: ["React / Vue / Angular", "Tailwind, WCAG accessibility", "Figma-to-code, state mgmt"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Database Administrator", desc: "DB provisioning, tuning, backup/recovery, schema design; migrating to cloud-managed DBs", domain: "", openings: [4000, 7000, 2000], it: "3.5–5", gcc: "8–13", gig: "6–12", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "Classic role, steady demand", 2027: "Cloud-managed DBs reduce manual ops", 2028: "DBA + Data Engineer hybrid more valued", 2029: "Automation handles most DBA tasks" },
+      skills: ["SQL (PostgreSQL/MySQL), PL/SQL", "Performance tuning, indexing", "AWS RDS / Azure SQL, backup/DR"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "DevOps Engineer", desc: "CI/CD pipelines, container orchestration, infra-as-code; bridge dev and ops", domain: "", openings: [6000, 9000, 5000], it: "4–6", gcc: "11–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "→ Stable" },
+      tnote: { 2026: "High demand, limited freshers qualified", 2027: "Platform engineering emerging", 2028: "AI-ops tools augmenting DevOps", 2029: "DevOps + AI fluency = standard" },
+      skills: ["Kubernetes + Docker, Helm", "Terraform / Ansible (IaC)", "Jenkins / GitHub Actions, Grafana"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Site Reliability Engineer (SRE)", desc: "Production reliability, SLOs/SLAs, incident response, toil automation at scale", domain: "", openings: [3000, 4000, 2000], it: "4.5–7", gcc: "12–20", gig: "12–20", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "GCC and product company priority", 2027: "AI reliability roles emerging", 2028: "AI reliability engineer = SRE evolution", 2029: "AIOps + SRE hybrid in demand" },
+      skills: ["Linux, Python scripting, Bash", "Prometheus/Grafana, PagerDuty", "K8s, chaos engineering, SLO design"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Cloud Engineer", desc: "Cloud infra design, migration, optimisation; multi-cloud or deep single-cloud specialisation", domain: "", openings: [6000, 8000, 3000], it: "4–6", gcc: "11–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Karnataka GCC cloud demand surging", 2027: "FinOps + cloud sec skills valued", 2028: "Multi-cloud + FinOps + security triple skill", 2029: "Sovereign cloud & AI infra roles emerging" },
+      skills: ["AWS/Azure/GCP (certify ≥1)", "Terraform / CDK (IaC)", "Networking, IAM, cost optimisation"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "QA Automation / SDET (General)", desc: "Automated test frameworks, API & UI testing, CI pipeline integration; AI-augmented testing", domain: "", openings: [16000, 6000, 5000], it: "3.5–5.5", gcc: "8–14", gig: "7–13", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "High volume, accessible entry point", 2027: "AI testing tools reduce manual effort", 2028: "AI test co-pilots standard; frameworks evolve", 2029: "Domain SDET > general SDET in value" },
+      skills: ["Selenium / Playwright / Cypress", "REST API testing (Postman/RestAssured)", "Python/Java test scripts, CI integration"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Network Engineer", desc: "LAN/WAN design, firewall config, routing protocols, network monitoring and automation", domain: "", openings: [5000, 3000, 3000], it: "3.5–5", gcc: "7–12", gig: "6–11", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Steady demand, 5G and SD-WAN growing", 2027: "SD-WAN / SASE skills premium", 2028: "Network + security convergence accelerating", 2029: "5G + private networks expansion" },
+      skills: ["CCNA: BGP, OSPF, VLANs", "Cisco/Juniper, SD-WAN", "Wireshark, SolarWinds, Nagios"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "IT Support & Networking Engineer", desc: "L1/L2 helpdesk, hardware/software troubleshooting, network admin; large-volume mass hire", domain: "", openings: [9000, 4000, 4000], it: "3.5–4.5", gcc: "6–10", gig: "4–8", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "⚠ Transition", 2028: "↘ Declining", 2029: "↘ Declining" },
+      tnote: { 2026: "Safety-net role for broad intake", 2027: "AI ticketing auto-resolves L1 issues", 2028: "L1 largely automated; L2+ survives", 2029: "Significant AI displacement at L1" },
+      skills: ["Windows/Linux sysadmin", "ServiceNow/Jira ticketing", "TCP/IP, VPN, Active Directory, O365"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "RPA Developer", desc: "Robotic process automation (UiPath/Automation Anywhere); enterprise workflow bots", domain: "", openings: [4000, 6000, 2000], it: "4–5.5", gcc: "8–14", gig: "7–13", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "⚠ Transition", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "Solid demand in BPO/enterprise", 2027: "AI agents beginning to replace RPA bots", 2028: "RPA + AI agent hybrid role emerging", 2029: "Pure RPA declining; AI automation rising" },
+      skills: ["UiPath / Automation Anywhere", "Process mapping, exception handling", "SQL, VBScript / Python basics"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Blockchain Developer", desc: "Smart contracts, DeFi/Web3, enterprise blockchain (Hyperledger/Ethereum); BFSI + logistics", domain: "", openings: [1200, 1000, 3000], it: "4–6", gcc: "10–18", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Post-hype; selective real demand", 2027: "CBDC pilots boosting demand in India", 2028: "RBI CBDC + trade finance blockchain hiring", 2029: "Institutional blockchain + Web3 convergence" },
+      skills: ["Solidity / Rust, Hardhat / Foundry", "Web3.js / Ethers.js, IPFS", "Cryptography basics, DeFi/NFT patterns"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Game / AR / VR Developer", desc: "Real-time 3D, game physics, XR interfaces; studios + enterprise immersive training", domain: "", openings: [1000, 500, 2500], it: "4–6", gcc: "10–18", gig: "10–20", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Niche but growing; gaming sector expanding", 2027: "Spatial computing (Vision Pro) drives demand", 2028: "Enterprise XR training at scale", 2029: "AI-generated game content changes role shape" },
+      skills: ["Unity3D / Unreal Engine (C# / C++)", "Shader programming, XR SDKs", "AR/VR spatial design, physics simulation"]
+    },
+
+    {
+      sec: "CORE TECH", cat: "Core Tech", title: "Quantum Engineer", desc: "Quantum computing R&D and consulting; IBM Q, QCI; requires strong mathematical foundations", domain: "Domain: Quantum physics, linear algebra, complexity theory", openings: [500, 300, 400], it: "5–8", gcc: "14–22", gig: "14–24", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Very nascent; research and consulting only", 2027: "NASSCOM Quantum Mission creating labs", 2028: "First commercial quantum apps emerging", 2029: "Hybrid classical-quantum roles growing" },
+      skills: ["Qiskit / Cirq / Q#", "Linear algebra, quantum gates, complexity", "Python, probabilistic algorithm design"]
+    },
+
+    // ─── CYBERSECURITY ───
+    {
+      sec: "CYBERSECURITY", cat: "Cybersecurity", title: "SOC Analyst (L1/L2)", desc: "24×7 threat monitoring, SIEM alert triage, incident logging; highest-volume entry point in security", domain: "", openings: [5000, 3000, 2000], it: "4–6", gcc: "9–14", gig: "8–14", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "DPDPA compliance driving demand", 2027: "AI-augmented SOC; analyst+AI teaming", 2028: "Threat landscape complexity rising", 2029: "AI threat detection; analysts handle complex cases" },
+      skills: ["Splunk / QRadar / Microsoft Sentinel", "Threat intel, log analysis, MITRE ATT&CK", "CompTIA Security+ / CEH (preferred)"]
+    },
+
+    {
+      sec: "CYBERSECURITY", cat: "Cybersecurity", title: "Application Security Engineer", desc: "SAST/DAST in SDLC, OWASP remediation, secure code review; shift-left security", domain: "", openings: [2000, 3000, 2000], it: "4.5–6.5", gcc: "11–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "DevSecOps mainstreaming", 2027: "AI code generation = new attack surface", 2028: "AI-assisted AppSec tools widespread", 2029: "AI code review + human oversight standard" },
+      skills: ["OWASP Top 10, Burp Suite / OWASP ZAP", "Python/Java secure coding principles", "DevSecOps pipeline, SAST/DAST tools"]
+    },
+
+    {
+      sec: "CYBERSECURITY", cat: "Cybersecurity", title: "Penetration Tester", desc: "Ethical hacking — web, mobile, network, cloud; red team exercises; compliance-driven demand", domain: "", openings: [2000, 2000, 2000], it: "4.5–7", gcc: "10–18", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "DPDPA + RBI mandates pentest", 2027: "Cloud + AI attack vectors expanding scope", 2028: "AI-assisted pen testing tools", 2029: "LLM jailbreaking / AI red-teaming new sub-role" },
+      skills: ["Kali Linux, Metasploit, Nmap, Burp", "CEH / OSCP certification path", "Web + mobile + cloud pen test methodology"]
+    },
+
+    {
+      sec: "CYBERSECURITY", cat: "Cybersecurity", title: "Cloud Security Engineer", desc: "Cloud-native security controls, CSPM, IAM hardening, zero-trust architecture", domain: "", openings: [3000, 4000, 2000], it: "5–7", gcc: "12–20", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Cloud migration security gap huge", 2027: "CNAPP and DSPM skills premium", 2028: "Sovereign cloud security roles in India", 2029: "AI workload security becomes distinct sub-role" },
+      skills: ["AWS/Azure Security Hub, CSPM tools", "IAM, zero-trust, CNAPP concepts", "Terraform, CIS benchmarks, DevSecOps"]
+    },
+
+    {
+      sec: "CYBERSECURITY", cat: "Cybersecurity", title: "GRC / Compliance Analyst", desc: "Risk assessment, policy writing, ISO 27001/SOC 2/DPDPA compliance; fast-growing with regulation", domain: "Domain: Regulatory frameworks, risk management, DPDPA/GDPR", openings: [2000, 3000, 1000], it: "4–5.5", gcc: "9–14", gig: "8–14", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "DPDPA 2023 enforcement driving surge", 2027: "SEBI + RBI digital risk mandates", 2028: "AI governance overlay on GRC", 2029: "AI ethics + compliance converging" },
+      skills: ["ISO 27001, SOC 2, NIST frameworks", "Risk register, BIA, policy writing", "DPDPA / GDPR / SEBI cybersec norms"]
+    },
+
+    // ─── ENTERPRISE STACK ───
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Salesforce", desc: "Test automation on Salesforce platform — Apex tests, UI automation; CRM ecosystem QA", domain: "Domain: CRM processes, Sales/Service/Marketing Cloud flows", openings: [3500, 5000, 1000], it: "4–6", gcc: "10–16", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "High IT Services demand; accessible path", 2027: "Salesforce Einstein AI = new test scenarios", 2028: "AgentForce (SF AI) testing added to role", 2029: "Domain + AI overlay; role secure" },
+      skills: ["Salesforce Apex unit testing", "Selenium + WebDriver for SF UI", "SF CLI, Copado DevOps pipeline"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — SAP", desc: "SAP ABAP testing, ECATT, ERP regression suites for SAP S/4HANA; large IT Services demand", domain: "Domain: ERP processes — FI/MM/SD modules; S/4HANA landscape", openings: [3000, 6000, 500], it: "4–6", gcc: "10–16", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "SAP S/4 migration wave sustaining demand", 2027: "SAP BTP and AI extension testing", 2028: "SAP Joule AI copilot test automation", 2029: "SAP ecosystem deeply entrenched in enterprises" },
+      skills: ["SAP ABAP basics, ECATT/Tricentis Tosca", "SAP S/4HANA module knowledge (FI/MM/SD)", "Selenium/Tricentis for SAP Fiori UI"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Microsoft (.NET/Azure)", desc: "Test automation for .NET apps, Azure DevOps pipeline QA, Power Platform testing", domain: "Domain: Microsoft enterprise stack, Azure cloud patterns", openings: [4000, 4000, 1500], it: "4–5.5", gcc: "9–15", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Azure adoption driving QA demand", 2027: "Copilot integration testing emerging", 2028: "M365 Copilot + Power Platform AI testing", 2029: "Microsoft stack deeply embedded in enterprises" },
+      skills: ["MSTest / NUnit, Playwright (C#)", "Azure DevOps, Azure Test Plans", "Power Platform testing (Canvas Apps/Power Automate)"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Oracle (EBS/Fusion Cloud)", desc: "Oracle ERP/HCM/SCM test automation; SQL-heavy regression; Oracle Fusion Cloud testing", domain: "Domain: Oracle ERP modules — HR, Finance, SCM; Oracle DB", openings: [2500, 5000, 500], it: "4–5.5", gcc: "9–14", gig: "8–13", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Large incumbent Oracle estate in enterprises", 2027: "Oracle Fusion Cloud migration wave", 2028: "Oracle AI layers adding test complexity", 2029: "Niche but durable; Oracle deeply entrenched" },
+      skills: ["Oracle OATS / Selenium for OAF/Fusion", "SQL, PL/SQL (Oracle DB), UTL", "Oracle Fusion Cloud workflow testing"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — IBM (Maximo/WebSphere)", desc: "IBM Maximo asset management testing, WebSphere app testing, IBM cloud integration QA", domain: "Domain: Asset management, enterprise middleware, MQ messaging", openings: [2000, 3500, 400], it: "4–5.5", gcc: "9–14", gig: "7–13", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "⚠ Transition" },
+      tnote: { 2026: "Large IBM installed base in enterprise", 2027: "IBM Watson/watsonx testing added", 2028: "IBM Maximo + AI predictive maintenance", 2029: "IBM AI layer testing increasingly important" },
+      skills: ["IBM Rational Functional Tester / Selenium", "WebSphere, IBM MQ test patterns", "Java, IBM Cloud (IKS) basics"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Red Hat / OpenShift", desc: "Container platform testing, Ansible automation testing, Linux infra QA; open-source enterprise", domain: "Domain: Linux, open-source enterprise stack, containerisation", openings: [2000, 3000, 1000], it: "4–5.5", gcc: "9–15", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "OpenShift adoption accelerating in GCCs", 2027: "Red Hat AI (InstructLab) testing emerging", 2028: "Edge + AI testing on RHEL AI", 2029: "Open-source AI stack testing growing" },
+      skills: ["OpenShift / K8s test tooling (Kuttl, Helm)", "Ansible playbook testing, shell scripting", "Pytest, Robot Framework on Linux/RHEL"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Adobe (AEM/Experience)", desc: "Adobe Experience Manager CMS testing, Analytics pipeline QA, Creative Cloud automation", domain: "Domain: Digital marketing, CMS/DXP platforms, campaign ops", openings: [1000, 2000, 500], it: "4–5.5", gcc: "10–16", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Digital experience platform demand steady", 2027: "Adobe Firefly AI content testing added", 2028: "GenAI content pipeline QA", 2029: "AI-driven content ops expands scope" },
+      skills: ["AEM component testing, Selenium", "Adobe Analytics / Target validation", "REST API testing, JS for frontend QA"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — Android", desc: "Automated testing for Android apps; Espresso/UIAutomator; device farm testing at scale", domain: "Domain: Mobile UX, Android platform behaviour, device fragmentation", openings: [3500, 1500, 2500], it: "3.5–5.5", gcc: "9–15", gig: "8–15", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Massive Android app ecosystem", 2027: "AI-assisted mobile testing tools", 2028: "On-device AI testing added complexity", 2029: "Stable; Android dominance persists in India" },
+      skills: ["Espresso / UIAutomator / Appium", "Kotlin/Java for test scripts", "Firebase Test Lab, BrowserStack/Sauce Labs"]
+    },
+
+    {
+      sec: "ENTERPRISE SDET — Ecosystem", cat: "Enterprise Stack", title: "SDET — iOS / Apple", desc: "Automated testing for iOS apps; XCTest/XCUITest; Apple ecosystem QA across devices", domain: "Domain: iOS platform behaviour, HIG guidelines, device matrix", openings: [2000, 500, 2000], it: "4–5.5", gcc: "10–16", gig: "9–17", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Steady demand; premium market segment", 2027: "Apple Intelligence (on-device AI) testing", 2028: "visionOS testing adds new dimension", 2029: "Stable; Apple ecosystem premium persists" },
+      skills: ["XCTest / XCUITest, Appium (iOS)", "Swift/ObjC basics for test scripts", "TestFlight, BrowserStack, Xcode Instruments"]
+    },
+
+    // ─── DOMAIN SDET ───
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Banking / BFSI", desc: "Core banking regression (CBS, payment rails, SWIFT), API and UI automation; regulatory validation", domain: "Domain: Core banking, NEFT/UPI/SWIFT, RBI compliance, ISO 20022", openings: [3500, 6000, 1500], it: "4–6.5", gcc: "11–17", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "BFSI #1 domain SDET employer", 2027: "UPI 2.0 + CBDC testing adds scope", 2028: "Fraud AI model validation new sub-role", 2029: "BFSI AI + compliance = durable demand" },
+      skills: ["Selenium + REST-assured (Java)", "Domain: CBS, SWIFT, NEFT/UPI/RuPay flows", "Payment test data mgmt, security testing basics"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Insurance", desc: "Policy lifecycle testing, claims automation, actuarial data validation; Guidewire/Duck Creek QA", domain: "Domain: Insurance products (life, health, P&C), IRDAI norms, claim workflows", openings: [2000, 4500, 700], it: "4–6", gcc: "10–16", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "InsurTech + legacy modernisation", 2027: "AI underwriting testing emerging", 2028: "AI claims automation validation", 2029: "Domain knowledge moat protects role" },
+      skills: ["Guidewire / Duck Creek test automation", "Cucumber BDD, Selenium, REST API", "Domain: policy, claims, underwriting workflows"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — E-Commerce", desc: "Checkout, search, recommendation engine testing; performance testing; high-volume regression", domain: "Domain: E-commerce funnel, marketplace ops, payment gateway", openings: [3500, 2000, 3500], it: "3.5–5.5", gcc: "9–15", gig: "8–14", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Quick-commerce + D2C boom driving demand", 2027: "AI recommendation engine testing", 2028: "Conversational commerce testing", 2029: "Steady e-comm volume in India" },
+      skills: ["Selenium / Playwright, JMeter (perf)", "API testing, payment gateway validation", "A/B test result validation, agile SDET"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Manufacturing / ERP", desc: "PLM, MES, ERP testing for manufacturing; IoT data validation; shop-floor system QA", domain: "Domain: Manufacturing processes, ERP (SAP/Oracle PP/MM), production mgmt", openings: [2000, 3500, 1000], it: "4–6", gcc: "9–15", gig: "7–13", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Make-in-India driving mfg digitalisation", 2027: "Digital twin + MES testing expanding", 2028: "Industry 4.0 automation QA growing", 2029: "Smart factory QA = durable niche" },
+      skills: ["SAP PP/MM module testing", "MES/SCADA data validation", "ETL testing, SQL for production data"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Supply Chain / Logistics", desc: "WMS, TMS, last-mile logistics platform testing; real-time tracking and ETA prediction QA", domain: "Domain: Supply chain ops, logistics networks, 3PL, demand planning", openings: [2000, 3500, 1500], it: "4–5.5", gcc: "9–14", gig: "7–13", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Post-COVID supply chain digitalisation", 2027: "AI route optimisation testing", 2028: "Autonomous delivery system QA", 2029: "Supply chain AI + IoT QA = durable demand" },
+      skills: ["API testing (logistics APIs: Delhivery, FedEx)", "Domain: WMS, TMS, order mgmt flows", "SQL, data integrity, performance testing"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — HealthTech", desc: "EHR/EMR platform testing, HL7/FHIR API validation, ABDM compliance QA", domain: "Domain: HL7/FHIR standards, ABDM, clinical workflows, health data privacy", openings: [1500, 2500, 1500], it: "4–6", gcc: "10–17", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Ayushman Bharat Digital Mission driving", 2027: "ABDM interoperability testing expanding", 2028: "AI diagnostics tool validation new area", 2029: "AI-in-health regulation = testing demand surge" },
+      skills: ["HL7 / FHIR API testing (Postman/Rest)", "Selenium for EHR UI, ABDM sandbox", "DPDPA health data compliance test scenarios"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Telecom", desc: "OSS/BSS testing, 4G/5G network element QA, billing system regression; large telco clients", domain: "Domain: Telecom protocols, BSS billing, OSS/NMS, TRAI compliance", openings: [2500, 4000, 1000], it: "4–5.5", gcc: "9–14", gig: "7–12", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Jio + Airtel digitalisation steady", 2027: "5G NR test cases expanding rapidly", 2028: "Open RAN testing growing in GCCs", 2029: "Telecom AI (network slicing) testing" },
+      skills: ["TTCN-3 / SIPp protocol testing", "BSS billing regression (Amdocs, Comverse)", "Python automation, REST/SOAP API testing"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — EdTech", desc: "LMS platform testing, adaptive learning engine QA, content pipeline automation", domain: "Domain: LMS platforms (Moodle, Canvas, Blackboard), SCORM/xAPI", openings: [1000, 500, 2500], it: "3.5–5", gcc: "8–13", gig: "7–12", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "EdTech consolidation; survivors hiring QA", 2027: "AI tutoring platform testing", 2028: "GenAI content pipeline QA", 2029: "Stable; ed platform complexity growing" },
+      skills: ["Selenium / Playwright for LMS", "SCORM / xAPI content validation", "Python automation, Postman for LMS APIs"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Pharma / Bioinformatics", desc: "Clinical trial data validation, regulatory submission testing (21 CFR Part 11), biopipeline QA", domain: "Domain: GxP, 21 CFR Part 11, ICH guidelines, drug development lifecycle", openings: [600, 1200, 600], it: "4.5–6.5", gcc: "10–17", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Hyderabad + Bengaluru pharma GCCs hiring", 2027: "AI drug discovery validation emerging", 2028: "Clinical AI tool validation new sub-role", 2029: "Pharma AI regulation driving compliance QA" },
+      skills: ["LIMS testing, 21 CFR Part 11 compliance", "R / Python for bioinformatics validation", "Selenium + data integrity testing (GxP)"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — Energy / GreenTech", desc: "Smart meter testing, grid management software QA, SCADA system validation; energy transition", domain: "Domain: Smart grid, AMI, energy trading, SCADA/IEC 61850", openings: [600, 1200, 600], it: "4–5.5", gcc: "9–15", gig: "8–15", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2027: "📈 Strong", 2029: "🚀 Explosive" },
+      tnote: { 2026: "National Smart Grid Mission driving", 2027: "Renewable energy management platform QA", 2028: "EV charging network software testing", 2029: "India's green energy build-out peak demand" },
+      skills: ["SCADA / HMI test automation", "IEC 61850 / Modbus protocol QA basics", "Python, InfluxDB time-series data validation"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — LegalTech", desc: "Contract lifecycle mgmt platform QA, e-discovery tool testing, legal AI output validation", domain: "Domain: Contract law basics, legal NLP, e-discovery, data privacy (DPDPA)", openings: [400, 900, 600], it: "4.5–6", gcc: "10–16", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Emerging; DPDPA driving legal-tech spend", 2027: "AI contract review validation growing", 2028: "Legal AI hallucination testing critical", 2029: "LegalTech AI regulation = QA mandate" },
+      skills: ["Selenium, Postman for CLM platforms", "Domain: contract types, legal NLP basics", "DPDPA compliance test scenario design"]
+    },
+
+    {
+      sec: "DOMAIN SDET — Reliable Placement Path", cat: "Enterprise Stack", title: "SDET — RealEstate / PropTech", desc: "Property listing platform QA, smart building IoT testing, mortgage system regression", domain: "Domain: RERA compliance, mortgage workflows, smart building IoT", openings: [600, 600, 1200], it: "3.5–5", gcc: "8–12", gig: "7–12", crunch: false, rpp: true,
+      traj: { 2026: "→ Stable", 2027: "→ Stable", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "PropTech growing; housing boom continuing", 2027: "Smart building IoT testing expanding", 2028: "AI property valuation testing", 2029: "Stable niche; moderate growth" },
+      skills: ["Selenium / Playwright, JMeter", "Domain: RERA, mortgage flow, IoT APIs", "SQL, performance testing (load/stress)"]
+    },
+
+    // ─── DATA & AI ───
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "Data Engineer", desc: "ETL/ELT pipelines, data lakes, warehouse orchestration; backbone of all analytics and AI systems", domain: "", openings: [6000, 5000, 5000], it: "5–7", gcc: "11–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Every company needs data pipelines", 2027: "LLM data pipeline engineering emerging", 2028: "RAG data engineering a distinct sub-role", 2029: "AI training data engineering high demand" },
+      skills: ["Python, Apache Spark / dbt", "Snowflake / BigQuery / Redshift", "Airflow / Dagster, data modelling"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "ML Engineer", desc: "Model training, feature engineering, deployment; bridges data science research and production", domain: "", openings: [4500, 3000, 4500], it: "5–8", gcc: "12–20", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "AI adoption across sectors driving demand", 2027: "Fine-tuning LLMs added to MLE scope", 2028: "MLE + LLMOps convergence", 2029: "Specialisation in domain AI models valued" },
+      skills: ["Python, PyTorch / TensorFlow / Scikit-learn", "Feature stores, model pipelines, MLflow", "SQL, cloud ML platforms (SageMaker/Vertex)"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "MLOps / LLMOps Engineer", desc: "ML lifecycle automation — versioning, monitoring, drift detection, retraining; LLM deployment ops", domain: "", openings: [2000, 2000, 2500], it: "6–10", gcc: "14–24", gig: "14–26", crunch: true, rpp: false,
+      traj: { 2026: "🚀 Explosive", 2027: "🚀 Explosive", 2028: "🚀 Explosive", 2029: "📈 Strong" },
+      tnote: { 2026: "Critical bottleneck; supply severely limited", 2027: "LLMOps = separate specialisation", 2028: "AI reliability engineering convergence", 2029: "Maturing; more talent entering pipeline" },
+      skills: ["MLflow / Kubeflow / Ray Serve", "Docker, K8s, CI/CD for ML models", "Model monitoring, drift detection, Prometheus"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "GenAI / LLM Engineer", desc: "Fine-tuning LLMs, RAG pipelines, prompt systems, embedding infrastructure; cross-industry surge", domain: "", openings: [2500, 2500, 4000], it: "7–11", gcc: "15–26", gig: "14–28", crunch: true, rpp: false,
+      traj: { 2026: "🚀 Explosive", 2027: "🚀 Explosive", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Single fastest-growing role 2026", 2027: "Every enterprise deploying LLM apps", 2028: "Domain-specific LLM engineering valued", 2029: "Commoditising slightly; specialise to stay premium" },
+      skills: ["LangChain / LlamaIndex, RAG architecture", "LLM fine-tuning (LoRA/QLoRA), vector DBs (Pinecone/Weaviate)", "Python, OpenAI/Anthropic/Gemini API integration"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "AI Agent Developer", desc: "Multi-agent orchestration, tool-use pipelines, autonomous workflow automation; fastest-growing niche", domain: "", openings: [1500, 1200, 3000], it: "8–13", gcc: "16–28", gig: "16–30", crunch: true, rpp: false,
+      traj: { 2026: "🚀 Explosive", 2027: "🚀 Explosive", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Top 5 crunch; supply near-zero", 2027: "Every enterprise deploying AI agents", 2028: "Agentic systems in production at scale", 2029: "Still high demand; most complex role to fill" },
+      skills: ["LangGraph / CrewAI / AutoGen / Agno", "Multi-agent design, memory, tool-use patterns", "Python, LLM APIs, vector DBs, MCP protocol"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "Prompt Engineer", desc: "System prompt design, LLM evaluation, chain-of-thought optimisation; embedded in product teams", domain: "", openings: [1200, 1500, 3500], it: "5–8", gcc: "12–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "High demand; low competition window open now", 2027: "Role evolving toward AI product specialist", 2028: "Pure prompt eng commoditising; AI PM emerging", 2029: "Absorbed into AI engineering / product roles" },
+      skills: ["Prompt patterns: CoT, ReAct, few-shot", "LLM evaluation (RAGAS, LangSmith, PromptFoo)", "Python, LangChain, domain understanding"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "Computer Vision Engineer", desc: "Object detection, segmentation, video analytics; industrial inspection, autonomous systems, medical imaging", domain: "", openings: [1200, 1000, 2500], it: "5–9", gcc: "13–22", gig: "14–26", crunch: true, rpp: false,
+      traj: { 2026: "🚀 Explosive", 2027: "🚀 Explosive", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Physical AI + surveillance + mfg all demand CV", 2027: "Multimodal AI (vision+language) merging", 2028: "Physical AI robotics CV critical", 2029: "Autonomous systems mainstream; CV essential" },
+      skills: ["OpenCV, PyTorch vision (YOLO v9, SAM 2)", "CNN / ViT architectures, model optimisation", "Edge deployment: TensorRT, ONNX, CoreML"]
+    },
+
+    {
+      sec: "DATA & AI", cat: "Data & AI", title: "AI Ethics & Safety Engineer", desc: "Bias auditing, fairness metrics, explainability (XAI), AI red-teaming; EU AI Act + DPDPA driven", domain: "Domain: AI policy, DPDPA/EU AI Act, fairness statistics, governance frameworks", openings: [500, 600, 700], it: "5–8", gcc: "12–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Emerging; early but important window", 2027: "EU AI Act enforcement increasing India GCC scope", 2028: "AI audit as regulatory service grows", 2029: "Mandated AI audits = mainstream demand" },
+      skills: ["SHAP, LIME, Fairlearn (XAI tools)", "AI governance: EU AI Act, NIST AI RMF", "Python, model auditing, bias & fairness metrics"]
+    },
+
+    // ─── PHYSICAL AI & ROBOTICS ───
+    {
+      sec: "PHYSICAL AI & ROBOTICS", cat: "Physical AI & Robotics", title: "Robotics Software Engineer", desc: "ROS2-based robot control, perception, path planning; manufacturing, warehousing, defence robots", domain: "Domain: Kinematics, control theory, actuator systems, real-time constraints", openings: [500, 500, 1200], it: "5–8", gcc: "13–24", gig: "14–26", crunch: true, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "🚀 Explosive", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "India robotics nascent; global gig high-value", 2027: "Warehouse automation wave hitting India", 2028: "Make-in-India robots + defence drones", 2029: "Physical AI mainstream; massive shortfall" },
+      skills: ["ROS2, Python / C++ for robot control", "SLAM, path planning (Nav2, MoveIt2)", "Sensor fusion: LiDAR + camera + IMU"]
+    },
+
+    {
+      sec: "PHYSICAL AI & ROBOTICS", cat: "Physical AI & Robotics", title: "Embedded / IoT Engineer", desc: "Firmware dev, sensor integration, RTOS, edge AI; smart devices, Industry 4.0, smart cities", domain: "Domain: Electronics basics, circuit interfaces, hardware protocols, power mgmt", openings: [2500, 2500, 2500], it: "4–6", gcc: "10–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "IoT + Industry 4.0 driving demand", 2027: "Edge AI (on-device ML) adds new skill req.", 2028: "AI-enabled sensors standard in products", 2029: "Physical AI convergence; durable demand" },
+      skills: ["C / C++, RTOS (FreeRTOS / Zephyr)", "MQTT, BLE, LoRa, I2C/SPI/UART protocols", "Edge ML: TensorFlow Lite, Edge Impulse"]
+    },
+
+    {
+      sec: "PHYSICAL AI & ROBOTICS", cat: "Physical AI & Robotics", title: "Digital Twin Architect", desc: "Virtual model of physical systems for simulation and predictive maintenance; smart manufacturing", domain: "Domain: Systems modelling, industrial processes, simulation mathematics", openings: [500, 1200, 600], it: "5–8", gcc: "13–22", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "🚀 Explosive" },
+      tnote: { 2026: "Emerging in GCCs; nascent in India", 2027: "Smart cities + infra digital twins", 2028: "Manufacturing + defence digital twins", 2029: "National Digital Twin infrastructure initiative" },
+      skills: ["Azure Digital Twins / AWS IoT TwinMaker", "Simulation: MATLAB/Simulink / Unity", "IoT data integration, 3D modelling basics"]
+    },
+
+    // ─── INTERDISCIPLINARY ───
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Smart Contract Auditor", desc: "Security audit of Solidity/Rust contracts, formal verification, DeFi protocol security review", domain: "Domain: Blockchain protocol design, DeFi mechanics, tokenomics, cryptography", openings: [300, 200, 1200], it: "5–8", gcc: "13–22", gig: "16–30", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Niche but high-paying gig market", 2027: "India CBDC + institutional Web3 demand", 2028: "Regulatory clarity unlocking BFSI blockchain", 2029: "Blockchain in trade finance / insurance" },
+      skills: ["Solidity / Rust, Foundry / Hardhat", "Static analysis: Slither, Mythril, Echidna", "Cryptography, DeFi attack patterns (reentrancy, flash loans)"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Quant Developer", desc: "Algorithmic trading systems, risk models, pricing engines; BFSI GCCs and hedge fund tech desks", domain: "Domain: Financial markets, derivatives pricing, stochastic calculus, statistics", openings: [500, 1200, 600], it: "6–9", gcc: "15–26", gig: "14–26", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "BFSI GCCs in Bengaluru/Mumbai hiring", 2027: "AI-driven quant strategies growing", 2028: "LLM for market analysis + signal gen", 2029: "AI quant + classical quant convergence" },
+      skills: ["Python (NumPy, Pandas, QuantLib, zipline)", "Statistics, stochastic models, time-series", "Low-latency C++ basics, financial data APIs"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "SDET — Fintech Domain", desc: "Payment gateway testing, wealth-tech platform QA, neo-bank API testing; regulatory test suites", domain: "Domain: PCI-DSS, RBI digital payments norms, UPI ecosystem, lending regulations", openings: [1500, 3500, 1500], it: "4–6.5", gcc: "10–17", gig: "9–16", crunch: false, rpp: true,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "FinTech #2 after BFSI in domain SDET demand", 2027: "UPI 2.0 + CBDC testing expanding", 2028: "Open banking API testing growing", 2029: "AI-in-fintech compliance testing durable" },
+      skills: ["Selenium + REST-assured, JMeter", "Domain: UPI, card networks, neo-bank lending", "Security testing basics, PCI-DSS awareness"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "BMS Software Engineer (EV/Battery)", desc: "Battery management system firmware for EVs and energy storage; SW on embedded ECUs", domain: "Domain: Electrochemistry basics, CAN bus, AUTOSAR, ISO 26262 functional safety", openings: [400, 600, 600], it: "5–8", gcc: "13–22", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "🚀 Explosive", 2029: "🚀 Explosive" },
+      tnote: { 2026: "EV policy + Tata/Mahindra GCCs hiring", 2027: "India EV manufacturing scale-up", 2028: "Solid-state battery SW demand emerging", 2029: "India EV export market = large BMS demand" },
+      skills: ["C / C++ on embedded ECUs (bare-metal)", "CAN / LIN / AUTOSAR, MATLAB/Simulink", "ISO 26262 functional safety awareness"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "PLC / SCADA Integrator", desc: "Industrial automation programming, SCADA HMI development, OT/IT convergence projects", domain: "Domain: Manufacturing ops, ISA-95/ISA-88, industrial safety, OT protocols", openings: [600, 1200, 700], it: "4–6", gcc: "11–18", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2027: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Make-in-India manufacturing digitalisation", 2027: "Industry 4.0 OT/IT convergence accelerating", 2028: "Industrial IoT + PLC integration", 2029: "Smart factory automation = sustained demand" },
+      skills: ["Siemens TIA Portal / Allen-Bradley RSLogix 5000", "SCADA: Ignition / WinCC, OPC-UA", "IEC 61131-3, EtherNet/IP, Profibus protocols"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Embedded SecOps Engineer", desc: "Firmware security, secure boot, cryptographic implementations for embedded/defence systems", domain: "Domain: Defence/aerospace standards, hardware trust anchors, threat modelling", openings: [200, 400, 400], it: "5–8", gcc: "13–22", gig: "12–22", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Niche but high-value; defence/aerospace push", 2027: "DRDO + defence GCCs expanding", 2028: "iDEX + defence startup ecosystem", 2029: "Defence tech make-in-India = sustained demand" },
+      skills: ["Embedded C, hardware security (TPM/HSM)", "Secure boot, cryptographic protocols (TLS/ECDSA)", "Threat modelling (STRIDE), JTAG/SWD debugging"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Geospatial Analyst", desc: "GIS data analysis, remote sensing, map intelligence; defence, urban planning, logistics", domain: "Domain: Geography, satellite imagery, spatial statistics, cartographic principles", openings: [400, 600, 600], it: "4–6", gcc: "10–17", gig: "9–16", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Smart cities + defence geospatial demand", 2027: "India's NR-DEM satellite data driving demand", 2028: "AI + geospatial convergence", 2029: "Urban planning + climate = durable demand" },
+      skills: ["QGIS / ArcGIS, Python (GeoPandas/Rasterio)", "Remote sensing, NDVI, raster/vector analysis", "PostGIS, SQL, Kepler.gl / Mapbox visualisation"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Bioinformatics Engineer", desc: "Genomic data pipelines, protein structure analysis, clinical trial data; pharma GCCs", domain: "Domain: Molecular biology, genomics, population genetics, statistical analysis", openings: [400, 700, 600], it: "5–8", gcc: "12–20", gig: "11–20", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Hyderabad pharma GCCs steady hiring", 2027: "AI protein folding (AlphaFold3) tools work", 2028: "AI drug discovery + bioinformatics convergence", 2029: "Genomic medicine + personalised pharma boom" },
+      skills: ["Python/R: Biopython, Bioconductor", "NGS pipelines: GATK, BWA, Bowtie2, STAR", "Cloud HPC for genomics (AWS Batch/Nextflow)"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "HealthTech Developer", desc: "EHR/EMR integration, FHIR app dev, telehealth platforms; Ayushman Bharat Digital Mission", domain: "Domain: ABDM, FHIR R4, clinical workflows, DPDPA health data norms", openings: [600, 1200, 1200], it: "4–6", gcc: "11–17", gig: "9–17", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "🚀 Explosive" },
+      tnote: { 2026: "ABDM rollout driving national demand", 2027: "ABDM interoperability layer expanding", 2028: "AI diagnostics integration in EHR", 2029: "India health data ecosystem at scale" },
+      skills: ["FHIR R4 APIs, HL7 integration", "React / Node.js for health portals", "ABDM sandbox, DPDPA health data compliance"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "ESG Data Analyst", desc: "Sustainability reporting pipelines, carbon accounting models, ESG score automation; SEBI BRSR", domain: "Domain: SEBI BRSR, GRI/TCFD standards, Scope 1/2/3 carbon accounting", openings: [600, 1200, 700], it: "4–6", gcc: "10–16", gig: "9–16", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "SEBI BRSR mandatory for top 1000 companies", 2027: "Net-zero commitments driving data demand", 2028: "AI-powered ESG reporting tools", 2029: "Carbon credit markets + ESG data = durable" },
+      skills: ["Python, Power BI / Tableau for ESG", "GRI / TCFD / BRSR reporting standards", "Data pipelines for Scope 1/2/3 emissions data"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Smart Grid Developer", desc: "Energy management systems, EV charging infra software, demand-response platforms", domain: "Domain: Power systems, AMI, IEC 61850, demand-response economics", openings: [400, 600, 700], it: "5–7", gcc: "11–19", gig: "10–18", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "🚀 Explosive" },
+      tnote: { 2026: "National Smart Grid Mission ongoing", 2027: "RE management + forecasting platforms", 2028: "EV charging network software scaling", 2029: "India green energy transition = peak demand" },
+      skills: ["Python, MQTT / AMQP for grid IoT", "SCADA + AMI integration, IEC 61850", "InfluxDB time-series, energy analytics tools"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "5G Network Engineer", desc: "5G NR protocol testing, network slicing, Open RAN integration; telcos + Nokia/Ericsson GCCs", domain: "Domain: 3GPP standards, RF propagation basics, network virtualisation", openings: [600, 1200, 600], it: "4–6", gcc: "11–18", gig: "9–16", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Jio 5G + Airtel 5G rolling out", 2027: "Open RAN / vRAN engineering growing", 2028: "Private 5G for industry (4.0) expanding", 2029: "6G research starting; 5G deployment peak" },
+      skills: ["3GPP 5G NR protocol stack", "Open RAN, vRAN / O-RAN architecture", "Python automation, RF simulation (Keysight/MATLAB)"]
+    },
+
+    {
+      sec: "INTERDISCIPLINARY", cat: "Interdisciplinary", title: "Data Center Technician", desc: "Physical infra ops, server provisioning, power/cooling management; surge from AI GPU infrastructure", domain: "", openings: [1500, 1500, 1200], it: "3.5–5", gcc: "7–12", gig: "6–10", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "AI GPU infra build-out driving DC boom", 2027: "Hyperscale DC expansion accelerating", 2028: "Edge DC + sovereign cloud build-out", 2029: "India data sovereignty = DC demand sustained" },
+      skills: ["Server hardware, DCIM tools (Nlyte, Sunbird)", "Networking: VLAN, fibre, structured cabling", "Power/cooling: UPS, PDU, CRAC, safety"]
+    },
+
+    // ─── HYBRID / NON-TECH ───
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Product Analyst", desc: "Product metrics, A/B test analysis, roadmap support; data-fluent business role; startups/GCCs", domain: "", openings: [2500, 2500, 4000], it: "4–6", gcc: "9–16", gig: "9–17", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "High demand; less competitive than SWE", 2027: "AI-assisted product analytics standard", 2028: "AI product manager = evolving role", 2029: "Domain PM + AI fluency = premium" },
+      skills: ["SQL, Python basics, GA4 / Mixpanel / Amplitude", "Figma basics, user research (interviews)", "OKR framework, JTBD, product thinking"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Growth Marketer", desc: "SEO/SEM, performance campaigns, funnel analytics, CRO; high demand in D2C, SaaS, EdTech", domain: "", openings: [1000, 600, 4000], it: "3.5–5", gcc: "7–12", gig: "7–14", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "D2C + SaaS + EdTech growth phase", 2027: "AI tools (Jasper, Perplexity Ads) reshaping", 2028: "AI-driven performance marketing", 2029: "AI handles execution; strategy remains human" },
+      skills: ["Google Ads, Meta Ads, SEO (SEMrush/Ahrefs)", "SQL / Python for cohort + funnel analysis", "CRM (HubSpot/Salesforce), A/B testing"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Tech Sales / Pre-Sales Engineer", desc: "Demo + POC delivery, RFP support, technical solution selling; lucrative with variable pay", domain: "", openings: [2500, 1500, 2500], it: "3.5–5.5", gcc: "8–14", gig: "8–15", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "AI + SaaS sales talent shortage", 2027: "AI sales tools change workflow; humans still close", 2028: "Technical depth + AI fluency = premium", 2029: "Consultative AI selling valued" },
+      skills: ["Domain product knowledge (cloud/SaaS/AI)", "Presentation, storytelling, Salesforce CRM", "Solution architecture basics, proposal writing"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "UI / UX Designer", desc: "Research, wireframes, prototypes, design systems; high demand as product mindset grows", domain: "", openings: [3500, 2500, 4000], it: "4–6", gcc: "9–16", gig: "9–18", crunch: false, rpp: false,
+      traj: { 2026: "📈 Strong", 2027: "📈 Strong", 2028: "→ Stable", 2029: "→ Stable" },
+      tnote: { 2026: "Product-first culture driving demand", 2027: "AI design tools (Figma AI) changing workflow", 2028: "AI-generated UI = designer focuses on strategy", 2029: "Research + systems design remains human" },
+      skills: ["Figma / Adobe XD (component libraries)", "User research, usability testing, WCAG 2.1", "Design systems, motion design, prototyping"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Technical Writer", desc: "API docs, user manuals, SDK guides, knowledge bases; software + infrastructure + AI firms", domain: "", openings: [2500, 1500, 2500], it: "3.5–5", gcc: "7–12", gig: "7–14", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "⚠ Transition", 2028: "⚠ Transition", 2029: "⚠ Transition" },
+      tnote: { 2026: "Steady; docs-as-code growing niche", 2027: "AI writing tools commoditising basic docs", 2028: "AI content review + strategy = evolved role", 2029: "Technical accuracy over volume; niche secure" },
+      skills: ["Docs-as-code: Markdown, Docusaurus, MkDocs", "API documentation (OpenAPI / Swagger)", "Git, Confluence, plain-language technical writing"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Instructional Designer", desc: "E-learning content design, SCORM/xAPI courseware, LMS management; EdTech + L&D corporate", domain: "Domain: Learning theories (Bloom's, Kirkpatrick, ADDIE), curriculum design", openings: [1000, 600, 2000], it: "3.5–5", gcc: "7–12", gig: "7–13", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "Corporate L&D + EdTech steady demand", 2027: "AI-augmented learning design growing", 2028: "AI tutoring content design specialist", 2029: "Personalised learning at scale = new role shape" },
+      skills: ["Articulate Storyline 360 / Rise", "Learning design: ADDIE, backwards design", "Camtasia, Canva, Moodle / Cornerstone LMS"]
+    },
+
+    {
+      sec: "HYBRID / NON-TECH", cat: "Hybrid / Non-Tech", title: "Tech Evangelist / DevRel", desc: "Developer community building, hackathon advocacy, open-source promotion; cloud + AI platform roles", domain: "", openings: [500, 600, 1500], it: "4–6", gcc: "9–16", gig: "8–16", crunch: false, rpp: false,
+      traj: { 2026: "→ Stable", 2027: "📈 Strong", 2028: "📈 Strong", 2029: "📈 Strong" },
+      tnote: { 2026: "AI platform DevRel surge (every AI co. needs)", 2027: "AI community building = priority", 2028: "Agent ecosystem advocacy growing", 2029: "AI platform wars = DevRel investment peak" },
+      skills: ["Public speaking, demo building, blog/video", "GitHub portfolio, open-source contributions", "Deep platform knowledge (AWS/GCP/AI APIs)"]
+    }
+  ];
+
+  let activeCohort = 2026;
+
+  function setCohort(y, el) {
+    activeCohort = y;
+    document.querySelectorAll('.ctab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('cohortNote').textContent = COHORT_NOTES[y];
+    renderTable();
+    filterTable();
+  }
+
+  function catBadge(cat) {
+    return `<span class="badge-pill ${CAT_BADGE[cat] || 'bp-gray'}" style="font-size:9.5px">${cat}</span>`;
+  }
+  function opFmt(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : n }
+
+  let currentSection = '';
+  function renderTable() {
+    currentSection = '';
+    const tbody = document.getElementById('tbl');
+    tbody.innerHTML = ROLES.map((r, i) => {
+      let secRow = '';
+      if (r.sec !== currentSection) {
+        currentSection = r.sec;
+        secRow = `<tr class="section-divider"><td colspan="8">— ${r.sec} —</td></tr>`;
+      }
+      const tc = r.crunch ? `<span class="crunch-b">Crunch</span>` : '';
+      const rp = r.rpp ? `<span class="rpp-b">RPP</span>` : '';
+      const domHTML = r.domain ? `<div class="domain-note">${r.domain}</div>` : '';
+      const tObj = r.traj[activeCohort] || '→ Stable';
+      const tnObj = r.tnote[activeCohort] || '';
+      const opTotal = r.openings[0] + r.openings[1] + r.openings[2];
+      return secRow + `<tr class="${r.crunch ? 'crunch-row' : ''}" data-cat="${r.cat}" data-crunch="${r.crunch}" data-rpp="${r.rpp}" data-gcc="${r.gcc}" data-gig="${r.gig}">
+    <td class="sr-num">${i + 1}</td>
+    <td>${catBadge(r.cat)}</td>
+    <td><div class="job-title">${r.title}${tc}${rp}</div></td>
+    <td><div class="job-desc">${r.desc}</div>${domHTML}</td>
+    <td>
+      <div class="op-row"><span class="op-label">GCC</span><span class="op-val">${opFmt(r.openings[0])}</span></div>
+      <div class="op-row"><span class="op-label">IT Svcs</span><span class="op-val">${opFmt(r.openings[1])}</span></div>
+      <div class="op-row"><span class="op-label">Gig/Global</span><span class="op-val">${opFmt(r.openings[2])}</span></div>
+      <div style="font-size:9.5px;color:var(--color-text-tertiary);margin-top:2px">Total ≈ ${opFmt(opTotal)}</div>
+    </td>
+    <td>
+      <div class="sal-grid">
+        <div class="sal-cell"><span class="sal-label">IT Services</span><span class="sal-val it">₹${r.it}</span></div>
+        <div class="sal-cell"><span class="sal-label">GCC / MNC</span><span class="sal-val gcc">₹${r.gcc}</span></div>
+        <div class="sal-cell"><span class="sal-label">Gig/Global</span><span class="sal-val gig">₹${r.gig}</span></div>
+      </div>
+    </td>
+    <td><div class="skills-list">${r.skills.map(s => `<div class="skill-item">${s}</div>`).join('')}</div></td>
+    <td><div class="traj">${tObj}</div><div class="traj-note">${tnObj}</div></td>
+  </tr>`;
+    }).join('');
+  }
+
+  function filterTable() {
+    const s = document.getElementById('searchBox').value.toLowerCase();
+    const cat = document.getElementById('catFilter').value;
+    const spec = document.getElementById('specFilter').value;
+    let count = 0, total = 0;
+    document.querySelectorAll('#tbl tr').forEach(row => {
+      if (row.classList.contains('section-divider')) { row.style.display = ''; return; }
+      total++;
+      const text = row.textContent.toLowerCase();
+      const rCat = row.getAttribute('data-cat');
+      const isCrunch = row.getAttribute('data-crunch') === 'true';
+      const isRpp = row.getAttribute('data-rpp') === 'true';
+      const gcc = parseFloat((row.getAttribute('data-gcc') || '0').split('–')[0]);
+      const gig = parseFloat((row.getAttribute('data-gig') || '0').split('–')[0]);
+      let show = true;
+      if (s && !text.includes(s)) show = false;
+      if (cat && rCat !== cat) show = false;
+      if (spec === 'crunch' && !isCrunch) show = false;
+      if (spec === 'rpp' && !isRpp) show = false;
+      if (spec === 'gcc14' && gcc < 14) show = false;
+      if (spec === 'gig20' && gig < 20) show = false;
+      row.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    document.getElementById('rowCount').textContent = `Showing ${count} of ${ROLES.length} roles`;
+  }
+
+  renderTable();
+  filterTable();
+</script>

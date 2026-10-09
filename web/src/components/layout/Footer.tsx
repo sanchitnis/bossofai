@@ -18,6 +18,7 @@ const cols = [
     links: [
       ["Quests", "/quests"],
       ["Toolkit", "/toolkit"],
+      ["AI Hub", "/aihub/"],
       ["Study guide", "/learn"],
       ["Open ideas", "/ideas"],
       ["T.R.A.C.K. framework", "/framework"],

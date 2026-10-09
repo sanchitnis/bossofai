@@ -265,6 +265,7 @@ export const Evidence: React.FC = () => {
     { what: "Srujana Pathway", stage: "Idea", note: "Stages defined. No cohort has completed it." },
     { what: "AI engineer study guide", stage: "Available", note: "Open-source reading plan on GitHub. Not yet tested with learners." },
     { what: "Student quests", stage: "Prototype", note: "13 self-paced quests, written but not yet tried by learners. Progress is saved in the browser only." },
+    { what: "AI Hub", stage: "Available", note: "A resource hub with learning tracks and guidelines, carried over from a university deployment. We have not independently reviewed its policy pages." },
     { what: "Toolkit", stage: "Available", note: "Curated links to prompts, assistants, apps, courses and reports. Curated by people, not audited." },
     { what: "Student and faculty projects", stage: "None completed", note: "Open invitations only. None are built." },
     { what: "Leaderboard", stage: "Planned", note: "No rankings exist. See how it will work." },

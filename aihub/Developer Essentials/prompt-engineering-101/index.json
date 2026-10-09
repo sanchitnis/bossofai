@@ -1,0 +1,35 @@
+{
+  "title": "Prompt Engineering 101",
+  "description": "Master the art of effective prompting from zero-shot to chain-of-thought.",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction to Prompting",
+        "text": "intro.md"
+      },
+      {
+        "title": "Zero-Shot vs Few-Shot",
+        "text": "step1.md"
+      },
+      {
+        "title": "Chain-of-Thought",
+        "text": "step2.md"
+      },
+      {
+        "title": "Iterative Refinement",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

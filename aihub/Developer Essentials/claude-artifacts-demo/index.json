@@ -1,0 +1,35 @@
+{
+  "title": "Building with Claude Artifacts",
+  "description": "Learn how to generate, iterate, and deploy interactive mini-apps using Claude AI.",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "What are Artifacts?",
+        "text": "intro.md"
+      },
+      {
+        "title": "The First Generation",
+        "text": "step1.md"
+      },
+      {
+        "title": "Iterating on Design",
+        "text": "step2.md"
+      },
+      {
+        "title": "Exporting and Sharing",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

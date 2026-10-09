@@ -10,6 +10,7 @@ import { Ideas, Framework, Pedagogy, Safety, Evidence, Leaderboard } from "@/pag
 import { Learn } from "@/pages/Learn";
 import { Quests, QuestDetail } from "@/pages/Quests";
 import { Toolkit } from "@/pages/Toolkit";
+import { AiHubRedirect } from "@/pages/AiHubRedirect";
 import { Join } from "@/pages/Join";
 import { AuthCallback } from "@/pages/AuthCallback";
 import { MemberPortal } from "@/pages/MemberPortal";
@@ -30,6 +31,7 @@ export function App() {
               <Route path="/teachers" element={<Teachers />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/toolkit" element={<Toolkit />} />
+              <Route path="/aihub/*" element={<AiHubRedirect />} />
               <Route path="/quests" element={<Quests />} />
               <Route path="/quests/:id" element={<QuestDetail />} />
               <Route path="/ideas" element={<Ideas />} />

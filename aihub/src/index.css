@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Dosis:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* REVA University Brand Colors - Orange & Blue */
+    --background: 210 20% 98%;
+    --foreground: 229 7% 31%;
+    /* #4a4c55 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 15%;
+
+    /* REVA Orange Primary */
+    --primary: 28 91% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Brand Blue/Grey Secondary */
+    --secondary: 229 7% 31%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 25% 93%;
+    --muted-foreground: 215 20% 45%;
+
+    /* REVA Orange Accent (Synonymous with Primary) */
+    --accent: 28 91% 66%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 210 65% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom REVA Colors */
+    --reva-blue: 229 7% 31%;
+    --reva-blue-light: 229 7% 41%;
+    --reva-blue-dark: 229 7% 21%;
+    --reva-orange: 28 91% 66%;
+    --reva-orange-light: 28 91% 76%;
+    --reva-orange-dark: 28 91% 56%;
+
+    /* Gradient Backgrounds */
+    --gradient-hero: linear-gradient(135deg, hsl(229 7% 31%) 0%, hsl(229 7% 21%) 50%, hsl(229 7% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(28 91% 66%) 0%, hsl(28 91% 56%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+
+    /* TRACK Pillar Colors */
+    --track-teaching: 210 80% 50%;
+    --track-research: 262 70% 55%;
+    --track-admin: 142 60% 45%;
+    --track-consulting: 18 95% 55%;
+    --track-kaizen: 340 75% 55%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 25% 15% / 0.08), 0 2px 4px -2px hsl(210 25% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 25% 15% / 0.1), 0 4px 6px -4px hsl(210 25% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(210 25% 15% / 0.1), 0 8px 10px -6px hsl(210 25% 15% / 0.1);
+    --shadow-card: 0 4px 20px -2px hsl(210 65% 25% / 0.08);
+    --shadow-card-hover: 0 12px 40px -4px hsl(210 65% 25% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 35% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 215 35% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 215 35% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 28 91% 66%;
+    --primary-foreground: 215 35% 8%;
+
+    --secondary: 229 7% 31%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 30% 18%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 28 91% 66%;
+    --accent-foreground: 215 35% 8%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 22%;
+    --input: 215 30% 22%;
+    --ring: 210 60% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Roboto', system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto Slab', serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--reva-blue)) 0%, hsl(var(--reva-blue-light)) 100%);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--reva-orange)) 0%, hsl(var(--reva-orange-dark)) 100%);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
