@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { WHATSAPP_COMMUNITY_URL } from "@/content/community";
 
 const cols = [
   {
@@ -50,7 +51,16 @@ export const Footer: React.FC = () => (
           <p className="mt-4 max-w-sm text-sm text-background/70">
             Boss of AI helps people and institutions orbit-shift with AI: smartly, safely, efficiently, and for their community.
           </p>
-          <div className="mt-5 flex gap-3">
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-md border-2 border-accent bg-accent px-4 py-2 text-sm font-bold text-accent-foreground hover:opacity-90"
+          >
+            <MessageCircle className="h-4 w-4" aria-hidden />
+            Join our WhatsApp community
+          </a>
+          <div className="mt-4 flex gap-3">
             <a href="https://github.com/sanchitnis/bossofai" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rounded-md border-2 border-background/40 p-2 hover:bg-accent hover:text-accent-foreground">
               <Github className="h-4 w-4" />
             </a>

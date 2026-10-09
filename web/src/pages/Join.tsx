@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MessageCircle } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 import { ROLES, roleBySlug } from "@/content/roles";
+import { WHATSAPP_COMMUNITY_URL } from "@/content/community";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -90,6 +91,18 @@ export const Join: React.FC = () => {
               </ul>
             </>
           )}
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="brut-sm mt-8 flex items-start gap-3 rounded-xl p-4 hover:bg-accent hover:text-accent-foreground"
+          >
+            <MessageCircle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden />
+            <span>
+              <strong className="block">Join our WhatsApp community</strong>
+              <span className="text-sm">Open to everyone. Come empower ourselves together, no sign-up needed.</span>
+            </span>
+          </a>
         </div>
 
         <div className="brut rounded-2xl p-6 sm:p-8">
@@ -112,6 +125,15 @@ export const Join: React.FC = () => {
                   <p className="mt-2 text-muted-foreground">We'll write to you soon at {email}.</p>
                 </>
               )}
+              <a
+                href={WHATSAPP_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-md border-2 border-foreground bg-accent px-4 py-2 text-sm font-bold text-accent-foreground"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden />
+                Join our WhatsApp community
+              </a>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-4" noValidate>
