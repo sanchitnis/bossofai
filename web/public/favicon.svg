@@ -1,13 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <defs>
-    <linearGradient id="gym-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="24" fill="#0b0f19"/>
-  <circle cx="50" cy="50" r="38" stroke="url(#gym-grad)" stroke-width="4" stroke-dasharray="6 4" opacity="0.6"/>
-  <path d="M30 68V32H48C56.8366 32 64 37.1487 64 43.5C64 49.8513 56.8366 55 48 55H38V68H30Z" fill="url(#gym-grad)"/>
-  <circle cx="70" cy="35" r="7" fill="#06b6d4"/>
+  <rect width="100" height="100" rx="22" fill="#111110"/>
+  <circle cx="50" cy="50" r="36" stroke="#f8f5ec" stroke-width="3" stroke-dasharray="5 5" opacity="0.7"/>
+  <circle cx="50" cy="50" r="17" fill="#c9f02e"/>
+  <circle cx="82" cy="34" r="7" fill="#f8f5ec"/>
 </svg>

@@ -2,21 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Dumbbell } from "lucide-react";
+import { Orbit } from "@/components/site/Orbit";
 
-export const NotFound: React.FC = () => {
-  return (
-    <Layout>
-      <div className="container mx-auto py-32 px-4 text-center">
-        <Dumbbell className="h-16 w-16 text-cyan-400 mx-auto mb-4 animate-bounce" />
-        <h1 className="font-heading text-4xl font-extrabold text-white mb-2">404 — Page Not Found</h1>
-        <p className="text-sm text-slate-400 mb-8 max-w-md mx-auto">
-          The requested page does not exist in the Boss of AI studio directory.
-        </p>
-        <Link to="/">
-          <Button variant="gym">Return to Boss of AI Home</Button>
-        </Link>
-      </div>
-    </Layout>
-  );
-};
+export const NotFound: React.FC = () => (
+  <Layout>
+    <div className="container mx-auto px-4 py-20 text-center sm:px-6">
+      <Orbit className="mx-auto w-full max-w-[220px] text-foreground" center="404" />
+      <h1 className="mt-6 font-heading text-4xl font-extrabold tracking-tight">Lost in orbit.</h1>
+      <p className="mx-auto mt-2 max-w-md text-muted-foreground">That page doesn't exist. Let's get you back.</p>
+      <Button asChild variant="accent" className="mt-6">
+        <Link to="/">Back to home</Link>
+      </Button>
+    </div>
+  </Layout>
+);

@@ -1,22 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  Dumbbell,
-  Compass,
-  Trophy,
-  Users,
-  BookOpen,
-  Sparkles,
-  LogIn,
-  LogOut,
-  User,
-  ShieldCheck,
-  Github,
-  Menu,
-  X,
-  FolderGit2,
-  Layers,
-} from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useTheme } from "next-themes";
+import { ChevronDown, LogIn, LogOut, Menu, Moon, Sun, User, X } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -28,199 +13,169 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Badge } from "@/components/ui/badge";
+import { DepthToggle } from "@/components/site/Depth";
+
+const roleLinks = [
+  { label: "Students", to: "/students" },
+  { label: "Faculty", to: "/faculty" },
+  { label: "Institutions", to: "/institutions" },
+  { label: "Practitioners", to: "/practitioners" },
+  { label: "Teachers", to: "/teachers" },
+];
+
+const moreLinks = [
+  { label: "Open ideas", to: "/ideas" },
+  { label: "T.R.A.C.K. framework", to: "/framework" },
+  { label: "How we teach", to: "/pedagogy" },
+  { label: "Safety", to: "/safety" },
+  { label: "Evidence", to: "/evidence" },
+  { label: "Leaderboard", to: "/leaderboard" },
+];
+
+const Logo: React.FC = () => (
+  <Link to="/" className="group flex items-center gap-2" aria-label="Boss of AI home">
+    <svg viewBox="0 0 40 40" className="h-9 w-9" aria-hidden>
+      <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="3 4" />
+      <circle cx="20" cy="20" r="8" fill="hsl(var(--accent))" stroke="currentColor" strokeWidth="2" />
+      <circle cx="34" cy="14" r="3.5" fill="currentColor" className="origin-center transition-transform group-hover:translate-x-0.5" />
+    </svg>
+    <span className="whitespace-nowrap font-heading text-xl font-extrabold tracking-tight">
+      Boss of <span className="mark-lime">AI</span>
+    </span>
+  </Link>
+);
 
 export const Header: React.FC = () => {
   const { user, signInWithGoogle, signOut } = useAuth();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const location = useLocation();
 
-  const navLinks = [
-    { label: "Cascading Theory", href: "/cascading-theory", icon: Layers, internal: true },
-    { label: "T.R.A.C.K.", href: "/#track", icon: Sparkles, highlight: true },
-    { label: "Projects", href: "/#projects", icon: FolderGit2 },
-    { label: "Brain GYM", href: "/#brain-gym", icon: Dumbbell },
-    { label: "Srujana Pathway", href: "/#pathway", icon: Compass },
-    { label: "Solutions & IP", href: "/#solutions", icon: Sparkles },
-    { label: "Leaderboard", href: "/#leaderboard", icon: Trophy },
-    { label: "Wiki", href: "https://github.com/sanchitnis/bossofai/blob/main/wiki/index.md", icon: BookOpen, external: true },
-  ];
+  useEffect(() => setMounted(true), []);
+  useEffect(() => setOpen(false), [location.pathname]);
+
+  const linkCls = ({ isActive }: { isActive: boolean }) =>
+    `rounded-md px-2.5 py-1.5 text-sm font-semibold transition-colors ${
+      isActive ? "bg-foreground text-background" : "hover:bg-accent hover:text-accent-foreground"
+    }`;
+
+  const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl transition-all">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-500 shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform">
-            <span className="font-heading font-black text-white text-base">B</span>
-          </div>
-          <div className="flex items-baseline gap-1">
-            <span className="font-heading text-xl font-bold tracking-tight text-white">Boss of</span>
-            <span className="font-heading text-xl font-black bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent underline decoration-cyan-400/50 decoration-2 underline-offset-4">
-              AI
-            </span>
-          </div>
-        </Link>
+    <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background/95 backdrop-blur">
+      <div className="container mx-auto flex h-16 items-center justify-between gap-3">
+        <Logo />
 
-        {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-1">
-          {navLinks.map((item) => {
-            const Icon = item.icon;
-            const className = `flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-              item.highlight
-                ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 hover:bg-cyan-500/20"
-                : item.internal && !item.highlight
-                ? "text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20"
-                : "text-slate-300 hover:text-white hover:bg-white/5"
-            }`;
-            if (item.internal) {
-              return (
-                <Link key={item.label} to={item.href} className={className}>
-                  <Icon className={`h-4 w-4 ${item.highlight ? "text-cyan-400" : "text-indigo-400"}`} />
-                  {item.label}
-                </Link>
-              );
-            }
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
-                className={className}
-              >
-                <Icon className={`h-4 w-4 ${item.highlight ? "text-cyan-400" : "text-slate-400"}`} />
-                {item.label}
-              </a>
-            );
-          })}
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
+          {roleLinks.map((l) => (
+            <NavLink key={l.to} to={l.to} className={linkCls}>
+              {l.label}
+            </NavLink>
+          ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="inline-flex items-center gap-1 rounded-md px-2.5 py-1.5 text-sm font-semibold hover:bg-accent hover:text-accent-foreground">
+                More <ChevronDown className="h-3.5 w-3.5" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-52">
+              {moreLinks.map((l) => (
+                <DropdownMenuItem key={l.to} asChild>
+                  <Link to={l.to}>{l.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
-        {/* Right Action Buttons */}
-        <div className="hidden sm:flex items-center gap-3">
-          <a
-            href="https://github.com/sanchitnis/bossofai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/10 transition-colors"
+        <div className="flex items-center gap-2">
+          <DepthToggle className="hidden sm:inline-flex" />
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+            onClick={() => setTheme(isDark ? "light" : "dark")}
           >
-            <Github className="h-4 w-4" />
-            <span>GitHub</span>
-          </a>
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </Button>
 
-          {/* User Auth state */}
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative h-9 w-9 rounded-full ring-2 ring-indigo-500/40 p-0">
+                <button className="hidden rounded-full sm:block" aria-label="Account menu">
                   <Avatar className="h-9 w-9">
-                    <AvatarImage src={user.avatar || undefined} alt={user.name || "User"} />
+                    <AvatarImage src={user.avatar || undefined} alt={user.name || "Member"} />
                     <AvatarFallback>{(user.name || "U").charAt(0).toUpperCase()}</AvatarFallback>
                   </Avatar>
-                </Button>
+                </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end" forceMount>
+              <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuLabel className="font-normal">
-                  <div className="flex flex-col space-y-1">
-                    <p className="text-sm font-semibold leading-none text-white">{user.name}</p>
-                    <p className="text-xs leading-none text-slate-400 truncate">{user.email}</p>
-                    <div className="flex items-center gap-1.5 pt-1.5">
-                      <Badge variant="stage1" className="text-[10px] py-0">{user.stage}</Badge>
-                      <span className="text-[10px] font-mono text-cyan-400 font-semibold">{user.points} pts</span>
-                    </div>
-                  </div>
+                  <p className="text-sm font-semibold leading-none">{user.name}</p>
+                  <p className="mt-1 truncate text-xs text-muted-foreground">{user.email}</p>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link to="/portal" className="cursor-pointer">
-                    <User className="mr-2 h-4 w-4 text-indigo-400" />
-                    <span>Member Dashboard</span>
+                  <Link to="/portal">
+                    <User className="mr-2 h-4 w-4" /> My portal
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => alert("Role: " + user.role)}>
-                  <ShieldCheck className="mr-2 h-4 w-4 text-cyan-400" />
-                  <span>Role: {user.role}</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={signOut} className="cursor-pointer text-rose-400 focus:text-rose-300">
-                  <LogOut className="mr-2 h-4 w-4" />
-                  <span>Sign Out</span>
+                <DropdownMenuItem onClick={signOut}>
+                  <LogOut className="mr-2 h-4 w-4" /> Sign out
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <Button
-              onClick={() => signInWithGoogle()}
-              size="sm"
-              variant="gym"
-              className="gap-2 text-xs font-semibold"
-            >
-              <LogIn className="h-3.5 w-3.5" />
-              <span>Google Sign In</span>
+            <Button variant="ghost" size="sm" className="hidden sm:inline-flex" onClick={() => signInWithGoogle()}>
+              <LogIn className="h-3.5 w-3.5" /> Sign in
             </Button>
           )}
 
-          <a href="#contact">
-            <Button size="sm" variant="default" className="text-xs">
-              Connect / Join
-            </Button>
-          </a>
-        </div>
+          <Button asChild variant="accent" size="sm" className="hidden sm:inline-flex">
+            <Link to="/join">Join free</Link>
+          </Button>
 
-        {/* Mobile menu button */}
-        <div className="flex sm:hidden items-center gap-2">
-          {user ? (
-            <Avatar className="h-8 w-8">
-              <AvatarImage src={user.avatar || undefined} alt={user.name || "User"} />
-              <AvatarFallback>{(user.name || "U").charAt(0).toUpperCase()}</AvatarFallback>
-            </Avatar>
-          ) : (
-            <Button onClick={() => signInWithGoogle()} size="sm" variant="gym" className="h-8 px-2 text-xs">
-              Sign In
-            </Button>
-          )}
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-slate-300 hover:text-white"
+            className="xl:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
 
-      {/* Mobile Navigation Dropdown */}
-      {mobileMenuOpen && (
-        <div className="xl:hidden border-b border-white/10 bg-slate-950/95 px-4 py-4 space-y-2 backdrop-blur-xl">
-          {navLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noopener noreferrer" : undefined}
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-white/5"
-            >
-              <item.icon className="h-4 w-4 text-cyan-400" />
-              {item.label}
-            </a>
-          ))}
-          <div className="pt-2 border-t border-white/10 flex gap-2">
-            <a
-              href="https://github.com/sanchitnis/bossofai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center py-2 bg-white/5 rounded-lg text-xs text-slate-300 border border-white/10"
-            >
-              GitHub Repo
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center py-2 bg-indigo-600 rounded-lg text-xs text-white font-medium"
-            >
-              Connect
-            </a>
+      {open && (
+        <div className="border-t-2 border-foreground bg-background xl:hidden">
+          <div className="container mx-auto space-y-4 py-4">
+            <div className="grid grid-cols-2 gap-2">
+              {[...roleLinks, ...moreLinks].map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className="brut-sm rounded-lg px-3 py-2 text-sm font-semibold hover:bg-accent hover:text-accent-foreground"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center justify-between gap-3">
+              <DepthToggle />
+              <div className="flex gap-2">
+                {!user && (
+                  <Button variant="outline" size="sm" onClick={() => signInWithGoogle()}>
+                    Sign in
+                  </Button>
+                )}
+                <Button asChild variant="accent" size="sm">
+                  <Link to="/join">Join free</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       )}
