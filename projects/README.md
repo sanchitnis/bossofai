@@ -29,3 +29,14 @@ projects/<project-slug>/
 2. Fill out `0_context.md` (standing domain facts) and `1_intent.md` (problem statement and scope).
 3. Partner with an AI agent using the `ai-native-project-engine` skill to lock `2_spec.md`, generate `3_draft.md`, conduct peer review in `4_review.md`, and deploy to `5_final.md`.
 4. After real-world deployment or feedback, capture learnings in `6_feedback.md`.
+
+---
+
+## 🗂️ Active Project Registry
+
+| # | Project Slug | Title | Current Stage | Status |
+|---|---|---|---|---|
+| 0 | [`project0bossofai/`](./project0bossofai/) | Boss of AI — Establish the Organization | **Stage 1: Intent** | `1_intent.md` in progress — `2_spec.md` awaiting expert approval |
+| 1 | [`project1aigurukul/`](./project1aigurukul/) | AI-Gurukul 2.0 — Center of Excellence for Teacher Training | **Stage 1: Intent** | `1_intent.md` ready for expert review — `2_spec.md` drafted, awaiting lock |
+
+> **Dependency**: Project 0 (organization setup) is the parent context for all other projects. Project 1 (AI-Gurukul) is the first active venture under the Boss of AI umbrella.
