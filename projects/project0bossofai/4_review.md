@@ -3,24 +3,29 @@ project: project0bossofai
 stage: 4-test
 artifact: review
 reviewer_human: ~
-reviewer_agent: ~
 date: ~
 status: not-started
 tags: [bossofai, organization, review, stage-4]
 ---
 
-# Review Ledger: Boss of AI — Organizational Charter
+# Review: Boss of AI Organizational Charter
 
-> **Status**: Not started. Awaiting completion of `3_draft.md`.
+> The agent part of review lives in [`deliberation_board.md`](./deliberation_board.md) and `deliberation/`, run under [`protocols/agentic-loops.md`](../../protocols/agentic-loops.md) §5. This file records the outcome and the human gate. Nothing is certified until the board supports it.
 
-## 🤖 Layer 1: Agent Automated Review Check
-- [ ] Grounding check: all factual claims cross-referenced against `wiki/semantic/sources/`.
-- [ ] Spec alignment: all 6 outline sections present and complete.
-- [ ] Scope boundary: all non-goals respected; no premature operational decisions.
-- [ ] HEITL compliance: no autonomous commitments without human approval.
+## Layer 1: Agent verification (Loop C)
+- Stakes level: Heavy
+- Commit reviewed: ~
+- Verification Summary: top of `deliberation_board.md`
+- Result: ~ (converged / converged with dissent / not converged)
+- Open Critical or Major issues (must be 0 before Layer 2): ~
+- Unverified claims awaiting a human decision: ~
+- Dissent Register entries: ~
 
-## 👤 Layer 2: Human Domain Expert Judgment
-- [ ] Strategic framing validated by Sanjay and founding expert committee.
-- [ ] Governance model reviewed by legal/organizational expert.
-- [ ] Partnership strategy reviewed by relevant domain expert.
-- [ ] Approved for promotion to `5_final.md`.
+## Layer 2: Human expert judgment
+- [ ] Strategy and positioning validated
+- [ ] Governance reviewed by someone with legal or organizational expertise
+- [ ] Child safety and data protection reviewed
+- [ ] Dissent Register read; each entry accepted or acted on
+- [ ] Unverified claims accepted, softened or removed
+- Decision: approve / approve with conditions / return to Build / Design / Plan
+- Reviewers (including one who is not a co-author) and date: ~

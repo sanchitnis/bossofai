@@ -61,3 +61,14 @@ When the user asks to start a project:
 3. Link relevant wiki concepts, sources, and seminar recordings.
 4. Record the project in `projects/README.md`, `index.md`, and `log.md`.
 
+---
+
+## Verification and loops (updated)
+
+The Stage 4 "two-layer review" is now the **multi-round verification loop (Loop C)** followed by the human gate. Stage 1 and Stage 2 artifacts get a Light version of it. Build has its own self-check (Loop B).
+
+- Canonical definition: `protocols/agentic-loops.md` (read before running any review).
+- Reviewer role skill: `.agents/skills/expert-peer-review/SKILL.md`.
+- Stage names used in project frontmatter: `1-plan`, `2-design`, `3-build`, `4-test`, `5-deploy`, `6-maintain`.
+- New project files in every project: `deliberation_board.md`, `deliberation/`, `claims.md`, `decisions.md`. Copy them from `projects/_template-project/`.
+- Do not mark anything `approved` or `certified`. Only a human does.

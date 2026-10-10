@@ -2,25 +2,40 @@
 project: _template-project
 stage: 2-design
 artifact: spec
+version: v0
 owner: Domain Lead
-locked_date: 2026-09-16
-status: locked
+locked_date: ~
+status: not-started
+stakes_level: Standard   # Light | Standard | Heavy (proposed here, confirmed by the human gate)
 tags: [ai-native, spec, stage-2]
 ---
 
-# Specification & Structure: [Template Project Title]
+# Specification: [Project Title]
 
-## 1. Document Architecture & Outline
-1. **Executive Summary**: Core finding and immediate call to action.
-2. **Context & Landscape**: Current reality in India vs global benchmarks.
-3. **Core Proposal / Framework**: Detailed technical or policy architecture.
-4. **Implementation Risks & Mitigations**: Governance, fiscal, and technical bottlenecks.
-5. **Recommendations & Roadmap**: Concrete next steps for key stakeholders.
+> **Verification**: Light loop on this spec before it is locked. Do not start `3_draft.md` until `status: approved` and `locked_date` is set by a human.
 
-## 2. Voice, Tone & Reading Level
-- **Tone**: Rigorous, analytical, solution-oriented.
-- **Reading Level**: Policy practitioner & interdisciplinary researcher.
+## 1. Document architecture and acceptance criteria
+For each section, say what "good enough" means in checkable terms. The Build loop ticks these off and the Adversary tests them.
 
-## 3. Explicit Non-Goals
-- We are NOT drafting legislative language.
-- We are NOT endorsing specific private vendor platforms.
+| # | Section | Key question it answers | Acceptance criteria (checkable) | Evidence required |
+|---|---|---|---|---|
+| 1 | | | | |
+
+## 2. Voice, tone, reading level, length
+- 
+
+## 3. Non-goals
+- 
+
+## 4. Decisions needed before locking, with defaults
+A question that blocks the spec should not stay a question. Give each a default so drafting can proceed, and a deadline.
+| ID | Decision | Owner | Deadline | Default if undecided | Cost of the default being wrong |
+|---|---|---|---|---|---|
+| D1 | | | | | |
+
+## 5. Verification plan
+- Stakes level and why:
+- Panel lenses (mandatory: Adversary; Standard and Heavy add Grounding Auditor) and project-specific lenses:
+- Models/harnesses planned:
+- Round cap and revision cap (defaults from the protocol unless changed here):
+- What a Critical issue would be for this artifact:

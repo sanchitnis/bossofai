@@ -46,6 +46,8 @@ For high-stakes projects (curricula, institutional roadmaps, venture whitepapers
 
 When starting or resuming work on any project, the **first decision** is which working mode applies. The mode must be stated explicitly in `0_context.md` under a `## Working Mode` heading. The default is **Mode 1** unless the project brief says otherwise.
 
+> **How verification works in every mode**: the working mode decides *who may proceed*. How agents *review each other* (blind independent review, cross-examination, convergence, or recorded agreement to disagree) is defined once, in [`protocols/agentic-loops.md`](./protocols/agentic-loops.md). Read it before running any review.
+
 ---
 
 ### Mode 1 — Sequential Human-Gated (Default)
@@ -57,6 +59,7 @@ When starting or resuming work on any project, the **first decision** is which w
 - After each document is committed, **pause** and route it to human domain experts for review, critique, and approval.
 - No AI agent proceeds to the next stage until the current artifact has an explicit human sign-off recorded in the file's YAML frontmatter (`status: approved`) or a review comment in `4_review.md`.
 - This is the mandatory mode for all high-stakes deliverables (curricula, institutional charters, policy briefs, venture whitepapers).
+- Stage 1 and 2 artifacts get a **Light** verification loop before the human gate; Stage 4 gets **Standard** or **Heavy** (stakes level is set in `0_context.md` and `2_spec.md`).
 
 **Agent instruction**: *"We are in Mode 1. Complete only `[current artifact]`, then stop and await human expert review before proceeding."*
 
@@ -64,27 +67,18 @@ When starting or resuming work on any project, the **first decision** is which w
 
 ### Mode 2 — Multi-Agent Deliberation Board
 
-**When to use**: Complex projects requiring multi-perspective synthesis — e.g., curriculum design, governance frameworks, contested policy choices — where a single agent or single expert perspective is insufficient.
+**When to use**: Complex or contested work (curriculum design, governance frameworks, policy choices) where a single agent or single expert perspective is insufficient. Mode 2 is the **Heavy** verification loop with the human gate kept in place.
 
-**How it works**:
-- A **Communication Board** is established as a markdown file in the project directory: `deliberation_board.md`. This file is the single shared memory for all agent and expert contributions.
-- Each participating agent is assigned a **SKILL.md-defined persona** (e.g., Pedagogy Expert Agent, AI Domain Expert Agent, Funder Perspective Agent). Each persona has a defined scope of expertise and a set of questions it must answer before any consensus is recorded.
-- Agents contribute to `deliberation_board.md` by writing their perspective, disagreements, and prioritization rationale in a structured format (see template below).
-- **Human experts resolve conflicts**: when agents flag a disagreement or when priorities cannot be reconciled by the deliberation rules, the item is escalated to a human expert who records the decision with a rationale.
-- **No API-based LLM calls**: Multi-agent deliberation does NOT use programmatic API calls to LLMs (no token spend on orchestration). All agent interactions are triggered **manually** using free harnesses — Antigravity IDE, Kiro, VS Code Copilot, or equivalent chatbot interfaces — with agents reading and writing to `deliberation_board.md` between sessions. Antigravity's `/goal` or skill-triggered sessions are the preferred mechanism for manual multi-agent turns.
+**How it works** (full rules in [`protocols/agentic-loops.md`](./protocols/agentic-loops.md) §5):
+- A **panel** of reviewer agents, each with a defined lens (always an Adversary; Standard and Heavy add a Grounding Auditor; plus domain lenses such as Pedagogy, Governance, Finance, Equity, Child safety). Heavy panels use at least one different model or harness from the Author.
+- **Round 1 is blind**: each reviewer writes their own file in `deliberation/` without reading the others, to avoid anchoring.
+- **Round 2 is cross-examination**: every reviewer and the Author responds to every open issue (AGREE / DISAGREE / REFINE / NOT-MY-SCOPE; ACCEPT / REJECT / DEFER-TO-HUMAN), steelmanning before disagreeing and tagging each disagreement Fact, Interpretation, Value, or Risk-tolerance.
+- **Convergence rounds** continue on open issues only. A position may change only for a stated reason (new evidence, new argument, clarified scope, conceded trade-off). "The others agree" is not a reason.
+- **Ending**: either no open Critical or Major issues remain (converged), or agents explicitly **agree to disagree** on an issue after a real stalemate, each writing a short crux statement. Disagreements go into a **Dissent Register** that travels to the human gate and into the final document. **Disputed facts can never be agreed away**: evidence settles them, or the claim is removed or labelled unverified.
+- **Human experts decide**: they may approve, return, or overrule consensus and impasse alike, and record why in `decisions.md`.
+- **No API-based LLM calls**: Multi-agent deliberation does NOT use programmatic API calls to LLMs (no token spend on orchestration). Every agent turn is triggered **manually** using free harnesses (Antigravity IDE, Kiro, VS Code Copilot, Claude, or equivalent chatbot interfaces), with agents reading and writing only through committed files. Copy-paste prompt cards for each role are in the protocol, §6.
 
-**Deliberation Board entry format** (each agent contribution in `deliberation_board.md`):
-```markdown
-### [Agent Persona] — [Date]
-**Artifact under review**: `[filename]`
-**My position**: [1–2 sentence summary]
-**Key evidence / reasoning**: [bullet points]
-**I disagree with**: [other agent's point, if any]
-**I defer to human expert on**: [items outside my scope]
-**My recommended next action**: [concrete proposal]
-```
-
-**Agent instruction**: *"We are in Mode 2. Read `deliberation_board.md`, contribute your perspective as [Persona Name], flag disagreements, and stop. A human expert or another agent will take the next turn."*
+**Agent instruction**: *"We are in Mode 2. Read `protocols/agentic-loops.md` and `deliberation_board.md`. Take the role of [Lens] for [Round N], write only your own file in `deliberation/`, and stop. A human or another agent takes the next turn."*
 
 ---
 
@@ -95,7 +89,7 @@ When starting or resuming work on any project, the **first decision** is which w
 **How it works**:
 - The AI agent completes **all applicable lifecycle stages** in a single session without waiting for human review at intermediate stages.
 - The agent still commits each artifact file sequentially (the file numbering and artifact structure are always maintained).
-- A human review pass is still required before any Mode 3 output is treated as final or shared externally.
+- A human review pass, preceded by at least a **Light** verification loop, is still required before any Mode 3 output is treated as final or shared externally.
 - Mode 3 is **never appropriate** for: curricula, governance charters, policy briefs, financial models, or any artifact that will be shared with external stakeholders without prior human review.
 
 **Agent instruction**: *"We are in Mode 3. Complete all lifecycle stages through `[target artifact]` autonomously, then flag for human review before external use."*

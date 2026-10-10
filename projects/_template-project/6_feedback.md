@@ -3,19 +3,24 @@ project: _template-project
 stage: 6-maintain
 artifact: feedback
 owner: Domain Lead
-received_date: 2026-09-16
-restarts_loop: true
+next_review_date: ~
+restarts_loop: false
 tags: [ai-native, feedback, stage-6, document-loop]
 ---
 
-# Feedback: [Template Project Title]
+# Feedback: [Project Title]
 
-## 1. Stakeholder Reception
-[Summary of reactions and impact from real-world dissemination.]
+## 1. Feedback log
+| Date | Source | What they said | Triage (fix / new intent / decline) | Reason | Where it goes |
+|---|---|---|---|---|---|
 
-## 2. Gaps & Unresolved Questions
-[Identified gaps and critique points.]
+## 2. Gaps and unresolved questions
 
-## 3. Trigger for Next Document Loop
-- Next Project Seed: `projects/<next-project-slug>`
-- Seed Intent: [Next problem to solve]
+## 3. Outcome measures (from `1_intent.md` §5), latest reading
+| Measure | Target | Latest | Date |
+|---|---|---|---|
+
+## 4. Next loop
+- Next review date (mandatory):
+- Next project seed: `projects/<slug>`
+- Seed intent:

@@ -12,14 +12,20 @@ All project files are sequentially numbered (0 onwards) so that they appear in e
 
 ```text
 projects/<project-slug>/
-├── 0_context.md     # Standing project background, domain facts, and constraints
-├── 1_intent.md      # Stage 1: Envision (problem, opportunity, target audience, done criteria)
-├── 2_spec.md        # Stage 2: Scope (locked structure, requirements, non-goals)
-├── 3_draft.md       # Stage 3: Build (AI-native comprehensive first-pass draft)
-├── 4_review.md      # Stage 4: Test (red-team critique, factual verification, human expert gate)
-├── 5_final.md       # Stage 5: Deploy (polished, authoritative deliverable committed for impact)
-└── 6_feedback.md    # Stage 6: Iterate (field outcomes, stakeholder impact, next cycle triggers)
+├── 0_context.md          # Standing facts, current state, working mode, glossary
+├── 1_intent.md           # Stage 1 Plan: problem, hypotheses, outcome-based Done, risks
+├── 2_spec.md             # Stage 2 Design: acceptance criteria, decisions with defaults, verification plan
+├── 3_draft.md            # Stage 3 Build: first full draft with conformance check
+├── 4_review.md           # Stage 4 Test: outcome of agent verification + human gate
+├── 5_final.md            # Stage 5 Deploy: approved deliverable with Known Disagreements
+├── 6_feedback.md         # Stage 6 Maintain: feedback triage, outcome readings
+├── deliberation_board.md # Issue ledger, Verification Summary, Dissent Register
+├── deliberation/         # Per-reviewer, per-round files
+├── claims.md             # Every factual claim and its verification status
+└── decisions.md          # Human decisions and overrules
 ```
+
+How agents review each other, disagree, converge or agree to disagree is defined in [`protocols/agentic-loops.md`](../protocols/agentic-loops.md).
 
 ---
 
@@ -36,7 +42,7 @@ projects/<project-slug>/
 
 | # | Project Slug | Title | Current Stage | Status |
 |---|---|---|---|---|
-| 0 | [`project0bossofai/`](./project0bossofai/) | Boss of AI — Establish the Organization | **Stage 1: Intent** | `1_intent.md` in progress — `2_spec.md` awaiting expert approval |
-| 1 | [`project1aigurukul/`](./project1aigurukul/) | AI-Gurukul 2.0 — Center of Excellence for Teacher Training | **Stage 1: Intent** | `1_intent.md` ready for expert review — `2_spec.md` drafted, awaiting lock |
+| 0 | [`project0bossofai/`](./project0bossofai/) | Boss of AI: Establish the Organization | Stage 1 to 2, revised 2026-10-09 | Intent v2 and spec v2 written; only a single-agent Round 0 pre-review has been done; awaiting independent Light loop and decisions D-001 to D-009 |
+| 1 | `project1aigurukul` | AI-Gurukul 2.0: Center of Excellence for Teacher Training | Stage 1 to 2, revised 2026-10-09 | Intent v2 and spec v2 written; Round 0 only. **Moving to its own repository** (`sanchitnis/aigurukul`); the folder here stays until the new repo exists |
 
-> **Dependency**: Project 0 (organization setup) is the parent context for all other projects. Project 1 (AI-Gurukul) is the first active venture under the Boss of AI umbrella.
+> **Dependency**: Project 0 is the parent context. Project 1 is the first venture project under Boss of AI. No status above means a human has approved anything.

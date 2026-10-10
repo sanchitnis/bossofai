@@ -3,43 +3,31 @@ project: project1aigurukul
 stage: 4-test
 artifact: review
 reviewer_human: ~
-reviewer_agent: ~
 date: ~
 status: not-started
 tags: [aigurukul, teacher-training, review, stage-4]
 ---
 
-# Review Ledger: AI-Gurukul 2.0 — Program Design Document
+# Review: AI-Gurukul 2.0 Program Design Document
 
-> **Status**: Not started. Awaiting completion of `3_draft.md`.
+> Agent verification lives in [`deliberation_board.md`](./deliberation_board.md) and `deliberation/`, run under the loop protocol (`protocols/agentic-loops.md` §5). This file records the outcome and the human gate.
 
-## 🤖 Layer 1: Agent Automated Review Check
-- [ ] Grounding check: all factual numbers (9.5M teachers, 3–5× salary premium, 200 students/teacher/year) cross-referenced.
-- [ ] Spec alignment: all 10 outline sections present and complete.
-- [ ] Scope boundary: all non-goals respected; no vendor endorsements, no premature financial commitments.
-- [ ] Principles coverage: all 7 principles (P1–P7) reflected in program architecture and curriculum sections.
-- [ ] Requirements coverage: all 20 requirements (R1–R20) addressed in relevant sections.
+## Layer 1: Agent verification (Loop C)
+- Stakes level: Heavy
+- Commit reviewed: ~
+- Result: ~ (converged / converged with dissent / not converged)
+- Open Critical or Major issues (must be 0 before Layer 2): ~
+- Unverified claims awaiting a human decision: ~
+- Dissent Register entries: ~
 
-## 👤 Layer 2: Human Domain Expert Judgment
-
-### Pedagogy & Assessment Expert Review
-- [ ] Mastery-gating logic validated (R2, P2).
-- [ ] Peer evaluation rubric and anti-gaming mechanism reviewed (R8, P3).
-- [ ] Residential intensity and whole-person environment validated (R3, R9, P5).
-
-### AI / Domain Expert Review
-- [ ] AI tutoring personalization mechanism validated (R7).
-- [ ] Curriculum content currency and depth validated (R13–R14).
-- [ ] Open-source program design reviewed (R4, P6).
-
-### Education-Sector Leader Review
-- [ ] Pilot institution engagement model reviewed (R15–R18).
-- [ ] Impact measurement framework validated (R17).
-
-### Funder / Financier Review
-- [ ] Business model and revenue streams validated (R19–R20).
-- [ ] Scale economics reviewed (R16, R18).
-
-### Final Gate
-- [ ] All flagged items resolved.
-- [ ] Approved for promotion to `5_final.md`.
+## Layer 2: Human expert judgment
+- [ ] Pedagogy and assessment (mastery gating, rubric, tiered panels, calibration)
+- [ ] AI and domain (curriculum currency, tool-agnostic fallback)
+- [ ] Child safety and data protection (qualified adviser)
+- [ ] Equity and access
+- [ ] Education-sector leader (pilot model, recognition of credential)
+- [ ] Funder (unit economics, ask, guardrails)
+- [ ] Dissent Register read; each entry accepted or acted on
+- [ ] Unverified claims accepted, softened or removed
+- Decision: approve / approve with conditions / return to Build / Design / Plan
+- Reviewers (including one who is not a co-author) and date: ~

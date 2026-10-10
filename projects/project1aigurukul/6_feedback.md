@@ -3,28 +3,32 @@ project: project1aigurukul
 stage: 6-maintain
 artifact: feedback
 owner: Sanjay
-received_date: ~
+next_review_date: ~
 restarts_loop: false
 tags: [aigurukul, teacher-training, feedback, stage-6]
 ---
 
-# Feedback: AI-Gurukul 2.0 — Program Design Document
+# Feedback: AI-Gurukul 2.0 Program Design Document
 
-> **Status**: Not started. To be filled after `5_final.md` is shared with expert reviewers, pilot institutions, and funders.
+> Not started. Begins after `5_final.md` is shared.
 
-## 1. Stakeholder Reception
-[Summary of reactions from pedagogy experts, AI domain experts, pilot institution leads, and financiers post-dissemination.]
+## 1. Feedback log
+| Date | Source | What they said | Triage (fix / new intent / decline) | Reason | Where it goes |
+|---|---|---|---|---|---|
 
-## 2. Gaps & Unresolved Questions
-[Identified gaps, critique points, and revision needs from real-world feedback on the Program Design Document.]
+## 2. Gaps and unresolved questions
 
-## 3. Key Metrics to Monitor (Post-Pilot)
-- Number of educator applicants for Level 1 cohort 1
-- Number of pilot institutions with signed MoU
-- Expert Committee members recruited and committed
-- Seed capital secured (target: ₹X crore)
+## 3. Outcome readings (hypotheses H1 to H6)
+| Measure | Target | Latest | Date |
+|---|---|---|---|
+| Applications per place (H1) | set in spec | | |
+| Completion rate (H1) | set in spec | | |
+| Inter-rater agreement (H3) | set in spec | | |
+| Participant mix, non-metro and non-English share (H6) | set in spec | | |
+| Cost per completer (H4) | set in spec | | |
+| Safeguarding incidents (H5) | 0 | | |
+| Pilot institutions with signed commitment | [PROPOSED] 2 | | |
 
-## 4. Trigger for Next Document Loop
-- **Next Project Seed**: `projects/project1aigurukul/` — Stage 3 Program Design Document draft
-- **Seed Intent**: Once `1_intent.md` is validated by experts and `2_spec.md` is locked, trigger full program design drafting.
-- **Or**: If pilot feedback reveals the need for a separate focused deliverable (e.g., Pilot Cohort Design, Expert Committee Charter, Business Model Canvas), create a sub-project under this directory.
+## 4. Next loop
+- Next review date (mandatory): ~
+- Next project seed: Pilot 0 design, assessor training pack, or safeguarding policy (sub-project)

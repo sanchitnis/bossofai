@@ -1,3 +1,5 @@
+> **Superseded.** This is the original v1.0 intent, kept for history. The current intent is `1_intent.md` (v2). Where they differ, `1_intent.md` wins.
+
 # INTENT.md — AI-Gurukul 2.0
 ## High-Level Intent & Requirements Document
 
