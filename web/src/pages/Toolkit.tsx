@@ -98,7 +98,7 @@ const KINDS: { key: Kind | "all"; label: string }[] = [
   { key: "reports", label: "Reports" },
 ];
 
-const TRACKS = ["Teaching", "Research", "Administration", "Consulting", "Kaizen"];
+const TRACKS = ["Teaching", "Research", "Administration", "Consulting", "Kaizen", "AI Systems"];
 
 const CopyButton: React.FC<{ text: string }> = ({ text }) => {
   const [done, setDone] = useState(false);
