@@ -44,5 +44,7 @@ How agents review each other, disagree, converge or agree to disagree is defined
 |---|---|---|---|---|
 | 0 | [`project0bossofai/`](./project0bossofai/) | Boss of AI: Establish the Organization | Stage 1 to 2, revised 2026-10-09 | Intent v2 and spec v2 written; only a single-agent Round 0 pre-review has been done; awaiting independent Light loop and decisions D-001 to D-009 |
 | 1 | `project1aigurukul` | AI-Gurukul 2.0: Center of Excellence for Teacher Training | Stage 1 to 2, revised 2026-10-09 | Intent v2 and spec v2 written; Round 0 only. **Moving to its own repository** (`sanchitnis/aigurukul`); the folder here stays until the new repo exists |
+| 2 | [`project2medicolegal/`](./project2medicolegal/) | MedAegis 360 — Healthcare Medicolegal, Consent & Cyber Defense Platform | **Stage 2: Spec** | `1_intent.md` approved — `2_spec.md` drafted, awaiting expert lock |
 
-> **Dependency**: Project 0 is the parent context. Project 1 is the first venture project under Boss of AI. No status above means a human has approved anything.
+> **Dependency**: Project 0 is the parent context. Project 1 is the first venture project under Boss of AI. Project 2 (Healthcare Medicolegal & Cybersecurity) is the flagship venture in specialized high-stakes AI and compliance platforms.
+
