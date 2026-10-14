@@ -289,6 +289,50 @@ export const Learn: React.FC = () => (
       />
     </div>
 
+    {/* Microlearning Presentations Showcase */}
+    <div className="mt-14 flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <h2 className="font-heading text-3xl font-extrabold tracking-tight">Interactive microlearning slide decks</h2>
+        <p className="mt-1 max-w-2xl text-muted-foreground">
+          Self-contained interactive presentations with built-in quizzes and AI demos, compiled directly in the Learning Hub.
+        </p>
+      </div>
+      <Button asChild variant="outline" size="sm">
+        <a href="/learn/intro#interactive-presentations">
+          All 10 Hub Decks →
+        </a>
+      </Button>
+    </div>
+
+    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        { title: "Creativity & Innovation", desc: "Design thinking, divergent ideation, and lean startup models.", slug: "creativity-and-innovation", badge: "Enterprising" },
+        { title: "Business Analysis & Software Design", desc: "Systems thinking, user stories, UML modeling, and modular decomposition.", slug: "BASD", badge: "Software" },
+        { title: "AI Creator: Productivity & Synthesis", desc: "Multi-source RAG synthesis, automated data analysis, and custom agents.", slug: "ai-creator", badge: "Builder" },
+        { title: "AI Citizen: Modern AI Literacy", desc: "Foundational AI literacy, prompt engineering, and ethical boundaries.", slug: "ai-citizen", badge: "Literacy" },
+        { title: "Physical AI", desc: "Introduction to Physical AI, hardware integration, and edge intelligence.", slug: "physical-ai", badge: "Hardware" },
+        { title: "AI-Powered Math Research", desc: "Formal prompting, Lean 4 proof systems, and agentic workflows.", slug: "ai-math-research", badge: "Advanced" },
+      ].map((deck) => (
+        <article key={deck.slug} className="brut rounded-xl p-5 flex flex-col justify-between bg-card">
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <Badge variant="outline">{deck.badge}</Badge>
+              <span className="text-[11px] font-mono text-muted-foreground">Interactive</span>
+            </div>
+            <h3 className="font-heading text-base font-bold">{deck.title}</h3>
+            <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{deck.desc}</p>
+          </div>
+          <div className="mt-4 pt-3 border-t border-foreground/10">
+            <Button asChild variant="default" size="sm" className="w-full">
+              <a href={`/learn/presentations/${deck.slug}/`} target="_blank" rel="noopener noreferrer">
+                Play Slide Deck <ArrowUpRight className="h-3.5 w-3.5 ml-1" />
+              </a>
+            </Button>
+          </div>
+        </article>
+      ))}
+    </div>
+
     {/* Call to Action Footer */}
     <div className="mt-12 brut rounded-2xl bg-accent p-6 text-accent-foreground sm:p-8">
       <h2 className="font-heading text-2xl font-extrabold">Learning alone is slow. Build with others.</h2>
