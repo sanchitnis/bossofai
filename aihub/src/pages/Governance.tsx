@@ -13,7 +13,7 @@ const policies = [
     color: "bg-primary",
     borderColor: "border-primary/20",
     lastUpdated: "January 2025",
-    url: "https://revaedu-my.sharepoint.com/:w:/r/personal/agnik_haldar_reva_edu_in/_layouts/15/Doc.aspx?sourcedoc=%7B383D7859-DB61-4C1B-A83B-6226A64E5E12%7D&file=REVA%20University_AI_Policy_Document.docx&action=default&mobileredirect=true&DefaultItemOpen=1"
+    url: "/governance/responsible-ai"
   },
   {
     title: "Staff AI Usage Procedures",
@@ -34,13 +34,13 @@ const policies = [
     url: "/student-guidelines"
   },
   {
-    title: "REVA Privacy policy",
+    title: "Institutional Privacy Policy",
     description: "Our commitment to protecting your personal information and ensuring data privacy across all university services.",
     icon: Lock,
     color: "bg-track-admin",
     borderColor: "border-track-admin/20",
     lastUpdated: "January 2025",
-    url: "https://bossofai.org/privacy"
+    url: "/governance/privacy-policy"
   },
 ];
 

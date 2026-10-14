@@ -31,6 +31,7 @@ Welcome to the central repository for microlearning materials, faculty guides, a
 
 Use the sidebar or the links below to navigate through the available courses:
 
+*   **[AI Engineer Study Guide](./ai-engineer/index.md)** - Open study guide & curriculum with two tracks: AI-Native Builder (Track A) and Deep Technical AI Engineer (Track B), plus 13 hands-on quests.
 *   **[CSU101: Introduction to AI](./csu101-intro-ai/csu101-intro-ai.md)** - Exploring the foundations of Machine Learning and Neural Networks.
 *   **[CSU102: Modern Web Development](./csu102-modern-web-dev/csu102-modern-web-dev.md)** - Building scalable, high-performance web applications.
 *   **[CSA490: Software 3.0](./csa490-software3/csa490-software3.md)** - Agentic Software Engineering with LLMs, RAG, and multi-agent systems.

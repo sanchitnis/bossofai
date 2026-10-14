@@ -51,6 +51,8 @@ import News from "./pages/News";
 import Projects from "./pages/track/research/Projects";
 import Datasets from "./pages/track/research/Datasets";
 import StaffAIProcedures from "./pages/StaffAIProcedures";
+import ResponsibleAIPolicy from "./pages/ResponsibleAIPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -70,7 +72,9 @@ const App = () => (
           <Route path="/assessment-vault" element={<AssessmentVault />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/governance" element={<Governance />} />
+          <Route path="/governance/responsible-ai" element={<ResponsibleAIPolicy />} />
           <Route path="/governance/staff-procedures" element={<StaffAIProcedures />} />
+          <Route path="/governance/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/track/teaching" element={<Teaching />} />
           <Route path="/track/teaching/assessment-design" element={<AssessmentDesign />} />
           <Route path="/track/teaching/engagement" element={<StudentEngagement />} />

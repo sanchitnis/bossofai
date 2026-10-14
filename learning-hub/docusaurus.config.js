@@ -88,6 +88,11 @@ const config = {
         },
         items: [
           {
+            to: '/ai-engineer',
+            position: 'left',
+            label: 'AI Engineer Guide',
+          },
+          {
             to: '/intro#explore-our-courses',
             position: 'left',
             label: 'Contents',
@@ -124,7 +129,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'pathname:///aihub',
+            href: 'https://bossofai.org/aihub/',
             position: 'right',
             label: 'AI Hub',
           },

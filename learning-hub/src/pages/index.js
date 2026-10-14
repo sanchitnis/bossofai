@@ -26,18 +26,18 @@ function HomepageHeader() {
             <div className={styles.heroButtons} style={{ justifyContent: 'center' }}>
               <Link
                 className={`${styles.actionButton} ${styles.btnTeal}`}
+                to="/ai-engineer">
+                ⚡ AI Engineer Guide
+              </Link>
+              <Link
+                className={`${styles.actionButton} ${styles.btnGold}`}
                 to="/intro#explore-our-courses">
                 Courses
               </Link>
               <Link
-                className={`${styles.actionButton} ${styles.btnGold}`}
+                className={`${styles.actionButton} ${styles.btnIndigo}`}
                 to="/intro#interactive-presentations">
                 Microlearning
-              </Link>
-              <Link
-                className={`${styles.actionButton} ${styles.btnIndigo}`}
-                to="/pdf500-faculty-guides/pdf501-content-creation">
-                Create Content
               </Link>
               <Link
                 className={`${styles.actionButton} ${styles.btnRose}`}
@@ -61,6 +61,14 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
 
   const courses = [
+    {
+      badge: 'Flagship · Core Study Guide',
+      title: 'Becoming an AI Engineer',
+      desc: 'Self-paced, project-driven study guide with two distinct tracks: AI-Native Builder (Track A) and Deep Technical AI Engineer (Track B).',
+      route: '/ai-engineer',
+      icon: '🧠',
+      colorClass: styles.pillarTeal
+    },
     {
       badge: 'Self-Paced',
       title: 'CSU101: Introduction to AI',
