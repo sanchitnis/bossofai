@@ -1,0 +1,304 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #060B13;      /* Deep Dark Navy */
+  --color-slate-900: #0B1726;
+  --color-slate-800: #152538;
+  --color-slate-700: #233850;
+  
+  --color-sky-400: #E5A823;        /* Accent Gold */
+  --color-sky-500: #C69214;
+  
+  --font-serif: 'Merriweather', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 overflow-hidden h-screen w-screen font-sans;
+}
+
+/* Slide Transition Animations */
+.slide-container {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide-inactive {
+  opacity: 0;
+  transform: scale(0.97) translateY(10px);
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar for slide contents */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 24, 43, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 168, 35, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 168, 35, 0.6);
+}
+
+/* Accordion slide-item spacing */
+.slide-item {
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+/* Quiz Option Interactive Transitions */
+.quiz-option {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.quiz-option.correct {
+  border-color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #10b981 !important;
+  transform: scale(1.02);
+}
+.quiz-option.incorrect {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #ef4444 !important;
+  opacity: 0.6;
+}
+
+/* Light theme support */
+body.theme-light {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+body.theme-light .bg-slate-950 { background-color: #F8FAFC !important; }
+body.theme-light .bg-slate-900 { background-color: #F1F5F9 !important; }
+body.theme-light .bg-slate-800 { background-color: #E2E8F0 !important; }
+body.theme-light .text-slate-100 { color: #0F172A !important; }
+body.theme-light .text-slate-200 { color: #1E293B !important; }
+body.theme-light .text-slate-300 { color: #334155 !important; }
+body.theme-light .text-slate-400 { color: #475569 !important; }
+body.theme-light .text-slate-500 { color: #64748B !important; }
+body.theme-light .text-slate-600 { color: #94A3B8 !important; }
+body.theme-light .text-slate-700 { color: #CBD5E1 !important; }
+body.theme-light .border-slate-700 { border-color: #94A3B8 !important; }
+body.theme-light .border-slate-800 { border-color: #CBD5E1 !important; }
+body.theme-light .text-sky-400 { color: #C69214 !important; }
+body.theme-light .callout.note { background: rgba(198, 146, 20, 0.05); border-color: rgba(198, 146, 20, 0.2); border-left-color: #C69214; }
+body.theme-light .callout.tip { background: rgba(5, 150, 105, 0.05); border-color: rgba(5, 150, 105, 0.2); border-left-color: #059669; }
+body.theme-light .callout.warning { background: rgba(217, 119, 6, 0.05); border-color: rgba(217, 119, 6, 0.2); border-left-color: #D97706; }
+body.theme-light .callout.danger { background: rgba(225, 29, 72, 0.05); border-color: rgba(225, 29, 72, 0.2); border-left-color: #E11D48; }
+body.theme-light .quiz { background: rgba(241, 245, 249, 0.8); border-color: #CBD5E1; border-left-color: #764BA2; }
+body.theme-light .quiz-option { background: #FFFFFF; border-color: #CBD5E1; color: #334155; }
+body.theme-light .quiz-option:hover { border-color: #C69214; background: rgba(198, 146, 20, 0.05); }
+
+/* I18n Language Toggle System */
+.lang-block, .lang-inline {
+  display: none !important;
+}
+html[data-lang="en"] .lang-block[data-lang="en"] {
+  display: block !important;
+}
+html[data-lang="en"] span.lang-inline[data-lang="en"] {
+  display: inline !important;
+}
+html[data-lang="hi"] .lang-block[data-lang="hi"] {
+  display: block !important;
+}
+html[data-lang="hi"] span.lang-inline[data-lang="hi"] {
+  display: inline !important;
+}
+
+/* Explicit Semantic Visual Blocks */
+.mnemonic-block {
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(99, 102, 241, 0.05);
+  border-left: 4px solid rgb(99, 102, 241);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.analogy-block {
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(245, 158, 11, 0.05);
+  border-left: 4px solid rgb(245, 158, 11);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.definition-block {
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  background: rgba(14, 165, 233, 0.05);
+  border-left: 4px solid rgb(14, 165, 233);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.example-block {
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(16, 185, 129, 0.05);
+  border-left: 4px solid rgb(16, 185, 129);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+/* Glossary Tooltips */
+.glossary-term {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dashed #E5A823;
+  color: #E5A823;
+}
+
+/* ========================================== */
+/* MINIMALIST PRESENTATION LAYOUT TEMPLATES  */
+/* ========================================== */
+
+/* Hero / Welcome Layout */
+.layout-hero {
+  text-align: center;
+  padding: 3rem 2rem !important;
+  background: radial-gradient(circle at top, rgba(229, 168, 35, 0.08) 0%, rgba(15, 23, 42, 0.4) 100%);
+  border: 1px solid rgba(229, 168, 35, 0.15) !important;
+}
+.layout-hero h1 {
+  font-family: 'Plus Jakarta Sans', serif;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #FFFFFF 50%, #f7a35b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Divider Layout */
+.layout-section {
+  border-left: 6px solid #f7a35b !important;
+  background: linear-gradient(90deg, rgba(247, 163, 91, 0.04) 0%, transparent 100%);
+  padding: 3rem 2.5rem !important;
+}
+.layout-section h1, .layout-section h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #FFFFFF;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+/* Agenda / Roadmap Layout */
+.layout-agenda ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-top: 1.5rem;
+}
+.layout-agenda li {
+  position: relative;
+  padding-left: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  transition: all 0.2s ease;
+}
+.layout-agenda li:hover {
+  color: #FFFFFF;
+  transform: translateX(2px);
+}
+.layout-agenda li::before {
+  content: "➔";
+  position: absolute;
+  left: 0;
+  color: #f7a35b;
+  font-weight: bold;
+}
+
+/* Thankyou Closing Layout */
+.layout-thankyou {
+  text-align: center;
+  padding: 3.5rem 2rem !important;
+  background: radial-gradient(circle at bottom, rgba(229, 168, 35, 0.05) 0%, rgba(15, 23, 42, 0.4) 100%);
+  border: 1px solid rgba(229, 168, 35, 0.1) !important;
+}
+.layout-thankyou h2 {
+  font-family: 'Plus Jakarta Sans', serif;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+/* Base Markdown Element Styles within Slide Container to counter Preflight Reset */
+.slide-container select, .slide-container input, .slide-container button {
+  color-scheme: dark;
+}
+
+.slide-container h1 {
+  @apply text-4xl font-bold font-serif mb-4 text-sky-400 block;
+  font-family: 'Plus Jakarta Sans', serif;
+}
+
+.slide-container h2 {
+  @apply text-2xl font-semibold font-serif mb-3 text-sky-400 border-l-4 border-sky-400 pl-3 block;
+  font-family: 'Plus Jakarta Sans', serif;
+}
+
+.slide-container h3 {
+  @apply text-xl font-semibold mb-2 text-sky-400 block;
+}
+
+.slide-container p {
+  @apply mb-4 text-slate-300 leading-relaxed block text-sm;
+}
+
+.slide-container ul {
+  @apply list-disc pl-6 mb-4 space-y-1.5 text-slate-300 block text-sm;
+}
+
+.slide-container ol {
+  @apply list-decimal pl-6 mb-4 space-y-1.5 text-slate-300 block text-sm;
+}
+
+.slide-container li {
+  @apply text-slate-300 text-sm;
+}
+
+.slide-container blockquote {
+  @apply border-l-4 border-sky-400 pl-4 italic my-4 text-slate-300 bg-slate-900/10 py-2 pr-2 rounded-r-lg block text-sm;
+}
+
+.slide-container strong {
+  @apply text-white font-semibold;
+}
+
+.slide-container em {
+  @apply italic text-slate-200;
+}
+
+.slide-container code {
+  @apply font-mono bg-slate-900 px-1.5 py-0.5 rounded text-sky-400 text-xs;
+}
+
+.slide-container a {
+  @apply text-sky-400 hover:text-white underline transition-colors;
+}
+
+

@@ -1,11 +1,16 @@
 {
-  "buildCommand": "cd web && npm install && npm run build && cd ../aihub && npm install && npm run build && rm -rf ../web/dist/aihub && cp -r dist ../web/dist/aihub",
+  "buildCommand": "cd web && npm install && npm run build && cd ../aihub && npm install --legacy-peer-deps && npm run build && rm -rf ../web/dist/aihub && cp -r dist ../web/dist/aihub && cd ../learning-hub && npm install && npm run build && rm -rf ../web/dist/learn && cp -r build ../web/dist/learn && cd ..",
   "outputDirectory": "web/dist",
   "framework": "vite",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/aihub/:path*",
       "destination": "/aihub/index.html"
+    },
+    {
+      "source": "/learn/:path*",
+      "destination": "/learn/:path*"
     },
     {
       "source": "/(.*)",
@@ -13,3 +18,4 @@
     }
   ]
 }
+

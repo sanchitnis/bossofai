@@ -1,0 +1,303 @@
+.heroBanner {
+  padding: 5rem 0;
+  position: relative;
+  background: linear-gradient(180deg, #060b13 0%, #0e172a 100%);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroGlow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(229, 168, 35, 0.04) 0%, rgba(38, 189, 248, 0.01) 50%, transparent 80%);
+  top: -200px;
+  left: calc(50% - 400px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: rgba(229, 168, 35, 0.08);
+  border: 1px solid rgba(229, 168, 35, 0.2);
+  border-radius: 9999px;
+  color: #E5A823;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -1.5px;
+}
+
+.accentText {
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Tool Buttons */
+.actionButton {
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #060b13 !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btnTeal {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+}
+
+.btnGold {
+  background: linear-gradient(135deg, #E5A823 0%, #C69214 100%);
+}
+
+.btnIndigo {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.btnRose {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+.btnGreen {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.btnRose {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+/* Floating Tools Panel */
+.quickToolsCard {
+  background: rgba(14, 23, 49, 0.45);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.toolsHeader {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.toolsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toolsList li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.toolsList li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #E5A823;
+  transform: translateX(4px);
+}
+
+.toolIcon {
+  font-size: 1.1rem;
+}
+
+/* Section styling */
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.sectionDesc {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0.5rem auto 0 auto;
+}
+
+/* TRACK Grid */
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.pillarCard {
+  background: rgba(14, 23, 49, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.75rem;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  position: relative;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  background: rgba(14, 23, 49, 0.55);
+}
+
+.pillarLetter {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.pillarContent {
+  flex: 1;
+}
+
+.pillarName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.pillarDesc {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pillarFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Pillar colors */
+.pillarTeal:hover {
+  border-left: 4px solid #14b8a6;
+}
+.pillarTeal .pillarLetter {
+  color: #14b8a6;
+}
+
+.pillarGold:hover {
+  border-left: 4px solid #E5A823;
+}
+.pillarGold .pillarLetter {
+  color: #E5A823;
+}
+
+.pillarIndigo:hover {
+  border-left: 4px solid #6366f1;
+}
+.pillarIndigo .pillarLetter {
+  color: #6366f1;
+}
+
+.pillarRose:hover {
+  border-left: 4px solid #f43f5e;
+}
+.pillarRose .pillarLetter {
+  color: #f43f5e;
+}
+
+.pillarGreen:hover {
+  border-left: 4px solid #22c55e;
+}
+.pillarGreen .pillarLetter {
+  color: #22c55e;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .heroSubtitle {
+    text-align: center;
+  }
+  .heroButtons {
+    justify-content: center;
+  }
+  .quickToolsCard {
+    margin-top: 2rem;
+  }
+}

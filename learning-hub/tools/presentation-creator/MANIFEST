@@ -1,0 +1,17 @@
+# tools/presentation-creator File Manifest
+
+convert.py             - Python script to convert MD presentations to HTML
+template-default.html  - Reference HTML template for visual design and structure
+input-template.md      - Specifications of the hybrid markdown format
+requirements.txt       - Dependencies (pyyaml, markdown2)
+README.md              - Project overview and constraints
+QUICKSTART.md          - Local running and testing guide
+AGENTS.md              - Guidance and constraints for AI agents
+MANIFEST.md            - Markdown version of file manifest
+MANIFEST               - Plain text version of file manifest
+
+# Course Folders (Moved to sibling CourseDesign workspace)
+# Location: d:\Github\CourseDesign\
+sample-presentation/   - Sample presentation inputs (sample-presentation.md)
+physical-ai/           - Physical AI inputs (physical-ai.md)
+ai-drivers-license/    - AI Driver's License inputs & syllabus (ai-drivers-license.md, syllabus-ai-drivers-license.md)

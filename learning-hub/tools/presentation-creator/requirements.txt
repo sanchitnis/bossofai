@@ -1,0 +1,2 @@
+# Python dependencies for Presentation Creator
+PyYAML>=6.0

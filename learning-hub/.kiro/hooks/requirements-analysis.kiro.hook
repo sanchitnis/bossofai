@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Requirements Analysis Hook",
+  "description": "Trigger when requirements.md is modified to run analysis",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/requirements.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the requirements.md file and identify any compliance issues with EARS patterns and INCOSE quality rules. Suggest improvements for requirements that don't meet the standards."
+  }
+}

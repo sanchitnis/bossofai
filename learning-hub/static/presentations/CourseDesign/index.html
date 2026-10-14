@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boss of AI Interactive Presentation</title>
+    <!-- Font Awesome for layout icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- KaTeX CSS for LaTeX Math Equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script type="module" crossorigin src="./assets/index-jyxDyQwa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DQ2JtZ7B.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- KaTeX JS and Auto-Render Extension -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <!-- Mermaid JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+    <script>
+      // Initialize Mermaid with a default dark theme mapping the app container
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.mermaid) {
+          window.mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+        }
+      });
+    </script>
+  </body>
+</html>
