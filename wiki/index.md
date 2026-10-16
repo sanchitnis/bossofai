@@ -38,6 +38,16 @@ The following frameworks provide the tools necessary to execute the **Srujana Pa
 * [Knowles Andragogy & Heutagogy](learning_pedagogies/knowles_andragogy_heutagogy.md)
 * [Kolb Experiential Learning](learning_pedagogies/kolb_experiential_learning.md)
 * [Minerva Project HCAS](learning_pedagogies/minerva_project_hcas.md)
+* [Alpha School: 2 Hour Learning](learning_pedagogies/alpha_school_2_hour_learning.md) *(draft; evidence thin)*
+* [Acton Academy: Learner-Driven Studios](learning_pedagogies/acton_academy_learner_driven.md) *(draft)*
+* [Khan Lab School: Mastery-Based Learning](learning_pedagogies/khan_lab_school_mastery.md) *(draft; thin source)*
+* [Nai Talim (Gandhi): Basic Education](learning_pedagogies/nai_talim_basic_education.md) *(draft)*
+* [Santiniketan (Tagore)](learning_pedagogies/santiniketan_tagore_open_air.md) *(draft)*
+
+### 6. Learning Techniques & Methods (how to build the habit, not a school model)
+* [Atomic Habits: Behaviour Design](learning_techniques/atomic_habits_behavior_design.md) *(draft)*
+* [Habit-Formation Research](learning_techniques/habit_formation_research.md) *(draft)*
+* [AI Coaching](learning_techniques/ai_coaching.md) *(draft)*
 
 ---
 
