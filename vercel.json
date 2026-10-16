@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd web && npm install && npm run build && cd ../aihub && npm install --legacy-peer-deps && npm run build && rm -rf ../web/dist/aihub && cp -r dist ../web/dist/aihub && cd ../learning-hub && npm install && npm run build && rm -rf ../web/dist/learn && cp -r build ../web/dist/learn && cd ..",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "web/dist",
   "framework": "vite",
   "cleanUrls": true,
