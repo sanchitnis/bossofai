@@ -11,7 +11,7 @@ status: not-started      # not-started | round-0 | in-deliberation | converged |
 chair: ~
 ---
 
-# Deliberation Board: PROdiGYM, the brain gym
+# Deliberation Board: PROdiGYM, the gym for brain
 
 > Maintained by the Chair. Reviewers write their own files in `deliberation/` and never edit this ledger directly. Word caps: findings 80, responses 120, crux 120.
 

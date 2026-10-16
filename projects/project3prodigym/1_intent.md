@@ -6,10 +6,10 @@ version: v2
 owner: Sanjay
 created: 2026-10-16
 status: draft
-tags: [prodigym, brain-gym, habits, taking-charge, psychometrics, peer-review, coaching, stage-1]
+tags: [prodigym, gym-for-brain, habits, taking-charge, psychometrics, peer-review, coaching, stage-1]
 ---
 
-# Intent: PROdiGYM, the brain gym
+# Intent: PROdiGYM, the gym for brain
 
 > **Verification**: Light loop (see [`protocols/agentic-loops.md`](../../protocols/agentic-loops.md)). Not yet run. Only a single-agent self-check has been done. Record the outcome in `deliberation_board.md`.
 >
@@ -72,7 +72,7 @@ Keep three things apart. Mixing them hides failure.
   - The full multi-domain catalogue in Phase 1.
   - An in-product AI coach, voice practice, multilingual content and a mentor marketplace in Phase 1.
   - Claiming improvement numbers before pilot evidence.
-  - Using "Brain Gym" as a name, tagline, domain or hashtag.
+  - Using "gym for brain" (or "Brain Gym") as a name, tagline, domain or hashtag.
 
 ## 7. Risks and assumptions
 | ID | Risk or assumption | Likelihood | Impact | Mitigation or test |

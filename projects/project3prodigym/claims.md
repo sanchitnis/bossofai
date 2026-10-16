@@ -3,7 +3,7 @@ project: project3prodigym
 artifact: claims
 ---
 
-# Claims Register: PROdiGYM, the brain gym
+# Claims Register: PROdiGYM, the gym for brain
 
 Every factual claim, statistic, quotation and citation used in any artifact gets a row. The Grounding Auditor works from this table.
 
@@ -19,7 +19,7 @@ Every factual claim, statistic, quotation and citation used in any artifact gets
 | C-006 | India's DPDP Act 2023 treats under-18s as children, requires verifiable parental consent, and bars tracking/behavioural monitoring of children (with exemptions); DPDP Rules notified Nov 2025, children's provisions phased in about 18 months later (around May 2027) | spec §2.9; context | secondary sources (law-firm summaries) read 2026-10-16 | unverified | agent, 2026-10-16 | Secondary sources only. Privacy lawyer must confirm text, dates and exemptions before Phase 3 and before launch notices |
 | C-007 | IPIP items and scales are public domain, usable for any purpose including commercial | spec §2.3 | International Personality Item Pool site (ipip.ori.org) | verified | agent, 2026-10-16 | Says nothing about translation or attribution; ask IP adviser. Brief Resilience Scale, GSE, Grit-S and habit-automaticity scales remain unverified and unused |
 | C-008 | École 42 has no teachers, lectures or tuition; peer evaluation, 4-week piscine, gamified project tree | spec §2.1 | [`ecole_42_peer_learning.md`](../../wiki/learning_pedagogies/ecole_42_peer_learning.md) | unverified | | Our wiki page only; verify against 42's sources |
-| C-009 | "Brain Gym" is claimed as a mark by the Educational Kinesiology Foundation (USPTO record serial 73654046, status not confirmed; India unknown) and the programme is widely regarded as pseudoscience (e.g. Ofsted 2018 called it a "gimmick") | context §3; intent K9; spec §2.10 | Justia trademark record; press reports | unverified | agent, 2026-10-16 | Not legal advice. Descriptive lowercase use is lower risk than use as name/tag; IP adviser to confirm |
+| C-009 | "Brain Gym" is claimed as a mark by the Educational Kinesiology Foundation (USPTO record serial 73654046, status not confirmed; India unknown) and the programme is widely regarded as pseudoscience (e.g. Ofsted 2018 called it a "gimmick") | context §3; intent K9; spec §2.10 | Justia trademark record; press reports | unverified | agent, 2026-10-16 | Not legal advice. Our own wording "gym for brain" avoids the phrase; descriptive use is lower risk than use as name/tag; IP adviser to confirm |
 | C-010 | Minerva's design (explicit teaching of named habits, cross-context grading) is a useful model for our taxonomy | intent §1; spec §2.1 | Minerva pages; [`minerva_project_hcas.md`](../../wiki/learning_pedagogies/minerva_project_hcas.md) | assumption | | Design choice, not evidence of effect |
 | C-011 | The site is a Vite + React + TypeScript + Tailwind + Radix SPA with Supabase and Vercel | context §2 | `web/package.json`, `vercel.json`, `supabase/schema.sql` | verified | agent, 2026-10-16 | Read from files |
 | C-012 | Lally et al. (2010): 96 undergraduates, average ~66 days to automaticity (range 18 to 254 predicted); one missed day made little difference; self-reported | spec §2.1, §2.4 | <https://bps.org.uk/research-digest/how-form-habit> | verified | agent, 2026-10-16 | From a research digest, not the paper; student sample |

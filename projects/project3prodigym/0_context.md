@@ -1,4 +1,4 @@
-# Project Context: PROdiGYM, the brain gym (bossofai.org/prodigym)
+# Project Context: PROdiGYM, the gym for brain (bossofai.org/prodigym)
 
 > **Cold-Open Context Note**: Standing project facts, constraints, and decisions. Any agent or human must be able to read this file cold before starting work. Keep it true: update it when reality changes.
 >
@@ -27,7 +27,7 @@
     2. *Psychologist or psychometrician* (choice and framing of baseline measures; no diagnostic claims).
     3. *Experienced habit or performance coach* (habit catalogue and coach-pack content).
     4. *Security reviewer* who did not build it (auth, row-level security, secrets).
-    5. *IP / trademark adviser* (name PROdiGYM, the phrase "brain gym", attributions to Minerva and *Atomic Habits*, instrument licences).
+    5. *IP / trademark adviser* (name PROdiGYM, the phrase "gym for brain", attributions to Minerva and *Atomic Habits*, instrument licences).
     6. *Community-safety reviewer* (peer-review rules and moderation).
     7. *One adult learner* from the target group (usability and tone).
   - **Added for Phase 2:** an AI-safety and evals reviewer; a cost and operations check.
@@ -36,7 +36,7 @@
 - **Product home:** a section of the existing site, `bossofai.org/prodigym`, inside the existing `web/` app (decision D3 default).
 
 ## 2. Current State (what actually exists today)
-- **Concept (2026-10-16):** a brain gym that builds habits and human-centric skills through baselines, daily practice, coaching and analytics. Earlier chat drafts `context.md` and `intent.md` are **superseded by these files**.
+- **Concept (2026-10-16):** a gym for brain that builds habits and human-centric skills through baselines, daily practice, coaching and analytics. Earlier chat drafts `context.md` and `intent.md` are **superseded by these files**.
 - **Repo and stack (verified by reading the repo, 2026-10-16):** `web/` is a **Vite + React 18 + TypeScript + Tailwind + Radix UI** single-page app with `react-router-dom`, `@tanstack/react-query` and `@supabase/supabase-js`, deployed on **Vercel** (`vercel.json` builds `web/`, `aihub/`, `learning-hub/`). Supabase schema is `supabase/schema.sql` (tables: `users`, `audience_inquiries`, `broadcast_subscribers`, `projects`, `leaderboard_entries`, `hub_nodes`). Auth is `AuthContext.tsx`. There is **no server-side API folder**. Phase 1 needs none (no programmatic AI calls).
 - **Pedagogy and technique sources in this repo** (added or checked 2026-10-16):
   - [`wiki/learning_pedagogies/`](../../wiki/learning_pedagogies/): Minerva, École 42, Kolb, Knowles/heutagogy, Aalborg and Gold Standard PBL, Challenge-Based Learning, plus new draft pages for **Alpha School, Acton Academy, Khan Lab School, Nai Talim and Santiniketan**. Each new page states its evidence status and a proposed verdict. Use only where relevant (DR-011); **Sanjay confirms** which to include (D15).

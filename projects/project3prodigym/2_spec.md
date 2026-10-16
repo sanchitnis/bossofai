@@ -10,7 +10,7 @@ stakes_level: Standard   # Phase 1 (adults, no AI calls). Heavy for any release 
 tags: [prodigym, spec, stage-2, product-spec, phase-1]
 ---
 
-# Specification: PROdiGYM, the brain gym
+# Specification: PROdiGYM, the gym for brain
 
 > **Verification**: Light loop on this spec before it is locked. Do not start `3_draft.md` until `status: approved` and `locked_date` are set by a human (Spec Rule, [`AGENTS.md`](../../AGENTS.md)).
 >
@@ -33,7 +33,7 @@ tags: [prodigym, spec, stage-2, product-spec, phase-1]
 | 7 | **Analytics: learner and practitioner** | How do they see real progress, honestly? | Learner and practitioner views as in §2.7; cohort aggregates only for **n ≥ 8** [PROPOSED]; self-reported data labelled; no individual ranking; metric definitions written and tested | `docs/metrics.md`; tests |
 | 8 | **Architecture and data model** | How is it built on our stack? | Routes and tables listed; every table has RLS written and tested; **no server-side AI function in Phase 1**; migrations versioned; no PII in logs | Schema and RLS tests; threat-model note |
 | 9 | **Privacy, consent, legal and safety** | How do we avoid harm and meet the law? | Data inventory; retention; consent records; 18+ declaration and minor-handling process; export and delete; incident process; privacy lawyer sign-off; Phase 3 children's-data plan drafted but not built | Lawyer sign-off; [C-006] |
-| 10 | **Experience, brand and accessibility** | What does it feel like, and who might be left out? | Mobile-first; first practice screen under 3 s on a mid-range phone; WCAG 2.1 AA target; copy uses full Prakamya meaning; **"brain gym" written only in lowercase as ordinary words, never as a name, tag, domain or heading**; 18+ notice and "children's version coming soon" shown; attribution page | Lighthouse and manual checks; copy review |
+| 10 | **Experience, brand and accessibility** | What does it feel like, and who might be left out? | Mobile-first; first practice screen under 3 s on a mid-range phone; WCAG 2.1 AA target; copy uses full Prakamya meaning; **"gym for brain" in lowercase ordinary words (we do not write "brain gym"), never as a name, tag, domain or heading**; 18+ notice and "children's version coming soon" shown; attribution page | Lighthouse and manual checks; copy review |
 | 11 | **Evaluation and pilot** | How will we know it works? | Thresholds for H1 to H7 pre-set; comparison design for H2; two read points (8 and 12 weeks or more); decision rules (continue, change, stop) | Pilot protocol; human gate approval |
 | 12 | **Build plan and milestones** | In what order, with what tests first? | Phases in §6; tests for scoring, credits and analytics written **before** the code | Plan; test files |
 
@@ -139,7 +139,7 @@ Two layers. **Pedagogies** are school or learning-design models. **Techniques an
 - **Routes (draft):** `/prodigym` (home), `/prodigym/start` (baseline), `/prodigym/today` (workout and habit plans), `/prodigym/coach` (coach pack and how to use it), `/prodigym/circle` (partners, squads, peer review), `/prodigym/progress`, `/prodigym/library`, `/prodigym/practitioner`, `/prodigym/privacy`, `/prodigym/credits` (attributions and sources).
 - **Tone:** warm, short, non-judgmental; the gym metaphor (reps, workouts) without shame for missed days.
 - **Brand:** PROdiGYM; tagline draft "Everyone can be a prodigy, with AI and practice."; Prakamya shown as "Our philosophy" with its full meaning.
-- **"brain gym" wording (DR-009, DR-014):** Sanjay's decision: write "brain gym" only in **lowercase, as ordinary words** (a gym for the brain), never as a proper name. The phrase "Brain Gym" is claimed as a trademark by the Educational Kinesiology Foundation (US record for BRAIN GYM filed 1987; status and any Indian registration not confirmed), and the programme is widely regarded as pseudoscience [C-009]. Note: trademark rights do not depend on letter case, so lowercase lowers but does not remove risk; the descriptive, non-name use is what matters. **Rule:** the product is PROdiGYM; do not use "brain gym" (in any case) as a product name, tagline, headline, hashtag, domain or social handle; do not describe our methods as movement-based "brain integration"; the IP adviser confirms before launch. This is not legal advice.
+- **"gym for brain" wording (DR-009, DR-014, DR-017):** Sanjay's decision: write **"gym for brain"** in lowercase as ordinary words, and do not write "brain gym" in our own copy, never as a proper name. The phrase "Brain Gym" is claimed as a trademark by the Educational Kinesiology Foundation (US record for BRAIN GYM filed 1987; status and any Indian registration not confirmed), and the programme is widely regarded as pseudoscience [C-009]. Note: trademark rights do not depend on letter case, so lowercase lowers but does not remove risk; the descriptive, non-name use is what matters. **Rule:** the product is PROdiGYM; do not use "brain gym" (in any case) or "gym for brain" as a product name, tagline, headline, hashtag, domain or social handle; do not describe our methods as movement-based "brain integration"; the IP adviser confirms before launch. This is not legal advice.
 - **Attribution page (`/prodigym/credits`):** credits frameworks and sources used (for example *Atomic Habits*, Minerva's approach, École 42, Acton, Nai Talim) without reproducing their text.
 - **Accessibility and inclusion:** keyboard and screen-reader support; plain language; low-bandwidth mode; English first; structure ready for Indian languages.
 
@@ -173,7 +173,7 @@ Deadlines are **[PROPOSED]** for Sanjay to set. **Decided** rows come from Sanja
 | D4 | Where the Phase 2 AI function runs | Sanjay | before Phase 2 | Supabase Edge Function | Moderate rework |
 | D5 | Peer review in Phase 1? | Sanjay | **Decided** (DR-006) | Yes, adults only | n/a |
 | D6 | AI budget, caps and model | Sanjay | **Moved to Phase 2** (DR-007) | Decide before Phase 2 | n/a |
-| D7 | Brand | Sanjay | **Decided** (DR-001, DR-009) | PROdiGYM + Prakamya philosophy; "brain gym" only as lowercase ordinary words, never a mark | Rebrand if the IP adviser objects |
+| D7 | Brand | Sanjay | **Decided** (DR-001, DR-009) | PROdiGYM + Prakamya philosophy; "gym for brain" only as lowercase ordinary words, never a mark | Rebrand if the IP adviser objects |
 | D8 | May the product call an AI API? | Sanjay | **Decided** (DR-007) | No, in any current release; later releases after testing and early customers | n/a |
 | D9 | Habit content authoring | Sanjay | before Stage 3 | Drafted by an AI agent in working sessions, each habit reviewed by one named human, original wording | Slower if reviewers are scarce |
 | D10 | Minimum n for cohort aggregates | Sanjay, psychometrician | before Stage 3 | 8 | Hidden data or weak privacy |
@@ -209,6 +209,6 @@ Loop depth by stakes: Light, Standard or Heavy as below. Nothing here has run ye
 - **Panel lenses (Phase 1 Stage 4, Standard):** Adversary; Grounding Auditor; Pedagogy and psychometrics; Privacy and data protection; Security; Community safety; IP and licensing.
 - **Models/harnesses planned:** at least one reviewer on a different model or harness from the Author (the Author is Claude).
 - **Round cap and revision cap:** protocol defaults (Light 2, Standard 4 per issue; 3 revision cycles).
-- **What a Critical issue would be:** any call to an LLM API in the Phase 1 release; a path to read another learner's private data; peer-review content exposing identity or personal detail; a minor able to use the product without being detected or removed; copied Minerva or book content; an instrument without a confirmed licence; a score shown as a label or diagnosis; "brain gym" used as a name, tag or heading; an unverified effectiveness claim shown to users; a contradiction with `1_intent.md`.
+- **What a Critical issue would be:** any call to an LLM API in the Phase 1 release; a path to read another learner's private data; peer-review content exposing identity or personal detail; a minor able to use the product without being detected or removed; copied Minerva or book content; an instrument without a confirmed licence; a score shown as a label or diagnosis; "brain gym" or "gym for brain" used as a name, tag or heading; an unverified effectiveness claim shown to users; a contradiction with `1_intent.md`.
 - **Human gate:** Sanjay alone, with the reviewers listed in `0_context.md` §1 arranged by him (DR-008).
 - **Not yet done:** nothing here has been independently verified. Only the author's self-check has been done.

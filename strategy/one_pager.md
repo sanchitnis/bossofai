@@ -1,6 +1,6 @@
 # Boss of AI: 1-Page Overview (bossofai.org)
 
-**A community venture studio and cognitive Brain GYM where students, educators, and leaders build real solutions to real problems, leading as the authoritative Boss of AI.**
+**A community venture studio and cognitive gym for brain where students, educators, and leaders build real solutions to real problems, leading as the authoritative Boss of AI.**
 
 ---
 
