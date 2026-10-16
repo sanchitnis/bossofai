@@ -10,7 +10,7 @@ status: not-started
 tags: [ai-native, draft, stage-3]
 ---
 
-# Draft: PROdiGYM, the brain gym
+# Draft: PROdiGYM, the gym for brain
 
 > **Preconditions**: `2_spec.md` has `status: approved`.
 >
