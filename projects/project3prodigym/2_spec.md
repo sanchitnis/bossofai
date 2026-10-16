@@ -2,21 +2,21 @@
 project: project3prodigym
 stage: 2-design
 artifact: spec
-version: v1
+version: v2
 owner: Sanjay
 locked_date: ~
 status: draft
-stakes_level: Heavy   # for the built product at Stage 4; Light for this spec
-tags: [prodigym, spec, stage-2, product-spec]
+stakes_level: Standard   # Phase 1 (adults, no AI calls). Heavy for any release with in-product AI or minors. Proposed here, confirmed by the human gate
+tags: [prodigym, spec, stage-2, product-spec, phase-1]
 ---
 
 # Specification: PROdiGYM, the Brain Gym
 
 > **Verification**: Light loop on this spec before it is locked. Do not start `3_draft.md` until `status: approved` and `locked_date` are set by a human (Spec Rule, [`AGENTS.md`](../../AGENTS.md)).
 >
-> **What this spec specifies:** the product (a web platform) that will be built in Stage 3. "Document" in the template means *specification section*; each section below has checkable acceptance criteria that the Build loop ticks off and the Adversary tests.
+> **v2 (2026-10-16):** applies Sanjay's decisions DR-004 to DR-012. Changes from v1: **Phase 1 is adults only**; MVP domain is **Taking Charge of Life** (self-regulation included) with **Atomic-Habits-style** habit plans; a **techniques and methods layer** sits beside the pedagogy map; **peer review and accountability partners are in Phase 1**; **no programmatic LLM API calls in current releases**, so AI coaching in Phase 1 is delivered by **skill files used in the learner's own chatbot**; the in-product AI coach and its cost controls move to **Phase 2**; school students come later through teachers and parents.
 >
-> **A note on the AGENTS.md "no API-based LLM calls" rule.** That rule governs how *agents review each other* (Loop C). It does not forbid the **product** from calling Claude for learners. This spec uses the Claude API inside the product, and says so here so a later reader does not see a contradiction. (Confirm in D8.)
+> **What this spec specifies:** the product (a web platform and a coach pack) built in Stage 3. Each section has checkable acceptance criteria.
 
 ---
 
@@ -24,149 +24,185 @@ tags: [prodigym, spec, stage-2, product-spec]
 
 | # | Section | Key question it answers | Acceptance criteria (checkable) | Evidence required |
 |---|---|---|---|---|
-| 1 | **Product principles and pedagogy map** | Which learning designs shape which features? | Table maps each of the six wiki pedagogies to named features and to named risks for minors; every feature in §2 to §7 cites at least one source or says "our own design"; no claim of effectiveness | Links to the six wiki pages; claims in `claims.md` |
-| 2 | **Skill taxonomy ("H&C catalogue")** | What is taught and how is it named, practised and graded? | Domains and habits defined with: name, hashtag-style tag, one-line definition, level descriptors (novice to fluent), at least 3 reps across **different contexts**, a cross-context rubric; MVP ships **2 domains, ≥ 20 habits, ≥ 60 reps**; each habit reviewed by one human who is not the author | Review log in `decisions.md`; Minerva sources [C-001, C-002] |
-| 3 | **Baseline and check-in assessments** | How does a learner see where they start and whether they grow? | Each baseline construct has an instrument with a **confirmed licence** or a self-developed item set flagged *experimental*; scoring rules written and unit-tested; parallel forms or re-test caveats shown; results framed developmental, never as labels; psychometrician reviewed before practitioners see scores | Licence notes [C-007]; test results; reviewer note |
-| 4 | **Daily practice engine** | What does a learner do today, and why? | A "workout" of 1 to 3 reps (5 to 15 minutes) is chosen by a documented rule from baseline gaps, spaced repetition and difficulty adaptation; a learner can swap or skip; works with **no AI** as a fallback; streak logic defined without punishing misses | Rule document; unit tests; fallback demo |
-| 5 | **AI Challenger (Claude)** | How does AI challenge without doing the thinking? | Defined modes (Socratic, role-play, devil's advocate, rubric feedback); age-banded system prompts in version control; learner is told it is AI; no completed answers to graded-style tasks; distress escalation message; server-side only; per-learner cap and caching; an eval set (≥ 30 prompts across modes and age bands) passed before release | Prompt files; eval results; cost telemetry |
-| 6 | **Projects and peer review** (Phase 2 unless D1/D5 change) | How do skills transfer to real work and with peers? | Challenge cycle in CBL form (big idea, essential question, challenge) and a PBL "public product" step; peer-review credits for adults; moderated and anonymised for minors or switched off | Design note; moderation rules |
-| 7 | **Analytics: learner and practitioner** | How do they see real progress, honestly? | Learner view: baseline vs now, skill profile, streak, reflections timeline, next step. Practitioner view: cohort distribution, stalled learners, weakest skills, export. Rules: cohort charts show only for **n ≥ 8** [PROPOSED]; uncertainty and caveats shown; no individual ranking of minors; no cross-cohort comparison by default | Spec of every metric (definition, formula, caveat); tests |
-| 8 | **Architecture and data model** | How is it built on our stack, and where do secrets and data live? | Components and routes listed; every table has RLS written and tested; Claude key lives only in server-side secrets; migrations are versioned; no PII in logs or prompts beyond what the spec lists | Schema and RLS tests; threat model note |
-| 9 | **Privacy, consent and safety** | How do we avoid harm? | Data inventory; retention periods; consent records; parental or school consent flow before any minor; data export and delete; incident process; safeguarding adviser sign-off recorded in `4_review.md` | Adviser sign-off; legal reading [C-006] |
-| 10 | **Experience, brand and accessibility** | What does it feel like, and who might be left out? | Mobile-first; first practice screen under 3 s on a mid-range phone; WCAG 2.1 AA target; copy uses full Prakamya meaning; tagline draft present; low-bandwidth mode; non-AI fallback | Lighthouse and manual a11y check; copy review |
-| 11 | **Evaluation and pilot design** | How will we know it works, and what will we stop doing? | Pre-set metrics and thresholds from H1 to H7; comparison design for H2; consent for research use; decision rules (continue, change, stop) | Pilot protocol; thresholds approved by human gate |
-| 12 | **Build plan and milestones** | In what order, and with what tests first? | Phases below (§6), each with a done-test; tests for scoring and analytics written **before** the code | Plan; test files |
+| 1 | **Pedagogy and methods map** | Which learning designs and techniques shape which features, and which are *not* used? | Each source in the map has a verdict (Use, Light, Reference-only, Not used) and a feature link or a reason; no effectiveness claims; every borrowed idea attributed; Sanjay confirms the verdicts (D15) | Wiki pages; `claims.md`; decision DR |
+| 2 | **Skill taxonomy and habit catalogue** | What is taught, named, practised and graded? | Domain D1 *Taking Charge of Life* with two strands; Phase 1 ships **≥ 20 habits and ≥ 60 reps**, all in **our own wording and names**; each habit has level descriptors, ≥ 3 reps in different contexts, a habit-plan prompt, and one named human reviewer; **no text, list or tag copied from Minerva or from any book**; originality check passed | Review log; originality check note; [C-013] |
+| 3 | **Baseline and check-ins** | How does a learner see where they start and how they change? | Instruments only with a **confirmed licence** (IPIP items are public domain, C-007) or our own items marked *experimental*; scoring is pure, documented and unit-tested; re-test caveats shown; results framed as developmental, never labels; psychometrician reviewed | Licence notes; tests; reviewer note |
+| 4 | **Habit plans and daily practice engine** | What does a learner do today, and why? | A habit plan template; a workout of 1 to 3 reps (5 to 15 minutes) chosen by a documented rule; **weekly consistency** (not an unbroken chain); learner can swap or skip; works with no AI at all | Rule document; unit tests |
+| 5 | **Coaching: coach pack (Phase 1) and in-product coach (Phase 2)** | How does AI challenge the learner without costing us API credits now? | **Phase 1:** a coach pack (skill files plus plain-text prompts) with modes and a session-log format; tested by a human on ≥ 2 chatbots against a fixed prompt set; files ask for no personal identifiers; site states that chat content is governed by the chatbot provider. **No programmatic LLM call in Phase 1 code.** **Phase 2:** design held but not built | Test log; code search showing zero LLM API calls |
+| 6 | **Peer review and accountability (Phase 1)** | How do learners learn from and support each other, safely? | Credit ledger; review rubric; anonymised handles; per-submission opt-in; report, block and moderation flow; code of conduct; accountability pairs and squads; no AI used in review; community-safety reviewer sign-off | Design note; moderation runbook; tests for credits |
+| 7 | **Analytics: learner and practitioner** | How do they see real progress, honestly? | Learner and practitioner views as in §2.7; cohort aggregates only for **n ≥ 8** [PROPOSED]; self-reported data labelled; no individual ranking; metric definitions written and tested | `docs/metrics.md`; tests |
+| 8 | **Architecture and data model** | How is it built on our stack? | Routes and tables listed; every table has RLS written and tested; **no server-side AI function in Phase 1**; migrations versioned; no PII in logs | Schema and RLS tests; threat-model note |
+| 9 | **Privacy, consent, legal and safety** | How do we avoid harm and meet the law? | Data inventory; retention; consent records; 18+ declaration and minor-handling process; export and delete; incident process; privacy lawyer sign-off; Phase 3 children's-data plan drafted but not built | Lawyer sign-off; [C-006] |
+| 10 | **Experience, brand and accessibility** | What does it feel like, and who might be left out? | Mobile-first; first practice screen under 3 s on a mid-range phone; WCAG 2.1 AA target; copy uses full Prakamya meaning; **"Brain Gym" not used as a name, tag, domain or heading**; attribution page | Lighthouse and manual checks; copy review |
+| 11 | **Evaluation and pilot** | How will we know it works? | Thresholds for H1 to H7 pre-set; comparison design for H2; two read points (8 and 12 weeks or more); decision rules (continue, change, stop) | Pilot protocol; human gate approval |
+| 12 | **Build plan and milestones** | In what order, with what tests first? | Phases in §6; tests for scoring, credits and analytics written **before** the code | Plan; test files |
 
 ## 2. Detailed product specification
 
-### 2.1 Principles and pedagogy map (section 1)
-| Pedagogy (repo wiki) | What we take | Feature | Caution |
-|---|---|---|---|
-| **Minerva** (H&Cs, 4 core competencies, cross-context grading) | Name each skill; teach it explicitly; assess how well it is applied in *new* contexts | Taxonomy of Habits and Concepts with tags; same habit practised across several contexts; cross-context rubric | Minerva's evidence is its own; designed for university students; we do not copy their catalogue |
-| **École 42** (peer review, XP, skill tree, "piscine") | Peer review as learning; visible progression; an immersive start | Skill tree view; 2-week "piscine" onboarding sprint; **peer-review credits** (Phase 2) | Peer review among minors needs moderation or must be off; "piscine" stress model is not for school students |
-| **Kolb** (experience, reflection, conceptualise, experiment) | Every rep ends with reflection and a rule-of-thumb | Rep structure: do, reflect, name the rule, try again | Reflection quality must be assessed, not assumed |
-| **Knowles / heutagogy** (need-to-know, self-direction, double-loop) | Show *why*; learner chooses; reflect on the assumption, not only the task | "Why this rep" line; choice of workout; double-loop reflection prompt | Andragogy describes adults; for school students use **scaffolded** autonomy, not full self-determination |
-| **Aalborg / Gold Standard PBL** (authentic problem, critique and revision, public product) | Sustained project with feedback | Optional capstone project (Phase 2) with critique cycle | Public products need privacy review; no public minor profiles |
-| **Challenge-Based Learning** (big idea, essential question, challenge) | A frame for self-chosen real challenges | "Taking Charge" challenge cycles | Keep scope small; guiding questions, not lectures |
-| **Prakamya (our philosophy)** | Discernment of *what is worth wanting*, for the good of all | A "What is worth wanting?" reflection strand; community-benefit prompts in challenges; copy | Not a pedagogy source; keep it a reflective practice, not doctrine |
+### 2.1 Pedagogy and methods map (section 1)
+Two layers. **Pedagogies** are school or learning-design models. **Techniques and methods** are ways to build a habit or skill. Verdicts are *proposals* for Sanjay (D15): nothing is used just because a wiki page exists.
 
-### 2.2 Skill taxonomy (section 2)
-- **Structure:** Domain → Skill → Habit/Concept (H&C) → Rep.
-- **Domains (inside-out ladder):** D1 Self-Regulation; D2 Taking Charge (Agency); D3 Thinking; D4 Human-Centric (creativity, communication, collaboration); D5 AI-Era (human expert in the loop).
-- **MVP:** D1 and D2 only. Target ≥ 20 habits and ≥ 60 reps, each with level descriptors (e.g. Novice, Developing, Fluent) and a rubric.
-- **Hashtag-style tags** for habits (for example `#pause`, `#nextstep`, `#rightquestion`) are *our own* names; do not reuse Minerva's tag names without checking licence and fit.
-- **Dependency:** earlier rungs are recommended, not locked. The UI shows the ladder and suggests the next rung.
-- **Cross-context rule:** every habit has reps in at least three contexts (for example study, relationships, work or community) so transfer can be assessed (H5).
-- **Content provenance:** each rep records author, reviewer, source, and `validation_status` (`draft`, `reviewed`, `experimental`).
+| Source (wiki page) | Layer | What we take | Verdict | Feature | Caution |
+|---|---|---|---|---|---|
+| **Minerva** ([page](../../wiki/learning_pedagogies/minerva_project_hcas.md)) | Pedagogy | Name each skill; teach it explicitly; assess application in *new* contexts; four core competencies | **Use (structure only)** | Habit catalogue shape; cross-context rubric | Content and name are © and trademarks of Minerva Project [C-013]: **original catalogue only** |
+| **École 42** ([page](../../wiki/learning_pedagogies/ecole_42_peer_learning.md)) | Pedagogy | Peer review as learning; credits for reviewing; visible progression | **Use** | Peer-review credits; skill-tree view | Description is wiki-sourced [C-008]; no "piscine" stress model; adults only |
+| **Acton Academy** ([page](../../wiki/learning_pedagogies/acton_academy_learner_driven.md)) | Pedagogy | Socratic guides; accountability partners and squads; personal contract; badges for character; sprint and showcase rhythm | **Use (selected parts)** | Accountability pairs and squads; habit contract; character badges; 4 to 6 week sprints | Own-site description only [C-017]; no age-mixed studios |
+| **Nai Talim** ([page](../../wiki/learning_pedagogies/nai_talim_basic_education.md)) | Pedagogy / philosophy | Learning through useful work; learning serves others | **Use (philosophy)** | "Useful to someone else" challenge prompts; pairs with Prakamya | No craft curriculum or self-supporting economy |
+| **Santiniketan** ([page](../../wiki/learning_pedagogies/santiniketan_tagore_open_air.md)) | Pedagogy / philosophy | Whole-person learning; arts and nature; member-run governance | **Light** | Optional non-screen reps (walk, writing, music); circles that set their own norms | Methods not detailed in sources [C-019] |
+| **Kolb** ([page](../../wiki/learning_pedagogies/kolb_experiential_learning.md)) | Pedagogy | Do, reflect, form a rule, try again | **Use** | Rep structure | Reflection quality must be assessed |
+| **Knowles / heutagogy** ([page](../../wiki/learning_pedagogies/knowles_andragogy_heutagogy.md)) | Pedagogy | Show *why*; learner chooses; reflect on assumptions | **Use** | "Why this rep" line; choice of workout; double-loop prompt | Adults only in Phase 1, so a good fit |
+| **Aalborg / Gold Standard PBL** ([page](../../wiki/learning_pedagogies/aalborg_bie_pbl.md)) | Pedagogy | Real problem, critique and revision, public product | **Light** | Sprint-end "showcase" of a habit plan or small project | Phase 2 for capstones |
+| **Challenge-Based Learning** ([page](../../wiki/learning_pedagogies/challenge_based_learning.md)) | Pedagogy | Big idea, essential question, challenge | **Light** | Wording of "Taking Charge" challenges | Keep small |
+| **Khan Lab School** ([page](../../wiki/learning_pedagogies/khan_lab_school_mastery.md)) | Pedagogy | Mastery-based progression, agency | **Reference-only** | Mastery gating (our own design) | Thin source [C-020] |
+| **Alpha School** ([page](../../wiki/learning_pedagogies/alpha_school_2_hour_learning.md)) | Pedagogy | Short focused block; adults as guides | **Reference-only / Not used** | None | Company claims only [C-016] |
+| **Atomic-Habits-style behaviour design** ([page](../../wiki/learning_techniques/atomic_habits_behavior_design.md)) | Technique | Cue, tiny start, easy setup, visible tracking, identity; implementation intentions; habit stacking | **Use (core method for D1)** | Habit plan template; tiny-version reps; tracking; stacking prompts | Book is copyrighted: own wording and examples [C-014]; framework is not a tested intervention |
+| **Habit-formation research** ([page](../../wiki/learning_techniques/habit_formation_research.md)) | Technique (evidence) | Habits take weeks to months, vary widely; one missed day matters little | **Use (design constraints)** | Weekly consistency; two read points (8 and 12 weeks or more) | One study of students, self-reported [C-012]; other techniques unverified [C-021] |
+| **AI coaching** ([page](../../wiki/learning_techniques/ai_coaching.md)) | Technique | Question-led coaching; goal, reality, options, plan | **Use (via coach pack)** | Coach pack in Phase 1; in-product coach in Phase 2 | One study, abstract only [C-015] |
+| **Prakamya** (our philosophy) | Philosophy | Discernment of what is worth wanting, for all | **Use** | "What is worth wanting?" reflection strand; copy | A reflective practice, not doctrine |
+
+**Candidates not yet researched, not used:** spaced repetition and retrieval practice, deliberate practice, self-determination theory, WOOP. Each needs a source before it enters the spec (see the research page's table).
+
+### 2.2 Skill taxonomy and habit catalogue (section 2)
+- **Structure:** Domain → Strand → Habit (or Concept) → Rep.
+- **Phase 1 domain:** **D1 Taking Charge of Life**, with two strands:
+  - **Self-regulation:** attention and focus, noticing and handling emotions, urges and impulses, pausing under stress, energy and rest routines (non-clinical, no sleep or mental-health advice).
+  - **Agency:** goals and priorities, planning and next steps, ownership and follow-through, bouncing back from setbacks, decisions, and **what is worth wanting** (Prakamya strand).
+- **Later domains (not built in Phase 1):** D2 Thinking; D3 Human-Centric (creativity, communication, collaboration); D4 AI-Era.
+- **Size:** ≥ 20 habits and ≥ 60 reps, each with level descriptors (for example Starting, Steady, Fluent) and a short rubric. **This is our own catalogue.**
+- **Originality rules (DR-010):** names, tags, definitions, examples and rubrics are written fresh; no entry is a rewording of a Minerva item or of passages from a book; each habit lists its inspirations in an attribution field; one named human reviewer checks originality and quality.
+- **Cross-context rule:** each habit has reps in ≥ 3 contexts (for example work, study, home or community) so transfer can be assessed (H5).
+- **Rep record fields:** author, reviewer, source or inspiration, `validation_status` (`draft`, `reviewed`, `experimental`).
+- **Habit plan template (our wording):** *When [cue], I will [tiny action] in [place]. I will make it easier by [change]. I will track it by [method]. I will check in with [partner].* Each habit rep includes a plan step and a "what got in the way" reflection.
 
 ### 2.3 Baseline and check-ins (section 3)
-- **Constructs for MVP (candidate):** self-regulation, self-efficacy or agency, perseverance, growth mindset. Final list is a decision for the psychometrician (Q3, Q8).
-- **Instruments:** only those with a **confirmed licence** that permits our use (open, public domain, or granted in writing). Candidates to check, **not yet verified**: IPIP-derived scales, the Brief Resilience Scale, General Self-Efficacy scale, Grit-S [C-007]. Anything with no clear licence is not used; a self-developed item set is marked *experimental* and not used for any comparison across people.
-- **Scoring:** implemented as pure, unit-tested functions; item reversals, missing-data handling and score ranges are documented. No norms or "percentiles" until we have a validated reference sample.
-- **Re-measurement:** a check-in every 4 weeks by default; show change with a caution about practice effects and self-report bias.
-- **Framing:** "where you are now", never "your type". No clinical terms. A short, plain statement of purpose and consent before every assessment.
+- **Candidate constructs for D1:** self-regulation, self-efficacy or agency, perseverance, and self-reported habit automaticity. Final list set with the psychometrician (Q3, Q8).
+- **Instruments:** use only items with a **confirmed licence**. The International Personality Item Pool states its items and scales are public domain for any purpose, including commercial use; it says nothing on translation or attribution, so ask the IP adviser [C-007]. Other well-known scales (for example resilience, self-efficacy, grit and habit-automaticity measures) are **not used** until each licence is confirmed in writing. Our own items are marked *experimental* and are not used to compare people.
+- **Scoring:** pure, unit-tested functions; reversals, missing data and ranges documented; **no norms or percentiles** without a validated reference sample.
+- **Re-measurement:** a check-in at **8 weeks**, and another at **12 weeks or more** for habit-automaticity (H2); show change with caveats about practice effects and self-report bias.
+- **Framing:** "where you are now", never a type or label; plain purpose and consent text before each assessment; no clinical terms.
 
-### 2.4 Daily practice engine (section 4)
-- **Workout generator** (pure function, documented): inputs are the baseline gaps, last 14 days of reps, spaced-repetition due dates and chosen goal; output is 1 to 3 reps for 5 to 15 minutes.
-- **Difficulty adaptation:** move up a level after two successful reps (rubric self-check plus Challenger or peer rating), down after two struggles; always allow manual choice.
-- **Streaks:** weekly consistency target (for example 4 of 7 days) rather than an unbroken daily chain; one "rest day" per week with no penalty. This is a design choice [PROPOSED], tested in H1.
-- **Rep format:** short prompt, action, reflection (Kolb), rule-of-thumb, and optional Challenger turn.
-- **Fallback:** every rep must work without AI. When the AI cap is reached the app switches to the static version.
+### 2.4 Habit plans and daily practice engine (section 4)
+- **Workout generator** (pure function, documented): inputs are baseline gaps, the last 14 days of reps, due dates and the learner's chosen goal; output is 1 to 3 reps for 5 to 15 minutes.
+- **Difficulty:** move up a level after two successful reps (self-check plus partner or peer rating); down after two struggles; manual choice always allowed.
+- **Consistency, not chains:** a **weekly target** (for example 4 of 7 days) with one rest day; one missed day has no penalty. This follows the finding that one missed day matters little while many missed days matter [C-012]. Tested in H1.
+- **Rep format:** short prompt, tiny action, reflection (Kolb), rule of thumb, optional coach-pack session.
+- **No-AI path:** every rep works without any AI.
 
-### 2.5 AI Challenger (section 5)
-- **Modes:** (1) Socratic questioning, (2) role-play for communication, (3) devil's advocate for thinking, (4) rubric-based feedback on a reflection.
-- **Behavioural rules (in the system prompt, in version control):** ask before telling; never write the learner's final answer for a graded-style task; give feedback against a visible rubric; say it is AI; stay inside the rep's topic; refuse unsafe or off-topic requests politely.
-- **Age bands:** separate prompts and limits for under-13 (not supported in MVP), 13 to 17 (only after safeguarding sign-off), and 18+. Content filters on input and output.
-- **Distress handling:** if the learner writes signs of serious distress, the Challenger stops the exercise, shows a plain, supportive message and points to a trusted adult or local helpline resource, and the event is logged without personal content. It does not give clinical advice.
-- **Server-side only:** the Claude API key lives in server-side secrets. The browser never sees it. The server verifies the Supabase session (JWT) and checks the per-learner cap before every call.
-- **Cost control:** per-learner daily and monthly token budget; cache static feedback; log token use, not text, by default; model choice is a configuration value (D6).
-- **Evals before release:** a fixed set of at least 30 test prompts across modes and age bands, including adversarial ones (asking for the answer, jailbreaks, sensitive disclosures); pass criteria set before running.
+### 2.5 Coaching (section 5)
+**Phase 1: coach pack (no API calls, no credits).**
+- **What it is:** a folder of files in the repo, for example `coach-pack/`: a core `SKILL.md` (the PROdiGYM coach) plus mode files (habit plan, weekly review, obstacle troubleshooter, "what is worth wanting" reflection, Socratic challenger) and a **plain-text prompt version** of each for chatbots without skill support.
+- **How a learner uses it:** the site gives download or copy instructions; the learner loads the pack in **their own chatbot** (for example Claude.ai); at the end the coach produces a **short session log** in a fixed, readable format; the learner **pastes it into PROdiGYM** to log the rep. That log is **self-reported**.
+- **Coach behaviour (in the files):** ask before telling; keep to the learner's goal; use a visible rubric; never do the learner's task; no clinical advice; do not ask for names, contacts or other identifiers; a gentle off-ramp if the learner seems distressed (suggest a trusted person or a local helpline).
+- **Testing:** a human runs a fixed set of ≥ 20 test prompts (including "just give me the answer" and distress cases) on **at least two chatbots** before release; results recorded.
+- **Disclosure:** the site says that what is typed into a chatbot is governed by that provider's terms and age rules, and is not stored by PROdiGYM unless the learner pastes it in.
+- **Code rule:** a repository check confirms **no call to any LLM API** in Phase 1 code and no AI key in settings.
 
-### 2.6 Projects and peer review (section 6)
-- **Phase 2.** For adults: peer-review credits (spend credits to get a review, earn credits by reviewing) with a quality rubric and spot checks. For minors: off by default; if used, moderated and anonymised and only within a school-sponsored cohort.
-- **Capstone challenge:** a CBL-style cycle (big idea, essential question, challenge, guiding questions, solution, publish, reflect) with a public-product step only for adults who opt in.
+**Phase 2: in-product coach (design held, not built).** After testing and an initial customer base: a server-side function calls an AI model with per-learner credit caps, caching and logging of usage (not text); age-banded prompts; content filters; an eval set before release. **When credits are unavailable the coach falls back to the coach pack**, so a no-cost path always exists. Where the function runs (Supabase Edge Function by default, D4) is decided then.
+
+### 2.6 Peer review and accountability (section 6)
+- **Credits:** earn credits by reviewing others' shared work; spend credits to request a review. Starting default: 1 review given earns 1 credit; a request costs 1; a new learner gets a small starter balance (D13).
+- **What can be reviewed:** only **work the learner chooses to share** (a habit plan, a weekly review, a short written reflection or exercise). **Private reflections stay private.** Each submission needs an explicit opt-in and a warning not to include personal details.
+- **Anonymity:** reviewers and reviewees see **anonymised handles** by default. Phase 1 has no public profiles.
+- **Quality:** a short rubric (clear, kind, specific, useful); reviewees rate usefulness; low-quality or abusive reviews lose credits; spot checks by admins.
+- **Safety:** report and block on every review; moderation queue and runbook; code of conduct; account suspension; adults only. Reviewed by the community-safety reviewer before launch (K12).
+- **Accountability pairs and squads (Acton-inspired):** a pair or squad of 2 to 4 with a weekly check-in and a shared view of only what each member chooses to share. A personal habit contract is optional.
+- **Cold start (K15):** begin with pairs and cohort-run groups (practitioner-led cohorts count as the reviewer pool); do not rely on an open marketplace at launch.
+- **No AI** takes part in peer review in Phase 1.
 
 ### 2.7 Analytics (section 7)
-- **Learner view:** baseline vs now (with caveats), skill profile, days practised, streak (weekly), reflections timeline, a single "next step".
-- **Practitioner view:** cohort distribution by skill, list of learners who have stalled (no practice in N days, N set in D-defaults), weakest skills across the cohort, engagement trend, export (CSV).
-- **Metric definitions:** every metric has a written definition, formula, minimum sample and caveat in `docs/metrics.md` (to be created in Stage 3).
-- **Privacy rules:** cohort aggregates only when n ≥ 8 [PROPOSED]; practitioners see individual detail only where consent allows; learners can see who can see their data; minors' individual data visible only to their school-sponsored practitioner.
-- **Honesty:** no league tables of individuals; show confidence or range where scores are used; label "self-reported".
+- **Learner view:** baseline vs now (with caveats), skill profile, days practised against the weekly target, habit plans, reflections timeline, partner and review activity, one "next step".
+- **Practitioner view (adult cohorts):** cohort distribution by skill, stalled learners (no practice in N days), weakest skills, engagement trend, peer-review quality, export (CSV).
+- **Metric definitions:** each metric has a written definition, formula, minimum sample and caveat in `docs/metrics.md` (created in Stage 3).
+- **Rules:** cohort aggregates only for **n ≥ 8** [PROPOSED]; individual detail visible to a practitioner only where the learner consented; learners can see who can see their data; **self-reported data is labelled as such**; no individual league tables.
 
 ### 2.8 Architecture and data model (section 8)
-- **Front end:** a new `/prodigym` area inside the existing `web/` app (Vite, React, TypeScript, Tailwind, Radix, react-router, react-query). Reuse `AuthContext.tsx` and `lib/supabase.ts`.
-- **Back end:** Supabase (Postgres, Auth, RLS). Add a **server-side function** for Claude calls. Default: a Supabase Edge Function (D4); alternative: a Vercel serverless function.
-- **Tables (new, namespaced `pg_` or schema `prodigym`):** `pg_profiles`, `pg_cohorts`, `pg_cohort_members`, `pg_consents`, `pg_skills`, `pg_habits`, `pg_reps`, `pg_instruments`, `pg_instrument_items`, `pg_assessments`, `pg_responses`, `pg_scores`, `pg_workouts`, `pg_attempts`, `pg_reflections`, `pg_ai_events` (metadata only), `pg_analytics_snapshots`, `pg_audit_log`.
-- **RLS:** learners read and write only their rows; practitioners read cohort rows only for cohorts they own and only for consented fields; admins manage content; no direct client access to `pg_ai_events` text. Each policy has a test.
-- **Roles:** learner, practitioner, content-reviewer, admin. Existing `users` table is reused for identity where possible; do not break existing sites (`aihub`, `learning-hub`).
-- **Deployment:** Vercel preview per change; migrations applied through a reviewed script; secrets only in Vercel and Supabase settings.
-- **Existing-code check:** read `AuthContext.tsx`, `Join.tsx`, `MemberPortal.tsx` and `supabase/schema.sql` first; extend, do not duplicate.
+- **Front end:** a new `/prodigym` area in `web/` (Vite, React, TypeScript, Tailwind, Radix, react-router, react-query), reusing `AuthContext.tsx` and `lib/supabase.ts`.
+- **Back end:** Supabase (Postgres, Auth, RLS). **Phase 1 needs no server-side function** because there are no AI calls. The coach pack is **static files** served with the site.
+- **Tables (namespaced `pg_`):** `pg_profiles`, `pg_cohorts`, `pg_cohort_members`, `pg_consents`, `pg_skills`, `pg_habits`, `pg_reps`, `pg_habit_plans`, `pg_instruments`, `pg_instrument_items`, `pg_assessments`, `pg_responses`, `pg_scores`, `pg_workouts`, `pg_attempts`, `pg_reflections`, `pg_session_logs` (pasted coach summaries, self-reported), `pg_squads`, `pg_peer_requests`, `pg_peer_reviews`, `pg_credit_ledger`, `pg_reports`, `pg_analytics_snapshots`, `pg_audit_log`.
+- **RLS:** learners read and write only their rows; reviewers see only the submissions assigned to them, under anonymised handles; practitioners see cohort rows only for cohorts they own and consented fields; admins manage content and moderation; each policy has a test.
+- **Roles:** learner, practitioner, content-reviewer, moderator, admin.
+- **Do not break** `aihub`, `learning-hub` or the existing `users` flows. Read `AuthContext.tsx`, `Join.tsx`, `MemberPortal.tsx` and `supabase/schema.sql` first; extend, do not duplicate.
+- **Deployment:** Vercel preview per change; migrations through a reviewed script; no AI key anywhere in Phase 1.
 
-### 2.9 Privacy, consent and safety (section 9)
-- **Data minimisation:** name, email, role, age band, cohort, responses, reflections, practice events. No contacts, location or device ID beyond what auth needs.
-- **Consent:** plain-language notice and recorded consent before assessments; separate consent for research use of anonymised data; for minors, parental or school consent before onboarding. The legal basis (including India's DPDP Act 2023 and rules) must be confirmed by a qualified adviser first [C-006, Q5].
-- **Rights:** learner can export and delete their data; deletion removes rows and AI-event metadata.
-- **Retention:** reflections and responses kept only while the account is active plus a stated period [PROPOSED 12 months]; analytics snapshots are aggregated and anonymised.
-- **Incident process:** named contact, 72-hour internal review target [PROPOSED], notification as the law requires.
-- **Safeguarding:** a named safeguarding adviser reviews flows for minors before any school pilot; report button on every AI turn.
+### 2.9 Privacy, consent, legal and safety (section 9)
+- **Adults only (Phase 1):** an 18+ declaration at sign-up and in the terms; if a user is found to be under 18, suspend the account, delete their data and tell them why. Institutional invites (cohort codes) help but do not prove age (K11).
+- **Data minimisation:** name or handle, email, role, cohort, responses, reflections, habit plans, practice events, pasted session logs, peer-review content. No contacts, location or device identifiers beyond what authentication needs.
+- **Law (to be confirmed by the privacy lawyer, Q5):** India's Digital Personal Data Protection Rules were notified in November 2025; the parts dealing with consent, notice, security and children's data are described by secondary sources as taking effect in stages, with most of them about **18 months after publication (around May 2027)** [C-006]. We build to that standard from the start: clear notice, specific consent, purpose limits, security, breach process, erasure on request.
+- **Phase 3 (school students) design constraints noted now:** the Act treats anyone under 18 as a child; processing needs **verifiable parental consent**; the Act bars **tracking, behavioural monitoring and targeted advertising directed at children**, with narrow exemptions (for example for educational institutions, under the Rules' fourth schedule) [C-006]. **Learner analytics on children must not be built until the legal adviser confirms what is allowed.**
+- **Rights:** learner can export and delete their data; deletion removes rows including peer-review content they authored.
+- **Retention:** active account plus [PROPOSED] 12 months, then delete or anonymise (D11).
+- **Incident process:** named contact, internal review target [PROPOSED 72 hours], notification as the law requires.
+- **Peer-review safety:** see §2.6.
+- **Third-party chatbots:** see §2.5 disclosure.
 
 ### 2.10 Experience, brand and accessibility (section 10)
-- **Routes (draft):** `/prodigym` (home), `/prodigym/start` (baseline), `/prodigym/today` (workout), `/prodigym/progress`, `/prodigym/library`, `/prodigym/practitioner`, `/prodigym/privacy`.
-- **Tone:** warm, short, non-judgmental. Language like "reps", "workout", "muscle groups" is the gym metaphor; do not shame misses.
-- **Brand:** PROdiGYM with tagline draft "Everyone can be a prodigy, with AI and practice." Prakamya appears as "Our philosophy" with its full meaning. No use of "Brain Gym" as a name [C-009].
-- **Accessibility and inclusion:** keyboard and screen-reader support; plain-language text; low-bandwidth mode; English first, structure ready for Indian languages.
+- **Routes (draft):** `/prodigym` (home), `/prodigym/start` (baseline), `/prodigym/today` (workout and habit plans), `/prodigym/coach` (coach pack and how to use it), `/prodigym/circle` (partners, squads, peer review), `/prodigym/progress`, `/prodigym/library`, `/prodigym/practitioner`, `/prodigym/privacy`, `/prodigym/credits` (attributions and sources).
+- **Tone:** warm, short, non-judgmental; the gym metaphor (reps, workouts) without shame for missed days.
+- **Brand:** PROdiGYM; tagline draft "Everyone can be a prodigy, with AI and practice."; Prakamya shown as "Our philosophy" with its full meaning.
+- **"Brain Gym" wording:** "Brain Gym" is claimed as a trademark by the Educational Kinesiology Foundation (a US record exists for BRAIN GYM filed in 1987 for instructional manuals; status and any Indian registration not confirmed) and the programme is widely regarded as pseudoscience [C-009]. Sanjay's position is that we use the words only as an ordinary phrase (DR-009). **Rule for Phase 1:** do not use "Brain Gym" as a product name, tagline, headline, hashtag, domain or social handle; do not describe our methods in terms of movement-based "brain integration"; internal documents may mention it only to explain the founder's metaphor; the IP adviser confirms before launch. This is not legal advice.
+- **Attribution page (`/prodigym/credits`):** credits frameworks and sources used (for example *Atomic Habits*, Minerva's approach, École 42, Acton, Nai Talim) without reproducing their text.
+- **Accessibility and inclusion:** keyboard and screen-reader support; plain language; low-bandwidth mode; English first; structure ready for Indian languages.
 
 ### 2.11 Evaluation and pilot (section 11)
-- **Pilot 0:** 3 cohorts (one school with sponsor only if safeguarding sign-off is complete, one college, one professional group), 8 weeks, with a comparison arm for H2 (waitlist or delayed start) where possible.
-- **Measures:** activation, retention, days practised, change on baseline constructs, rep reflection quality (blind rubric), Challenger usefulness, practitioner views, cost per active learner, incidents.
-- **Decision rules:** continue, change, or stop, set before the pilot starts and approved by the human gate.
+- **Pilot 0:** at least two adult cohorts (college-age adults, professionals), with a comparison arm for H2 where possible.
+- **Read points:** 8 weeks (practice, baseline change, peer-review quality) and 12 weeks or more (habit automaticity).
+- **Measures:** activation, retention, days practised, change on baseline constructs, self-reported automaticity, reflection quality (blind rubric), coach-pack usefulness (self-report), peer-review quality, partner effects, practitioner views, incidents.
+- **Decision rules:** continue, change or stop, set before the pilot and approved by the human gate.
 
 ## 3. Voice, tone, reading level, length
 - Learner-facing copy: plain English, grade 8 reading level, one idea per screen.
-- Evidence-facing documents: rigorous and candid; no hype; plainly mark unverified claims.
-- Code: typed (TypeScript), small modules, comments only where intent is not obvious.
+- Evidence-facing documents: rigorous and candid; no hype; unverified claims marked.
+- Code: TypeScript, small modules, comments where intent is not obvious.
 
 ## 4. Non-goals
 - Therapy, diagnosis, clinical scales used as clinical tools.
+- Children in the product (Phase 3 only, after safeguards).
+- Programmatic LLM API calls in any current release.
 - Public learner profiles or open social features.
-- Full 100+ habit catalogue, voice practice, multilingual content and mentor marketplace in the MVP.
+- Domains D2 to D4, voice practice, multilingual content and a mentor marketplace in Phase 1.
 - Using scores for admissions, hiring or grading.
-- Programmatic multi-agent orchestration for *document review* (the existing protocol stays manual).
+- Any copied Minerva or book content.
 
 ## 5. Decisions needed before locking, with defaults
-A question that blocks the spec should not stay a question. Each has a default so drafting can proceed. Deadlines are **[PROPOSED]** for Sanjay to set.
+Deadlines are **[PROPOSED]** for Sanjay to set. **Decided** rows come from Sanjay's 2026-10-16 responses.
 | ID | Decision | Owner | Deadline | Default if undecided | Cost of the default being wrong |
 |---|---|---|---|---|---|
-| D1 | Who can use the MVP: adults only, or minors too? | Sanjay | before spec lock | **18+ only at launch;** school students only through a school-sponsored pilot after safeguarding sign-off | Slower school reach; minimal harm risk |
-| D2 | MVP scope: which two domains first? | Sanjay | before spec lock | D1 Self-Regulation and D2 Taking Charge | Rework if pilot partners need Communication first |
-| D3 | Where does it live? | Sanjay | before Stage 3 | Path `bossofai.org/prodigym` inside `web/` | Small cost to move to a subdomain later |
-| D4 | Where does the Claude call run? | Sanjay | before Stage 3 | Supabase Edge Function (close to auth and data) | Moderate rework if Vercel functions are preferred |
-| D5 | Peer review in MVP? | Sanjay | before spec lock | Not in MVP; Phase 2 for adults only | Lost engagement benefit if H6 were true |
-| D6 | AI budget, per-learner cap and model | Sanjay | before Stage 3 | Daily and monthly caps set low; model set by config; non-AI fallback always on | Weaker Challenger if cap too low |
-| D7 | Brand: product PROdiGYM, philosophy Prakamya, tagline text | Sanjay | before launch | As recorded in `0_context.md` | Rebrand cost; domain and trademark checks needed |
-| D8 | Confirm that the product may call Claude despite AGENTS.md's manual-only rule for agent review | Sanjay | before Stage 3 | Yes, product calls are allowed; the rule applies to Loop C only | Policy rework |
-| D9 | Content authoring model | Sanjay | before Stage 3 | AI-drafted, human-reviewed, each habit has one named human reviewer | Slower content if reviewers are scarce |
-| D10 | Minimum cohort size for aggregates (n) | Sanjay, psychometrician | before Stage 3 | 8 | Too-small cohorts hide data; too-large frustrates teachers |
-| D11 | Retention period for responses and reflections | Sanjay, legal adviser | before any user data is stored | 12 months after last activity | Compliance risk if the law requires less |
+| D1 | Who can use Phase 1? | Sanjay | **Decided** (DR-004) | Adults only; school students later via teachers and parents | n/a |
+| D2 | MVP scope | Sanjay | **Decided** (DR-005) | D1 Taking Charge of Life incl. self-regulation; Atomic-Habits-style methods; techniques layer | n/a |
+| D3 | Where it lives | Sanjay | before Stage 3 | `bossofai.org/prodigym` inside `web/` | Small cost to move later |
+| D4 | Where the Phase 2 AI function runs | Sanjay | before Phase 2 | Supabase Edge Function | Moderate rework |
+| D5 | Peer review in Phase 1? | Sanjay | **Decided** (DR-006) | Yes, adults only | n/a |
+| D6 | AI budget, caps and model | Sanjay | **Moved to Phase 2** (DR-007) | Decide before Phase 2 | n/a |
+| D7 | Brand | Sanjay | **Decided** (DR-001, DR-009) | PROdiGYM + Prakamya philosophy; no "Brain Gym" as a mark | Rebrand if the IP adviser objects |
+| D8 | May the product call an AI API? | Sanjay | **Decided** (DR-007) | No, in any current release; later releases after testing and early customers | n/a |
+| D9 | Habit content authoring | Sanjay | before Stage 3 | Drafted by an AI agent in working sessions, each habit reviewed by one named human, original wording | Slower if reviewers are scarce |
+| D10 | Minimum n for cohort aggregates | Sanjay, psychometrician | before Stage 3 | 8 | Hidden data or weak privacy |
+| D11 | Retention period | Sanjay, privacy lawyer | before any user data is stored | 12 months after last activity | Compliance risk |
+| D12 | Stakes level for Phase 1 Stage 4 | Sanjay | before Stage 4 | **Standard** (Heavy for AI or minors) | Under-review if wrong |
+| D13 | Peer-review credit rules | Sanjay | before Stage 3 | 1 earned per review, 1 spent per request, small starter balance, abuse penalties | Gaming or stalling |
+| D14 | Which chatbots to test the coach pack on | Sanjay | before Stage 3 | Claude.ai plus one other | Uneven coach quality |
+| D15 | Which wiki pedagogies and techniques to use (verdicts in §2.1) | Sanjay | before spec lock | As proposed in §2.1 | Design carries unused or missing ideas |
 
 ## 6. Build plan and milestones (section 12)
-Phases map to the `intent.md` Done layers. Every phase starts with tests for scoring and analytics logic.
+Every phase starts with tests for scoring, credits and analytics logic.
 | Phase | Deliverable | Done-test |
 |---|---|---|
-| **P0 Discovery** | Repo audit of auth, schema, pages; instrument licence check; benchmark of 5 offerings (Q4); habit set v0 for D1 and D2 | Notes committed; claims updated |
-| **P1 Core loop** | Profiles, roles, consent, baseline (1 to 2 constructs), workout generator, reps, weekly streak | A new learner can baseline, do a workout, see progress |
-| **P2 AI Challenger** | Edge function, prompts, age bands, cap, filter, evals | Eval set passes; cost cap works; fallback works |
-| **P3 Analytics** | Learner and practitioner dashboards, check-ins, exports | Metric definitions tested; n-threshold enforced |
-| **P4 Hardening** | RLS tests, security review, accessibility pass, privacy pages, incident process | Stage 4 Heavy verification ready |
-| **P5 Pilot** | Pilot 0 with partners | Pre-set thresholds read and decisions recorded |
-| **P6 Scale (later)** | Catalogue, peer review, languages | Out of MVP |
+| **P0 Discovery** | Repo audit (auth, schema, pages); instrument licence check; benchmark of 5 offerings (Q4); habit list v0 for D1 | Notes committed; claims updated |
+| **P1a Core loop** | Profiles, roles, consent, 18+ declaration, baseline, habit plans, workout generator, weekly consistency | A new adult can baseline, plan a habit, do a workout, see progress |
+| **P1b Coach pack** | Skill files, plain-text prompts, session-log format, test log on ≥ 2 chatbots | Human test log passes; repo check shows zero LLM API calls |
+| **P1c Circle** | Pairs and squads, peer review, credits, moderation | Credit tests pass; moderator can review a report; safety reviewer signs off |
+| **P1d Analytics** | Learner and practitioner dashboards, check-ins, exports | Metric tests pass; n-threshold enforced |
+| **P1e Hardening and launch prep** | RLS tests, security review, accessibility, privacy pages, attribution page, lawyer and IP review | Stage 4 verification ready |
+| **P1f Pilot 0** | Two adult cohorts, two read points | Thresholds read; decisions recorded |
+| **Phase 2** | In-product coach with credit caps and coach-pack fallback; domain D2 | After testing and early customers (DR-007) |
+| **Phase 3** | School students via teachers and parents; safeguarding and children's-data compliance | Legal and safeguarding sign-off first |
 
 ## 7. Verification plan
-- **Stakes level and why:** this spec is **Light** (a plan, not binding). The built product is **Heavy** (minors, psychometric and reflective data, an AI model, public deployment).
+- **Stakes level and why:** this spec is **Light**. Phase 1 Stage 4 is **Standard** (adults, personal reflective data, peer interaction, no AI calls) [PROPOSED, D12]. Any release with in-product AI or minors is **Heavy**.
 - **Panel lenses (spec, Light):** Adversary; Pedagogy and psychometrics.
-- **Panel lenses (product, Heavy):** Adversary; Grounding Auditor; Pedagogy and psychometrics; Child safety and data protection; Security (RLS, secrets, prompt injection); Equity and access; Cost and operations.
+- **Panel lenses (Phase 1 Stage 4, Standard):** Adversary; Grounding Auditor; Pedagogy and psychometrics; Privacy and data protection; Security; Community safety; IP and licensing.
 - **Models/harnesses planned:** at least one reviewer on a different model or harness from the Author (the Author is Claude).
-- **Round cap and revision cap:** protocol defaults (Light 2 per issue; Heavy 5 per issue; 3 revision cycles).
-- **What a Critical issue would be:** any path where a minor's data is exposed or collected without valid consent; a learner able to read another learner's data; the Claude key reachable from the browser; AI that completes a graded-style task for the learner; a score shown as a label or diagnosis; an unverified effectiveness claim shown to users; a psychometric instrument used without a confirmed licence; a contradiction with `1_intent.md`.
-- **Human gate:** Sanjay plus the external reviewers listed in `0_context.md` §1 (psychometrician, safeguarding adviser, practitioner). Pending.
-- **Not yet done:** nothing in this spec has been independently verified. Only the author's self-check has been done.
+- **Round cap and revision cap:** protocol defaults (Light 2, Standard 4 per issue; 3 revision cycles).
+- **What a Critical issue would be:** any call to an LLM API in the Phase 1 release; a path to read another learner's private data; peer-review content exposing identity or personal detail; a minor able to use the product without being detected or removed; copied Minerva or book content; an instrument without a confirmed licence; a score shown as a label or diagnosis; "Brain Gym" used as a name or tag; an unverified effectiveness claim shown to users; a contradiction with `1_intent.md`.
+- **Human gate:** Sanjay alone, with the reviewers listed in `0_context.md` §1 arranged by him (DR-008).
+- **Not yet done:** nothing here has been independently verified. Only the author's self-check has been done.

@@ -55,6 +55,15 @@ Minerva's HCA framework directly informs **PRODIGY's HEITL Talent Pipeline**:
 
 ---
 
+## ⚖️ Reuse Note (added 2026-10-16)
+Minerva's website footer carries "©2025. Minerva Project, Inc. All Rights Reserved." and states that the Minerva name, logo and trade dress are trademarks of Minerva Project (checked 2026-10-16 at <https://www.minerva.edu/four-year-curriculum>; the Terms & Conditions page itself was not read). Consequences for us:
+- **Describe and attribute** the approach (named habits, cross-context grading, four core competencies); the ideas are not ours and not owned by us.
+- **Do not copy** Minerva's list of HCs, their definitions, hashtag names or rubrics, and do not use the Minerva name or logo as branding. Write original material.
+- Minerva's own materials say there are **more than 100** HCs, roughly evenly spread across four core competencies (critical thinking, creative thinking, effective communication, effective interaction), introduced in four first-year Cornerstone courses. Source: <https://www.minerva.edu/public/media/enrollment-center/Minerva-HCs-Intro.pdf>, accessed 2026-10-16.
+- Details on this page that we have **not** verified externally (for example the share of class time professors speak, and the seven-city rotation) should not be repeated in outward-facing material.
+
+---
+
 ## 🔗 Related Notes & References
 - 🏊‍♂️ Peer Learning: [[ecole_42_peer_learning|École 42 Model]]
 - 🎯 Challenge Framework: [[challenge_based_learning|Apple Challenge-Based Learning (CBL)]]
