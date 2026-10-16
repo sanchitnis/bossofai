@@ -8,7 +8,7 @@ status: not-started
 tags: [ai-native, review, stage-4]
 ---
 
-# Review: PROdiGYM, the Brain Gym
+# Review: PROdiGYM, the brain gym
 
 > The agentic part of review lives in [`deliberation_board.md`](./deliberation_board.md) and `deliberation/`, run under [`protocols/agentic-loops.md`](../../protocols/agentic-loops.md) §5. This file records the **outcome** and the **human gate**. Never mark anything certified here that the board does not support.
 

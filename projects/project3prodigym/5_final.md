@@ -9,7 +9,7 @@ status: not-started
 tags: [ai-native, final, deliverable, stage-5]
 ---
 
-# Final Deliverable: PROdiGYM, the Brain Gym
+# Final Deliverable: PROdiGYM, the brain gym
 
 > Promote here only after `4_review.md` shows human approval.
 

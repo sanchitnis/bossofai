@@ -8,7 +8,7 @@ restarts_loop: false
 tags: [ai-native, feedback, stage-6, document-loop]
 ---
 
-# Feedback: PROdiGYM, the Brain Gym
+# Feedback: PROdiGYM, the brain gym
 
 ## 1. Feedback log
 | Date | Source | What they said | Triage (fix / new intent / decline) | Reason | Where it goes |

@@ -9,7 +9,7 @@ status: draft
 tags: [prodigym, brain-gym, habits, taking-charge, psychometrics, peer-review, coaching, stage-1]
 ---
 
-# Intent: PROdiGYM, the Brain Gym
+# Intent: PROdiGYM, the brain gym
 
 > **Verification**: Light loop (see [`protocols/agentic-loops.md`](../../protocols/agentic-loops.md)). Not yet run. Only a single-agent self-check has been done. Record the outcome in `deliberation_board.md`.
 >

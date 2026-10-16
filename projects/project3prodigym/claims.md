@@ -3,7 +3,7 @@ project: project3prodigym
 artifact: claims
 ---
 
-# Claims Register: PROdiGYM, the Brain Gym
+# Claims Register: PROdiGYM, the brain gym
 
 Every factual claim, statistic, quotation and citation used in any artifact gets a row. The Grounding Auditor works from this table.
 

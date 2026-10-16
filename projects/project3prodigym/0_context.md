@@ -1,4 +1,4 @@
-# Project Context: PROdiGYM, the Brain Gym (bossofai.org/prodigym)
+# Project Context: PROdiGYM, the brain gym (bossofai.org/prodigym)
 
 > **Cold-Open Context Note**: Standing project facts, constraints, and decisions. Any agent or human must be able to read this file cold before starting work. Keep it true: update it when reality changes.
 >
@@ -46,15 +46,16 @@
 
 ## 3. Standing Decisions & Assumptions
 Decisions made by a human are in [`decisions.md`](./decisions.md). Standing ones, as stated by Sanjay on 2026-10-16:
-- **Brand:** **PROdiGYM** is the product (`bossofai.org/prodigym`); **Prakamya** is the guiding philosophy. The word "Gym" stays. Tagline (draft): "Everyone can be a prodigy, with AI and practice." Sanjay's position is that "brain gym" is used only as an ordinary word, not as a mark (DR-009). Agent view and open check: see `claims.md` C-009 and `2_spec.md` §2.10.
+- **Brand:** **PROdiGYM** is the product (`bossofai.org/prodigym`); **Prakamya** is the guiding philosophy. The word "Gym" stays. Tagline (draft): "Everyone can be a prodigy, with AI and practice." Sanjay's decision: "brain gym" is written only in lowercase as ordinary words, never as a name or mark (DR-009, DR-014). Agent view and open check: see `claims.md` C-009 and `2_spec.md` §2.10.
 - **Build first, then feedback.** No early feedback request to the core team; a complete solution is built from the spec, then shared.
-- **Phase 1 is adults only (18+).** School students come later, through their teachers and parents, in Phase 2 or 3 (DR-004).
+- **Phase 1 is adults only (18+).** The site shows: "This site is for people aged 18 and over. A version for children is coming soon." (DR-013). School students come later, through their teachers and parents, in Phase 2 or 3 (DR-004).
 - **MVP scope:** domain **Taking Charge of Life**, which **includes self-regulation**, taught with **Atomic-Habits-style behaviour design**. The concept also has a **techniques and methods layer** (habit design, implementation intentions, tracking, accountability, coaching by AI) next to the pedagogy layer (DR-005).
 - **Peer review is in the first version** (DR-006).
 - **No programmatic LLM API calls in any current release**, for the product and for agent review. Features whose API cost would fall on us are **deferred to a later release**, after testing and an initial customer base. **AI coaching in Phase 1 runs through skill files** that learners load in their own chatbot (for example Claude.ai); this stays as a no-credit fallback when in-product credits exist (DR-007).
 - **Minerva** is a model for *how* to organise a taxonomy, not a source of content. Use only licensed or original material, with attribution (DR-010).
 - **Pedagogies and techniques are used only where relevant**; having a wiki page does not mean it is used (DR-011).
-- **All changes are pushed to GitHub** on a branch; Sanjay merges later (DR-012).
+- **Git:** the spec work is merged to `main` and pushed (DR-012, superseded by DR-016); further changes go on separate branches.
+- **Verification loop:** AI agent review, then discussion on the deliberation board, then the human expert in the loop takes the final call (DR-015).
 - Assumptions that, if wrong, change the plan:
   - A1: A short daily practice can change measurable habits. **Partly informed** by habit research (average about 66 days to automaticity, range 18 to 254; `claims.md` C-012), so the pilot reads at 8 weeks and again at 12 weeks or later.
   - A2: Self-report baselines can be made useful for development (not diagnosis) if framed and interpreted carefully.
