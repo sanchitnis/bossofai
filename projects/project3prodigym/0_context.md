@@ -46,7 +46,7 @@
 
 ## 3. Standing Decisions & Assumptions
 Decisions made by a human are in [`decisions.md`](./decisions.md). Standing ones, as stated by Sanjay on 2026-10-16:
-- **Brand:** **PROdiGYM** is the product (`bossofai.org/prodigym`); **Prakamya** is the guiding philosophy. The word "Gym" stays. Tagline (draft): "Everyone can be a prodigy, with AI and practice." Sanjay's decision: "brain gym" is written only in lowercase as ordinary words, never as a name or mark (DR-009, DR-014). Agent view and open check: see `claims.md` C-009 and `2_spec.md` §2.10.
+- **Brand:** **PROdiGYM** is the product (`bossofai.org/prodigym`); **Prakamya** is the guiding philosophy. The word "Gym" stays. Tagline (draft): "Everyone can be a prodigy, with AI and practice." Sanjay's decision: we write "gym for brain" in lowercase ordinary words instead of "brain gym", never as a name or mark (DR-009, DR-014, DR-017). Agent view and open check: see `claims.md` C-009 and `2_spec.md` §2.10.
 - **Build first, then feedback.** No early feedback request to the core team; a complete solution is built from the spec, then shared.
 - **Phase 1 is adults only (18+).** The site shows: "This site is for people aged 18 and over. A version for children is coming soon." (DR-013). School students come later, through their teachers and parents, in Phase 2 or 3 (DR-004).
 - **MVP scope:** domain **Taking Charge of Life**, which **includes self-regulation**, taught with **Atomic-Habits-style behaviour design**. The concept also has a **techniques and methods layer** (habit design, implementation intentions, tracking, accountability, coaching by AI) next to the pedagogy layer (DR-005).
