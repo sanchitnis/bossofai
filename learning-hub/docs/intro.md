@@ -48,7 +48,6 @@ Explore the interactive slide decks compiled using the presentation creator:
 *   [AI Citizen: Modern AI Literacy](pathname:///presentations/ai-citizen/) - Foundational microlearning course establishing baseline AI literacy, responsible prompt engineering, and ethical boundaries for all students.
 *   [Introduction to Srujana-Bodha](pathname:///presentations/intro-srujana-bodha/) - A professional development platform for educators to author interactive microlearning courses, embed H5P assessments, and deploy AI tutors.
 *   [Sample Presentation](pathname:///presentations/sample-presentation/) - Demo slide deck showcasing quizzes and components.
-*   [Physical AI](pathname:///presentations/physical-ai/) - Introduction to Physical AI, hardware integration, and edge intelligence.
 *   [AI Driver's License](pathname:///presentations/ai-drivers-license/) - Professional development certification for AI-era pedagogy.
 *   [AI-Powered Mathematical Research](pathname:///presentations/ai-math-research/) - Formal prompting, Lean 4 proof systems, and agentic workflows by Sanjay Chitnis.
 

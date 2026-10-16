@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, Github, Sparkles, Compass, BookOpen, Layers, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -59,8 +59,20 @@ const skillMap = [
   },
 ];
 
-export const Learn: React.FC = () => (
-  <InfoPage
+export const Learn: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const elem = document.querySelector(location.hash);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location.hash]);
+
+  return (
+    <InfoPage
     eyebrow="Learn · Srujana Pathway &amp; Learning Hub"
     title={
       <>
@@ -157,18 +169,18 @@ export const Learn: React.FC = () => (
       </div>
     </div>
 
-    {/* Two Tracks Grid */}
+    {/* Three Tracks Grid */}
     <div className="mt-14 flex flex-wrap items-center justify-between gap-4">
       <div>
         <h2 className="font-heading text-3xl font-extrabold tracking-tight">Pick a track</h2>
-        <p className="mt-1 max-w-2xl text-muted-foreground">The guide has two tracks that share the same foundations.</p>
+        <p className="mt-1 max-w-2xl text-muted-foreground">The guide has three distinct pathways that share the same foundations.</p>
       </div>
       <Button asChild variant="outline" size="sm">
-        <a href="/learn/ai-engineer">Compare Both Tracks in Hub →</a>
+        <a href="/learn/ai-engineer">Compare All 3 Tracks in Hub →</a>
       </Button>
     </div>
 
-    <div className="mt-6 grid gap-6 md:grid-cols-2">
+    <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <article className="brut rounded-2xl p-6 flex flex-col justify-between">
         <div>
           <Badge variant="accent">Track A</Badge>
@@ -203,10 +215,10 @@ export const Learn: React.FC = () => (
             lifecycle.
           </p>
           <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">
-            <li>Agentic AI systems</li>
-            <li>LLM fine-tuning and knowledge distillation</li>
+            <li>Transformer internals and KV cache dynamics</li>
+            <li>LLM fine-tuning, LoRA and preference alignment</li>
             <li>Data collection, curation and synthetic data</li>
-            <li>Deep learning, maths and MLOps foundations</li>
+            <li>High-throughput inference (vLLM) and MLOps</li>
           </ul>
         </div>
         <div className="mt-6 pt-4 border-t border-foreground/10 flex flex-wrap items-center justify-between gap-3">
@@ -216,6 +228,30 @@ export const Learn: React.FC = () => (
             </a>
           </Button>
           <ExtLink href={g("track-b-ai-engineer-deep-technical")}>GitHub Source</ExtLink>
+        </div>
+      </article>
+
+      <article className="brut rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <Badge variant="outline" className="border-foreground/40 bg-foreground/5">Track C</Badge>
+          <h3 className="mt-3 font-heading text-2xl font-extrabold">Forward deployed engineer (FDE)</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            You embed with enterprise clients to solve messy problems, integrate legacy data, and harden custom workflows into core platforms.
+          </p>
+          <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">
+            <li>Diagnostic problem scoping and ADR authoring</li>
+            <li>FastAPI, Docker, and private VPC networking</li>
+            <li>Model Context Protocol (MCP) and RBAC RAG</li>
+            <li>4-week enterprise pilots and executive ROI defense</li>
+          </ul>
+        </div>
+        <div className="mt-6 pt-4 border-t border-foreground/10 flex flex-wrap items-center justify-between gap-3">
+          <Button asChild variant="accent" size="sm">
+            <a href="/learn/ai-engineer/track-c-fde">
+              Read Track C in Hub <ArrowRight className="h-3.5 w-3.5 ml-1" />
+            </a>
+          </Button>
+          <span className="text-xs font-mono font-semibold text-muted-foreground">Enterprise Pathway</span>
         </div>
       </article>
     </div>
@@ -290,7 +326,7 @@ export const Learn: React.FC = () => (
     </div>
 
     {/* Microlearning Presentations Showcase */}
-    <div className="mt-14 flex flex-wrap items-center justify-between gap-4">
+    <div id="microlearning" className="mt-14 flex flex-wrap items-center justify-between gap-4">
       <div>
         <h2 className="font-heading text-3xl font-extrabold tracking-tight">Interactive microlearning slide decks</h2>
         <p className="mt-1 max-w-2xl text-muted-foreground">
@@ -299,7 +335,7 @@ export const Learn: React.FC = () => (
       </div>
       <Button asChild variant="outline" size="sm">
         <a href="/learn/intro#interactive-presentations">
-          All 10 Hub Decks →
+          All Hub Decks →
         </a>
       </Button>
     </div>
@@ -310,7 +346,7 @@ export const Learn: React.FC = () => (
         { title: "Business Analysis & Software Design", desc: "Systems thinking, user stories, UML modeling, and modular decomposition.", slug: "BASD", badge: "Software" },
         { title: "AI Creator: Productivity & Synthesis", desc: "Multi-source RAG synthesis, automated data analysis, and custom agents.", slug: "ai-creator", badge: "Builder" },
         { title: "AI Citizen: Modern AI Literacy", desc: "Foundational AI literacy, prompt engineering, and ethical boundaries.", slug: "ai-citizen", badge: "Literacy" },
-        { title: "Physical AI", desc: "Introduction to Physical AI, hardware integration, and edge intelligence.", slug: "physical-ai", badge: "Hardware" },
+        { title: "Introduction to Srujana-Bodha", desc: "Author interactive microlearning courses, embed H5P assessments, and deploy AI tutors.", slug: "intro-srujana-bodha", badge: "Platform" },
         { title: "AI-Powered Math Research", desc: "Formal prompting, Lean 4 proof systems, and agentic workflows.", slug: "ai-math-research", badge: "Advanced" },
       ].map((deck) => (
         <article key={deck.slug} className="brut rounded-xl p-5 flex flex-col justify-between bg-card">
@@ -352,6 +388,7 @@ export const Learn: React.FC = () => (
       </div>
     </div>
   </InfoPage>
-);
+  );
+};
 
 export default Learn;

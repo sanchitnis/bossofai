@@ -18,10 +18,12 @@ const cols = [
   {
     title: "Learn more",
     links: [
+      ["Microlearning decks", "/learn#microlearning"],
+      ["Study guide", "/learn"],
+      ["Learning Hub portal", "/learn/"],
       ["Quests", "/quests"],
       ["Toolkit", "/toolkit"],
       ["AI Hub", "/aihub/"],
-      ["Study guide", "/learn"],
       ["Open ideas", "/ideas"],
       ["T.R.A.C.K. framework", "/framework"],
       ["How we teach", "/pedagogy"],
@@ -78,9 +80,15 @@ export const Footer: React.FC = () => (
             <ul className="space-y-2 text-sm font-medium">
               {c.links.map(([label, to]) => (
                 <li key={to}>
-                  <Link to={to} className="hover:text-accent">
-                    {label}
-                  </Link>
+                  {to.startsWith("/learn/") ? (
+                    <a href={to} className="hover:text-accent">
+                      {label}
+                    </a>
+                  ) : (
+                    <Link to={to} className="hover:text-accent">
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

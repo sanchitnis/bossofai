@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Rocket, ShieldCheck, Zap, Brain } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Rocket, ShieldCheck, Zap, Brain } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -119,6 +119,85 @@ const HowWeLearn: React.FC = () => {
   );
 };
 
+const MicrolearningSection: React.FC = () => {
+  const featuredDecks = [
+    {
+      title: "AI Citizen: Modern AI Literacy",
+      desc: "Baseline AI literacy, prompt engineering, and ethical boundaries for everyone.",
+      slug: "ai-citizen",
+      badge: "Literacy",
+    },
+    {
+      title: "AI Creator: Productivity & Synthesis",
+      desc: "Multi-source RAG synthesis, automated analysis, and custom agent creation.",
+      slug: "ai-creator",
+      badge: "Builder",
+    },
+    {
+      title: "Creativity & Innovation",
+      desc: "Design thinking, divergent ideation, and lean startup business models.",
+      slug: "creativity-and-innovation",
+      badge: "Enterprising",
+    },
+    {
+      title: "Business Analysis & Software Design",
+      desc: "Systems thinking, user stories, UML modeling, and modular decomposition.",
+      slug: "BASD",
+      badge: "Software",
+    },
+  ];
+
+  return (
+    <section className="container mx-auto px-4 py-16 sm:px-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <Badge variant="ink" className="mb-3">Integrated from Learning Hub</Badge>
+          <h2 className="font-heading text-4xl font-extrabold tracking-tight sm:text-5xl">
+            Interactive <span className="mark-lime">microlearning</span> decks.
+          </h2>
+          <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            Self-paced interactive slide decks with built-in quizzes and AI demos, integrated directly from our Docusaurus Learning Hub.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 shrink-0">
+          <Button asChild variant="accent">
+            <Link to="/learn#microlearning">
+              All Decks &amp; Guide <ArrowRight className="h-4 w-4 ml-1" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/learn/">
+              Learning Hub Portal <ArrowUpRight className="h-4 w-4 ml-1" />
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {featuredDecks.map((d) => (
+          <article key={d.slug} className="brut brut-hover flex flex-col justify-between rounded-2xl p-5 bg-card">
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <Badge variant="outline">{d.badge}</Badge>
+                <span className="font-mono text-[11px] text-muted-foreground">Interactive Deck</span>
+              </div>
+              <h3 className="font-heading text-lg font-bold leading-snug">{d.title}</h3>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{d.desc}</p>
+            </div>
+            <div className="mt-5 pt-3 border-t border-foreground/10">
+              <Button asChild variant="default" size="sm" className="w-full">
+                <a href={`/learn/presentations/${d.slug}/`} target="_blank" rel="noopener noreferrer">
+                  Play Slide Deck <ArrowUpRight className="h-3.5 w-3.5 ml-1" />
+                </a>
+              </Button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const Roles: React.FC = () => (
   <section className="container mx-auto px-4 py-16 sm:px-6">
     <p className="label-mono text-muted-foreground">Six roles, six promises</p>
@@ -217,6 +296,7 @@ export const Index: React.FC = () => (
     <Hero />
     <Bet />
     <HowWeLearn />
+    <MicrolearningSection />
     <Roles />
     <Pillars />
     <PayForward />

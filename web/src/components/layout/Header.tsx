@@ -25,10 +25,12 @@ const roleLinks = [
 ];
 
 const moreLinks = [
+  { label: "Microlearning", to: "/learn#microlearning" },
+  { label: "Study guide", to: "/learn" },
+  { label: "Learning Hub", to: "/learn/", external: true },
   { label: "Quests", to: "/quests" },
   { label: "Toolkit", to: "/toolkit" },
   { label: "AI Hub", to: "/aihub/" },
-  { label: "Study guide", to: "/learn" },
   { label: "Open ideas", to: "/ideas" },
   { label: "T.R.A.C.K. framework", to: "/framework" },
   { label: "How we teach", to: "/pedagogy" },
@@ -87,7 +89,11 @@ export const Header: React.FC = () => {
             <DropdownMenuContent align="end" className="w-52">
               {moreLinks.map((l) => (
                 <DropdownMenuItem key={l.to} asChild>
-                  <Link to={l.to}>{l.label}</Link>
+                  {'external' in l && l.external ? (
+                    <a href={l.to}>{l.label}</a>
+                  ) : (
+                    <Link to={l.to}>{l.label}</Link>
+                  )}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -158,15 +164,25 @@ export const Header: React.FC = () => {
         <div className="border-t-2 border-foreground bg-background xl:hidden">
           <div className="container mx-auto space-y-4 py-4">
             <div className="grid grid-cols-2 gap-2">
-              {[...roleLinks, ...moreLinks].map((l) => (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  className="brut-sm rounded-lg px-3 py-2 text-sm font-semibold hover:bg-accent hover:text-accent-foreground"
-                >
-                  {l.label}
-                </Link>
-              ))}
+              {[...roleLinks, ...moreLinks].map((l) =>
+                'external' in l && l.external ? (
+                  <a
+                    key={l.to}
+                    href={l.to}
+                    className="brut-sm rounded-lg px-3 py-2 text-sm font-semibold hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    className="brut-sm rounded-lg px-3 py-2 text-sm font-semibold hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {l.label}
+                  </Link>
+                )
+              )}
             </div>
             <div className="flex items-center justify-between gap-3">
               <DepthToggle />

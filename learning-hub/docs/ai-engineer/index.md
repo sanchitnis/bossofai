@@ -16,17 +16,17 @@ This curriculum is adapted from the open-source [learn-ai-engineering](https://g
 
 ---
 
-## 🧭 Two Specialized Tracks
+## 🧭 Three Specialized Tracks
 
-The curriculum is structured around two distinct learning tracks sharing a unified foundation. Pick the track that matches your immediate career ambition:
+The curriculum is structured around three distinct learning tracks sharing a unified foundation. Pick the track that matches your immediate career ambition:
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
   <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 text-slate-100 flex flex-col justify-between">
     <div>
       <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-3">Track A</span>
       <h3 className="text-xl font-bold text-white mb-2">AI-Native Builder</h3>
       <p className="text-sm text-slate-300 leading-relaxed">
-        For developers and entrepreneurs who want to ship AI-powered products fast using coding agents, LLMs, and modern APIs. You think in systems, product flows, and user value, orchestrating models rather than training them.
+        For developers and entrepreneurs who want to ship AI-powered products fast using coding agents, LLMs, and modern web APIs. You orchestrate models rather than train them.
       </p>
       <ul className="text-xs text-slate-400 space-y-1.5 my-4 pl-4 list-disc">
         <li>AI coding tools & spec-driven development</li>
@@ -45,17 +45,36 @@ The curriculum is structured around two distinct learning tracks sharing a unifi
       <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 mb-3">Track B</span>
       <h3 className="text-xl font-bold text-white mb-2">AI Engineer (Deep Technical)</h3>
       <p className="text-sm text-slate-300 leading-relaxed">
-        For engineers and researchers who want to work on the AI systems themselves: agentic architectures, fine-tuning, synthetic data generation, rigorous evaluation, and model lifecycle engineering.
+        For engineers and researchers who want to work on the AI systems themselves: transformer internals, fine-tuning, synthetic datasets, and high-throughput inference engines.
       </p>
       <ul className="text-xs text-slate-400 space-y-1.5 my-4 pl-4 list-disc">
-        <li>Stateful agentic architectures & ReAct pattern</li>
-        <li>LLM fine-tuning, LoRA & distillation</li>
-        <li>Data collection, curation, and synthetic data generation</li>
-        <li>Deep learning, mathematics, and MLOps foundations</li>
+        <li>Transformer internals & KV cache dynamics</li>
+        <li>PEFT, LoRA & preference alignment (DPO)</li>
+        <li>Data curation & synthetic datasets (Evol-Instruct)</li>
+        <li>High-throughput inference (vLLM) & quantization</li>
       </ul>
     </div>
     <a href="/learn/ai-engineer/track-b-technical" className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-xl bg-amber-500 text-slate-950 hover:bg-amber-400 transition-colors no-underline">
       Explore Track B: Technical →
+    </a>
+  </div>
+
+  <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 text-slate-100 flex flex-col justify-between">
+    <div>
+      <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 mb-3">Track C</span>
+      <h3 className="text-xl font-bold text-white mb-2">Forward Deployed AI Engineer (FDE)</h3>
+      <p className="text-sm text-slate-300 leading-relaxed">
+        For engineers who embed on the front lines with enterprise clients: solving messy unstructured problems, integrating legacy data, and hardening custom workflows into core platforms.
+      </p>
+      <ul className="text-xs text-slate-400 space-y-1.5 my-4 pl-4 list-disc">
+        <li>Diagnostic problem scoping & ADR authoring</li>
+        <li>FastAPI, Docker & private VPC networking</li>
+        <li>Model Context Protocol (MCP) & RBAC RAG</li>
+        <li>4-week enterprise pilots & executive ROI defense</li>
+      </ul>
+    </div>
+    <a href="/learn/ai-engineer/track-c-fde" className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-xl bg-blue-500 text-slate-950 hover:bg-blue-400 transition-colors no-underline">
+      Explore Track C: FDE →
     </a>
   </div>
 </div>
@@ -97,6 +116,14 @@ Theory without shipped code creates fragile understanding. We have turned this e
 * **Level 4 — Judgment & Proof:** Model explainability, ethical auditing, publish your public portfolio, and pay it forward.
 
 👉 Explore the **[Quests Overview](./quests.md)** or jump into the interactive quest board at **[bossofai.org/quests](https://bossofai.org/quests)**.
+
+---
+
+## 🏗️ Bridging the Gaps: Plan to Build Missing Trainings
+
+Where public online courses only offer toy demos or abstract philosophy, Boss of AI is actively building hands-on modules, starter repositories, and microlearning decks across 8 critical gaps (Spec-Driven Development, Synthetic Data, Multi-Agent Deliberation, and Enterprise FDE Pilots).
+
+👉 Read our comprehensive **[Plan to Build Missing AI Engineer & FDE Trainings](./missing-trainings-action-plan.md)**.
 
 ---
 
