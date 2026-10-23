@@ -25,6 +25,7 @@ const roleLinks = [
 ];
 
 const moreLinks = [
+  { label: "PROdiGYM (Gym for Brain)", to: "/prodigym" },
   { label: "Microlearning", to: "/learn#microlearning" },
   { label: "Study guide", to: "/learn" },
   { label: "Learning Hub", to: "/learn/", external: true },

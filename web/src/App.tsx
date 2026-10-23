@@ -15,6 +15,7 @@ import { Join } from "@/pages/Join";
 import { AuthCallback } from "@/pages/AuthCallback";
 import { MemberPortal } from "@/pages/MemberPortal";
 import { NotFound } from "@/pages/NotFound";
+import { ProdiGymStart } from "@/pages/ProdiGymStart";
 
 export function App() {
   return (
@@ -45,6 +46,8 @@ export function App() {
               <Route path="/join" element={<Join />} />
               <Route path="/auth/callback" element={<AuthCallback />} />
               <Route path="/portal" element={<MemberPortal />} />
+              <Route path="/prodigym" element={<ProdiGymStart />} />
+              <Route path="/prodigym/start" element={<ProdiGymStart />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Toaster richColors position="top-right" />

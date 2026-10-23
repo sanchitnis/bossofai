@@ -18,6 +18,7 @@ const cols = [
   {
     title: "Learn more",
     links: [
+      ["PROdiGYM (Gym for Brain)", "/prodigym"],
       ["Microlearning decks", "/learn#microlearning"],
       ["Study guide", "/learn"],
       ["Learning Hub portal", "/learn/"],

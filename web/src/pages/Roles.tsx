@@ -1,5 +1,6 @@
 import React from "react";
 import { RolePage } from "@/components/site/RolePage";
+import { SrujanaPathway } from "@/components/site/SrujanaPathway";
 import { IDEAS, roleBySlug, type Idea } from "@/content/roles";
 
 const REPO = "https://github.com/sanchitnis/bossofai";
@@ -18,7 +19,7 @@ export const Students: React.FC = () => (
         Don't just use AI. <span className="mark-lime">Build</span> with it.
       </>
     }
-    sub="The Srujana Pathway takes you from AI consumer to AI engineer through real projects, real mentors and proof you can show anyone."
+    sub="The Srujana Pathway takes you from basic foundational learning to prepare for internships to venture development in a progressive series of challenges."
     becomeTitle="An AI engineer, or someone ready for an AI-era career."
     becomePoints={[
       "Build and deploy AI apps, and measure whether they actually work (evals, error analysis).",
@@ -28,18 +29,89 @@ export const Students: React.FC = () => (
       "Carry the judgment: safety, ethics and honesty. The human signs off.",
     ]}
     steps={[
-      { title: "Micro-challenges", text: "Small, fast, public wins. Spot a problem, build a prototype with AI, show your work." },
-      { title: "Challenge projects", text: "Real problems from community, industry and research. Work in a team with a mentor." },
-      { title: "Research and IP", text: "Take the best work deeper. Face an expert jury that tries to break it. Write it up." },
-      { title: "Ventures and careers", text: "Spin it out as a venture, or use your verified portfolio to land the role you want." },
+      {
+        title: "Stage 1: Micro-challenges & Foundations",
+        text: "Fast, bite-sized public wins. Master prompt engineering, coding agents, and red-teaming hallucinations.",
+      },
+      {
+        title: "Stage 2: Applied Sprints & Internships",
+        text: "Real problems from community and industry. Move from manual coding to AI agent orchestration in a team to prepare for internships.",
+      },
+      {
+        title: "Stage 3: Systems Architecture & Research IP",
+        text: "Deep inquiry challenges. Face an expert jury that red-teams your system. Aim for a preprint, DPG, or patent.",
+      },
+      {
+        title: "Stage 4: Venture Incubation & AI Careers",
+        text: "Spin out an AI-native venture with paying users, or use your verified portfolio to land top-tier AI engineering roles.",
+      },
     ]}
     ideas={IDEAS.students}
     ideasIntro="These are starting points we made up, not finished projects. Pick one, bend it, or bring your own."
     cta="Start free"
-    deepTitle="Student pathway"
+    deepTitle="The Srujana Pathway: Framework, Pedagogy & Evidence"
     deep={
       <>
-        <h3>What "AI engineer" means here</h3>
+        <h3>The Srujana Pathway: Core Philosophy</h3>
+        <p>
+          The <strong>Srujana Pathway</strong> is Boss of AI's experiential developmental framework for learners of all backgrounds.
+          In the era of <strong>Abundant Intelligence</strong>, traditional computer science education—rooted in manual syntax memorization
+          and isolated classroom problem sets—is insufficient. The substance of engineering has shifted from routine task execution
+          to <strong>AI agent orchestration, systems architecture, and high-order human judgment</strong>.
+        </p>
+        <p>
+          Srujana structures this evolution into a <strong>progressive four-stage challenge engine</strong> that takes learners from basic
+          foundational literacy directly to qualification for competitive industry internships, deep-tech research, and startup incubation.
+        </p>
+
+        <h3>The 4 Developmental Stages in Detail</h3>
+        <ul>
+          <li>
+            <strong>Stage 1: Developing Foundational Skills (AI Literacy & Meta-Learning):</strong> Focuses on transitioning from rote learning
+            to cognitive agility. Learners master prompt and context engineering, problem deconstruction, steering coding agents (Claude, Cursor, Copilot),
+            and red-teaming synthetic hallucinations. Delivered through 1–3 day micro-challenges and guided coding quests.
+          </li>
+          <li>
+            <strong>Stage 2: Practical Real-World Application (AI Orchestration & Internship Readiness):</strong> Because AI agents automate
+            routine grunt work, modern software internships demand orchestrators. Learners join cross-functional pods guided by industry mentors to
+            solve authentic problems for clinics, schools, and local enterprises. They practice data governance, hallucination mitigation, and
+            Human-in-the-Loop (HEITL) oversight.
+          </li>
+          <li>
+            <strong>Stage 3: Solutions Development, Systems Architecture & Research IP:</strong> Creation is hyper-accelerated. Learners act as
+            Systems Architects orchestrating foundation models. The focus elevates from <em>how to build it</em> to <em>what to build and why it matters ethically</em>.
+            Teams apply Ramesh Raskar's SPOT-PROBE methodology and Google X's "Monkey-First" principle to tackle the hardest bottlenecks first, defending their
+            architecture before an independent expert jury that attempts to red-team and break it.
+          </li>
+          <li>
+            <strong>Stage 4: Enterprise Incubation & Elite Career Placement:</strong> Lean student teams leverage autonomous agent workflows to operate
+            with the capability of traditional 30-person companies. Validated solutions transition into AI-native startup spin-offs, corporate licensing contracts,
+            or marquee placements in frontier AI engineering roles.
+          </li>
+        </ul>
+
+        <h3>Pedagogical Lineage & Challenge Engine</h3>
+        <p>
+          The Srujana Pathway synthesizes proven operational mechanisms from premier global institutions:
+        </p>
+        <ul>
+          <li>
+            <strong>Apple Challenge-Based Learning (CBL):</strong> Big Idea &rarr; Essential Question &rarr; Challenge &rarr; Solution &rarr; Public Publishing.
+            Challenges are framed around authentic friction, not simulated test questions.
+          </li>
+          <li>
+            <strong>École 42 Peer-Learning Economy:</strong> Teacherless, peer-to-peer correction, gamified skill progressions, and radical student agency.
+          </li>
+          <li>
+            <strong>MIT Media Lab / REDX SPOT-PROBE:</strong> Rapid problem spotting, micro-probing, technical root-cause deconstruction, and brutal de-risking.
+          </li>
+          <li>
+            <strong>Stage-Gated Capital & Review:</strong> Inspired by Y Combinator and stage-gate engineering, advancing to the next stage requires demonstrated,
+            measured evidence (evals, telemetry, peer reviews, jury vivas).
+          </li>
+        </ul>
+
+        <h3>What "AI Engineer" Means Here</h3>
         <p>
           We anchor on Andrew Ng's AI Engineering Skills Map, which DeepLearning.AI built from an analysis of more than
           10,000 job postings plus expert interviews<sup>[1]</sup>. It names four skills: building and deploying AI
@@ -50,19 +122,14 @@ export const Students: React.FC = () => (
           We add a fifth, because tools do not carry responsibility: <em>judgment and responsibility</em>. That covers
           safety, ethics, honesty and domain depth, with a human expert signing off (HEITL).
         </p>
-        <h3>The four stages</h3>
-        <ul>
-          <li><strong>Stage 1, foundations:</strong> micro-challenges and sprints that prove you can work with AI.</li>
-          <li><strong>Stage 2, practical exposure:</strong> cross-functional teams with mentors on real problems.</li>
-          <li><strong>Stage 3, research and IP:</strong> an expert jury red-teams your work; you aim for a preprint or filing.</li>
-          <li><strong>Stage 4, incubation:</strong> venture, licence, or a portfolio that opens doors.</li>
-        </ul>
-        <h3>Recognition</h3>
+
+        <h3>Recognition & Portfolio Over Credentials</h3>
         <p>
-          A public portfolio, open-source contributions, and (later) a leaderboard ranked by peer review and an expert-team
+          A public portfolio, open-source contributions, and a leaderboard ranked by peer review and an expert-team
           viva. Not clicks. Not quiz scores. See <a href="/leaderboard">how it will work</a>.
         </p>
-        <h3>Start learning today</h3>
+
+        <h3>Start Learning Today</h3>
         <p>
           Our open-source <a href="/learn">AI engineer study guide</a> has two tracks (AI-native builder and deep technical
           AI engineer) and a map from these five skills to the sections worth reading first. Prefer doing to reading? Try the{" "}
@@ -77,7 +144,9 @@ export const Students: React.FC = () => (
         </p>
       </>
     }
-  />
+  >
+    <SrujanaPathway />
+  </RolePage>
 );
 
 export const Faculty: React.FC = () => (

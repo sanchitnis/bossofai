@@ -38,6 +38,7 @@ interface Props {
   cta: string;
   deepTitle?: string;
   deep: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const RolePage: React.FC<Props> = ({
@@ -52,6 +53,7 @@ export const RolePage: React.FC<Props> = ({
   cta,
   deepTitle,
   deep,
+  children,
 }) => (
   <Layout>
     {/* Hero */}
@@ -97,6 +99,8 @@ export const RolePage: React.FC<Props> = ({
         </ul>
       </div>
     </section>
+
+    {children}
 
     {/* How it works */}
     <section className="border-y-2 border-foreground bg-secondary/60 py-14">
