@@ -96,8 +96,9 @@ alter table public.projects enable row level security;
 alter table public.leaderboard_entries enable row level security;
 alter table public.hub_nodes enable row level security;
 
--- Users: Anyone can read basic user profile; users can update their own
+-- Users: Anyone can read basic user profile; users can insert and update their own
 create policy "Users are viewable by everyone" on public.users for select using (true);
+create policy "Users can insert own profile" on public.users for insert with check (auth.uid() = id);
 create policy "Users can update own profile" on public.users for update using (auth.uid() = id);
 
 -- Audience Inquiries: Anyone can insert inquiries; authenticated admins can view all
@@ -129,13 +130,16 @@ begin
     new.id,
     new.email,
     coalesce(new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'name', new.email),
-    new.raw_user_meta_data->>'avatar_url',
+    coalesce(new.raw_user_meta_data->>'avatar_url', new.raw_user_meta_data->>'picture'),
     'student',
     50,
     'Stage 1',
     'Brain GYM Cadet'
   )
-  on conflict (id) do nothing;
+  on conflict (id) do update set
+    name = coalesce(excluded.name, public.users.name),
+    avatar = coalesce(excluded.avatar, public.users.avatar),
+    updated_at = now();
   return new;
 end;
 $$ language plpgsql security definer;

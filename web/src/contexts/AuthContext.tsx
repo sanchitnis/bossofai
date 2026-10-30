@@ -61,16 +61,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
 
         if (i === 0) {
-          await supabase.from("users").insert({
-            id: sess.user.id,
-            email: sess.user.email ?? "",
-            name: sess.user.user_metadata?.full_name ?? sess.user.email ?? "Boss of AI Member",
-            role: "student",
-            avatar: sess.user.user_metadata?.avatar_url ?? null,
-            points: 50,
-            stage: "Stage 1",
-            badge: "Brain GYM Cadet",
-          });
+          await supabase.from("users").upsert(
+            {
+              id: sess.user.id,
+              email: sess.user.email ?? "",
+              name: sess.user.user_metadata?.full_name ?? sess.user.email ?? "Boss of AI Member",
+              role: "student",
+              avatar: sess.user.user_metadata?.avatar_url ?? null,
+              points: 50,
+              stage: "Stage 1",
+              badge: "Brain GYM Cadet",
+            },
+            { onConflict: "id", ignoreDuplicates: true }
+          );
         }
       } catch (err) {
         console.warn("User profile fetch retry:", err);
