@@ -33,7 +33,8 @@ export const useQuestProgress = () => {
 
   const update = useCallback((id: string, patch: Partial<Entry>) => {
     setProgress((prev) => {
-      const next = { ...prev, [id]: { done: false, proof: "", ...prev[id], ...patch } };
+      const current = prev[id] ?? { done: false, proof: "" };
+      const next = { ...prev, [id]: { ...current, ...patch } };
       try {
         window.localStorage.setItem(KEY, JSON.stringify(next));
       } catch {
